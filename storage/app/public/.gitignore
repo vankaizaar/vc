@@ -1,2 +1,4 @@
-*
+/audio/*
+/avatars/*
+/covers/*
 !.gitignore
