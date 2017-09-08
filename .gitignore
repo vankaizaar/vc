@@ -1,6 +1,10 @@
 /node_modules
 /public/hot
-/public/storage
+/public/storage/app/audio/*
+/public/storage/app/avatars/*
+/public/storage/app/covers/*
+/public/storage/framework
+/public/storage/logs
 /storage/*.key
 /vendor
 /.idea
