@@ -1,0 +1,56 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 5, 2017, 11:03:21 AM
+    Author     : developer
+*/
+.btn-primary { 
+    color: #ffffff !important; 
+    background-color: #BB1C94 !important; 
+    border-color: transparent !important; 
+    background-image: none !important; 
+    font-weight: 700;
+} 
+
+.btn-primary:hover, 
+.btn-primary:focus, 
+.btn-primary:active, 
+.btn-primary.active, 
+.open .dropdown-toggle.btn-primary { 
+    color: #ffffff !important; 
+    background-color: #23051C !important; 
+    border-color: #12030E !important; 
+} 
+
+.btn-primary:active, 
+.btn-primary.active, 
+.open .dropdown-toggle.btn-primary { 
+    background-image: none !important; 
+} 
+
+.btn-primary.disabled, 
+.btn-primary[disabled], 
+fieldset[disabled] .btn-primary, 
+.btn-primary.disabled:hover, 
+.btn-primary[disabled]:hover, 
+fieldset[disabled] .btn-primary:hover, 
+.btn-primary.disabled:focus, 
+.btn-primary[disabled]:focus, 
+fieldset[disabled] .btn-primary:focus, 
+.btn-primary.disabled:active, 
+.btn-primary[disabled]:active, 
+fieldset[disabled] .btn-primary:active, 
+.btn-primary.disabled.active, 
+.btn-primary[disabled].active, 
+fieldset[disabled] .btn-primary.active { 
+    background-color: #BB1C94; 
+    border-color: #12030E; 
+} 
+
+.btn-primary .badge { 
+    color: #BB1C94; 
+    background-color: #ffffff; 
+}

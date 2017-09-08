@@ -1,0 +1,80 @@
+// Variables
+//@import "variables";
+// Bootstrap
+//@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "voicecast/assets/bootstrap/css/bootstrap.min";
+@import "voicecast/assets/css/voice-cast-typography";
+@import "voicecast/assets/css/styles";
+@import "voicecast/assets/css/button-reset";
+@import "node_modules/sweetalert2/src/sweetalert2.scss";
+@import "node_modules/jquery-ui-bundle/jquery-ui";
+@import "node_modules/selectize/dist/css/selectize.bootstrap3";
+
+
+//@import "bootswatch";
+.fb-profile img.fb-image-lg {
+    z-index: 0;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.fb-image-profile {
+    margin: -50px 10px 20px 10px;
+    z-index: 9;
+    width: 20%;
+}
+
+.fb-profile-text h1 {
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+* {
+    word-break: break-all;
+}
+
+a {
+    outline: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+div#app {
+    min-height: 80vh;
+    position: relative;
+}
+#outer {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+.itemwrapper {
+  display: table-cell;
+  vertical-align: top;
+  width: 100%;
+}
+
