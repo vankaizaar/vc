@@ -68,13 +68,17 @@ div#app {
     position: relative;
 }
 #outer {
-  display: table;
-  width: 100%;
-  table-layout: fixed;
+    display: table;
+    width: 100%;
+    table-layout: fixed;
 }
 .itemwrapper {
-  display: table-cell;
-  vertical-align: top;
-  width: 100%;
+    display: table-cell;
+    vertical-align: top;
+    width: 100%;
+}
+
+.panel-success {
+    border-color: #BB1C94 !important;
 }
 
