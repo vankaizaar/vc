@@ -79,6 +79,9 @@ div#app {
 }
 
 .panel-success {
-    border-color: #BB1C94 !important;
+    border-color: rgba(187, 28, 148, 0.1) !important;
+    -webkit-box-shadow: 1px 1px 3px 0px rgba(187,28,148,0.5);
+    -moz-box-shadow: 1px 1px 3px 0px rgba(187,28,148,0.5);
+    box-shadow: 1px 1px 3px 0px rgba(187,28,148,0.5);
 }
 
