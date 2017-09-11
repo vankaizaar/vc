@@ -214,7 +214,7 @@ echo json_encode([
                                                             {{ csrf_field() }}
                                                             <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
                                                                 <label for="name" class="col-md-4 control-label">Full name</label>
-                                                                <div class="col-md-6">
+                                                                <div class="col-md-8">
                                                                     <input  type="text" name="name" value="{{ old('name') }}" class="form-control" placeholder="Enter Name" required/>
                                                                     @if ($errors->has('name'))
                                                                     <span class="help-block">
@@ -226,7 +226,7 @@ echo json_encode([
 
                                                             <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
                                                                 <label for="email" class="col-md-4 control-label">Email</label>
-                                                                <div class="col-md-6">
+                                                                <div class="col-md-8">
                                                                     <input  type="email" name="email" value="{{ old('email') }}" class="form-control" placeholder="Enter Email" required/>
                                                                     @if ($errors->has('email'))
                                                                     <span class="help-block">
@@ -238,7 +238,7 @@ echo json_encode([
 
                                                             <div class="form-group {{ $errors->has('message') ? 'has-error' : '' }}">
                                                                 <label for="message" class="col-md-4 control-label">Message</label>
-                                                                <div class="col-md-6">
+                                                                <div class="col-md-8">
 
                                                                     <textarea name="message" id="message" cols="30" rows="10" class="form-control" required maxlength="255" placeholder="Message">{{ old('message') }}</textarea>
                                                                     @if ($errors->has('message'))
