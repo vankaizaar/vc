@@ -97,13 +97,13 @@
                                     <form action="{{route('audio.destroy', ['id'=>$track->id ])}}" method="POST">
                                         {{ method_field('DELETE') }}
                                         {{ csrf_field() }}
-                                        <input class="btn btn-danger btn-xs" type="submit" value="Delete">
+                                        <input class="btn btn-primary btn-md text-uppercase" type="submit" value="Delete">
                                     </form>                                       
                                 </td>
                             </tr>
                             @empty
                         <p class="text-danger">You have not yet uploaded any tracks yet.</p>
-                        <a  class="btn btn-primary btn-sm"href="{{route('audio.create')}}">Start uploading</a>
+                        <a  class="btn btn-primary btn-sm text-uppercase"href="{{route('audio.create')}}">Start uploading</a>
                         @endforelse
                         </tbody>
                     </table>

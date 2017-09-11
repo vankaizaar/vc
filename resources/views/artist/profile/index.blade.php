@@ -22,14 +22,14 @@
                                     <p></p>
                                     @if(Auth::guard('web_artist')->user()->id == $artist->id)
                                    
-                                    <a href = "{{route('profile.edit', ['id'=>$profile->id])}}" class = "btn btn-sm btn-primary">Edit your profile</a>
+                                    <a href = "{{route('profile.edit', ['id'=>$profile->id])}}" class = "btn btn-sm btn-primary text-uppercase">Edit your profile</a>
                                    
                                     @endif
 
                                 </div>
                             @else
                                  <p>You are yet to create you profile. Please update it here.</p>
-                                  <a href = "profile/create" class = "btn btn-sm btn-warning">Edit your profile</a>
+                                  <a href = "profile/create" class = "btn btn-sm btn-warning text-uppercase">Edit your profile</a>
                             @endif
                             </div>                       
                         </div>

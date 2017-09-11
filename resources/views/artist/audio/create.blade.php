@@ -101,7 +101,7 @@
                         <div class="form-group">
                             <div class="col-md-4 col-md-offset-8">  
                                 <br />
-                                <button class="btn btn-primary btn-md pull-right" type="submit">
+                                <button class="btn btn-primary btn-md pull-right text-uppercase" type="submit">
                                     SAVE TRACK
                                 </button>                                    
                             </div>

@@ -72,7 +72,7 @@ echo json_encode([
                                         <h1 class="center cta">Are you the next big Voice Artist?</h1>
                                         <p class="center">Thousands of brands await opportunities <br /> to partner with you and thrill their audiences.</h4>
                                             <br><br>
-                                            <a href="{{ url('/artist_register') }}"><button type="button" class="btn btn-warning btn-lg">Upload your demo now</button></a>
+                                            <a href="{{ url('/artist_register') }}"><button type="button" class="btn btn-warning btn-lg text-uppercase">Upload your demo now</button></a>
                                     </div>
                                 </div>                                
 
@@ -251,7 +251,7 @@ echo json_encode([
 
                                                             <div class="form-group">
                                                                 <div class="col-md-8 col-md-offset-4">
-                                                                    <button type="submit" class="btn btn-primary">
+                                                                    <button type="submit" class="btn btn-primary text-uppercase">
                                                                         Send Message
                                                                     </button>                                                        
                                                                 </div>
