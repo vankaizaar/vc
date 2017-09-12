@@ -21,10 +21,10 @@ class StoreAudio extends FormRequest {
      * @return array
      */
     public function rules() {
-        $allowedFileTypes = env('allowedMusicFiles');
+        //$allowedFileTypes = env('allowedMusicFiles');
         $maxFileSize = env('maxFileSize');
         return [
-            'link' => 'required|mimes:' . $allowedFileTypes . '|max:' . $maxFileSize,
+            'link' => 'required|max:' . $maxFileSize.'|mp3_wav_flac_extension',
             'title' => 'required|max:255',
 
             'language' => 'required',
@@ -37,7 +37,7 @@ class StoreAudio extends FormRequest {
         $size = env('maxFileSize') / 1024;
         return [
             'link.required' => 'An MP3 file is required.',
-            'link.mimes' => 'Only MP3,FLAC files are allowed at the moment',
+            'link.mimes' => 'Only MP3,FLAC,WAV files are allowed at the moment',
             'link.max' => 'The uploaded file must be a maximum of ' . $size . 'MB',
             'title.required' => 'You need to provide a valid title for the voiceover.',
             'title.max' => 'You provide a sensible name.'
