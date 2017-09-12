@@ -82,7 +82,7 @@
 
                                             <div class="sm2-playlist-wrapper">
                                                 <ul class="sm2-playlist-bd">
-                                                    <li><a href="{{Storage::url($track->link)}}">{{ $track->title }} - {{ $track->about_sample }}</a></li>
+                                                    <li><a href="{{Storage::url($track->link)}}">{{ $track->title }}</a></li>
                                                 </ul>
                                             </div>
 
@@ -90,7 +90,7 @@
 
                                     </div>   
                                     <br /> <br />
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus mauris cursus ex maximus semper. Aliquam faucibus ex enim, at ornare metus convallis eu.</p>
+                                    <p>{{ $track->about_sample }}</p>
                                 </td>
 
                                 <td>
