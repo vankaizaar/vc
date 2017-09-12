@@ -55,7 +55,7 @@ class AudioController extends Controller {
             ]);
             return redirect('audio')->with('success', 'Voice over successfully uploaded. ');
         } else {
-           return redirect('audio')->with('error', 'Uploading failed. ');
+            return redirect('audio')->with('error', 'Uploading failed. ');
         }
     }
 
@@ -67,7 +67,7 @@ class AudioController extends Controller {
      */
     public function show($id) {
         //
-         dd($id);
+        dd($id);
     }
 
     /**
@@ -78,7 +78,6 @@ class AudioController extends Controller {
      */
     public function edit($id) {
         //
-        
     }
 
     /**
@@ -98,8 +97,10 @@ class AudioController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id) {        
+    public function destroy($id) {
         $track = Audio::where('id', $id)->first();
+        $audiofile = $track->link;       
+        Storage::delete($audiofile);
         $track->delete();
         return redirect('audio')->with('success', 'Selected track has been deleted. ');
     }
