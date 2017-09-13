@@ -11,7 +11,7 @@
                         <br />
                     </div>
 
-                    <form action="{{route('audio.store')}}" class="form-horizontal" role="form" method="post" enctype="multipart/form-data">
+                    <form action="{{route('audio.store')}}" class="form-horizontal" role="form" method="post" enctype="multipart/form-data" id="submitAudio">
                         {{csrf_field()}}                        
                         <div class="form-group {{ $errors->has('title') ? ' has-error' : '' }}">
                             <label for="title" class="col-md-4 control-label">Title</label>
@@ -112,17 +112,13 @@
     </div>
 </div>
 
-<div class="modal fade" id="progressDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="progressDialog" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body">
-                <p>Please wait while we update your topic. You will be redirected automatically!</p>
+                <h3><img src="{{asset('images/preloader.svg')}}" alt="Audio is uploading..." height="20px"/> Please wait upload in progress. </h3>
 
-                <div class="progress progress-striped active">
-                    <div class="progress-bar"  role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
-                        <span class="sr-only">/span>
-                    </div>
-                </div>
+                
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
