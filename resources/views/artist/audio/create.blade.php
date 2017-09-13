@@ -101,7 +101,7 @@
                         <div class="form-group">
                             <div class="col-md-4 col-md-offset-8">  
                                 <br />
-                                <button class="btn btn-primary btn-md pull-right text-uppercase" type="submit">
+                                <button class="btn btn-primary btn-md pull-right text-uppercase" id="saveButton" type="submit">
                                     SAVE TRACK
                                 </button>                                    
                             </div>
@@ -113,11 +113,21 @@
         </div>
     </div>
 </div>
-<script>
-window.paceOptions = {
-    ajax: {
-        trackMethods: ['GET', 'POST']
-    }
-};
-</script>
+
+<div class="modal fade" id="progressDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p>Please wait while we update your topic. You will be redirected automatically!</p>
+
+                <div class="progress progress-striped active">
+                    <div class="progress-bar"  role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                        <span class="sr-only">/span>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
 @endsection

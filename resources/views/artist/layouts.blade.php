@@ -24,7 +24,7 @@ echo json_encode([
 ]);
 ?>
         </script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
+        <script data-pace-options='{ "ajax": true }' type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
     </head>
     <body>
         <div id="app">

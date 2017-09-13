@@ -11120,6 +11120,20 @@ $("#link").change(function () {
     $(".audio_preview").attr("src", fileUrl);
 });
 
+$("#saveButton").click(function () {
+    $('#progressDialog').modal('show');
+
+    var updateForm = document.querySelector('form');
+    var request = new XMLHttpRequest();
+
+    request.upload.addEventListener('progress', function (e) {
+        var percent = Math.round(e.loaded / e.total * 100);
+
+        $('.progress-bar').css('width', percent + '%');
+        $('.sr-only').html(percent + '%');
+    }, false);
+});
+
 /***/ }),
 /* 10 */
 /***/ (function(module, exports) {
