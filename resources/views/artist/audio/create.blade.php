@@ -79,9 +79,7 @@
                                     <strong>{{ $errors->first('link') }}</strong>
                                 </span>
                                 @endif
-
                             </div>
-
                         </div>
                         <div class="col-md-12">
                             <h3> <span class="highlighted">3</span>Provide more information about this project</h3>
