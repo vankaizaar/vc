@@ -113,4 +113,11 @@
         </div>
     </div>
 </div>
+<script>
+window.paceOptions = {
+    ajax: {
+        trackMethods: ['GET', 'POST']
+    }
+};
+</script>
 @endsection
