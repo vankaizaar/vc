@@ -28,7 +28,7 @@
                         <div class="form-group{{ $errors->has('dob') ? ' has-error' : '' }}">
                             <label for="dob" class="col-md-4 control-label">Date of birth</label>
                             <div class="col-md-8">
-                                <input data-provide="datepicker" id="dob" type="text" class="form-control datepicker" name="dob" value="{{ old('dob') }}" required autofocus>
+                                <input data-provide="datepicker" id="dob" type="text" class="form-control datepicker" name="dob" value="{{ old('dob') }}" required>
                                 @if ($errors->has('dob'))
                                 <span class="help-block">
                                     <strong>{{ $errors->first('dob') }}</strong>
