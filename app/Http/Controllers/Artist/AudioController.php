@@ -39,9 +39,10 @@ class AudioController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function store(StoreAudio $request) {
-        $userid = Auth::guard('web_artist')->user()->id;
+        $userid = Auth::guard('web_artist')->user()->id;                        
         $file = $request->file('link');
-        $filename = $file->getClientOriginalName();
+        $extension = '.'.$file->getClientOriginalExtension();               
+        $filename = md5($file->getClientOriginalName() . microtime()).$extension;     
         $destinationPath = env('fileDestinationPath') . $userid . '/' . $filename;
         $uploaded = Storage::put($destinationPath, file_get_contents($file->getRealPath()));
         if ($uploaded) {
@@ -99,7 +100,7 @@ class AudioController extends Controller {
      */
     public function destroy($id) {
         $track = Audio::where('id', $id)->first();
-        $audiofile = $track->link;       
+        $audiofile = $track->link;
         Storage::delete($audiofile);
         $track->delete();
         return redirect('audio')->with('success', 'Selected track has been deleted. ');
