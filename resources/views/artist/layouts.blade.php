@@ -137,6 +137,14 @@ echo json_encode([
                 confirmButtonColor: "#43ABDB"
             }).catch(swal.noop);
             @endif
+                    @if (Session::has('status'))
+            swal({title: "Success!",
+                text: "{{Session::get('status')}}",
+                type: "success",
+                timer: 5000,
+                confirmButtonColor: "#43ABDB"
+            }).catch(swal.noop);
+            @endif
                     @if (Session::has('error'))
             swal({title: "Error!",
                     text: "{{Session::get('success')}}",

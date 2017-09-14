@@ -6,16 +6,11 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-success">
-                 <div class="col-md-6 col-md-offset-4">
-                        <h3>Reset Password</h3>
-                    </div>
+                 
                 <div class="panel-body">
-                    @if (session('status'))
-                    <div class="alert alert-success">
-                        {{ session('status') }}
-                    </div>
-                    @endif
-
+                    <div class="col-md-6 col-md-offset-4">
+                        <h3>Reset Password</h3>
+                    </div>                    
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/artist_password/email') }}">
                         {{ csrf_field() }}
 

@@ -10,6 +10,7 @@ use App\Models\Profile;
 use App\Http\Requests\StoreProfile;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Notifications\NewUserNotification;
 
 class ProfileController extends Controller {
 
@@ -44,6 +45,7 @@ class ProfileController extends Controller {
      */
     public function store(StoreProfile $request) {
         $artistid = Auth::guard('web_artist')->user()->id;
+        $artist = Artist::findOrFail($artistid);
         $native_language = implode(',', $request->native_language);
         $voice_categories = implode(',', $request->voice_categories);
 
@@ -90,6 +92,7 @@ class ProfileController extends Controller {
             'link' => $cover
         ]);
 
+        $artist->notify(new NewUserNotification($artist));
 
         return redirect('profile')->with('success', 'Profile created ');
     }
