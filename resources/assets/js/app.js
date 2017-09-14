@@ -1,19 +1,24 @@
 require('./bootstrap');
-//require('./bootstrap-datepicker');
+require('bootstrap-datepicker');
 window.swal = require('sweetalert2');
-require('jquery-ui-bundle');
+//require('jquery-ui-bundle');
 require('selectize');
 require('soundmanager2');
 require('./bar-ui');
 
 
-$(function () {
-    "use strict";
-    $('.datepicker').datepicker({
-        dateFormat: 'yy-mm-dd',
-        changeMonth: true,
-        changeYear: true
-    });
+//$(function () {
+//    "use strict";
+//    $('.datepicker').datepicker({
+//        dateFormat: 'yy-mm-dd',
+//        changeMonth: true,
+//        changeYear: true
+//    });
+//});
+
+$('.datepicker').each(function () {
+    $(this).datepicker({
+        format: 'yy-mm-dd'});
 });
 
 

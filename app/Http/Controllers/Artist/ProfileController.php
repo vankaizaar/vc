@@ -133,12 +133,22 @@ class ProfileController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function update(StoreProfile $request, Profile $profile) {
+        $artistid = Auth::guard('web_artist')->user()->id;
         $native_language = implode(',', $request->native_language);
         $voice_categories = implode(',', $request->voice_categories);
 
         $request->native_language = $native_language;
         $request->voice_categories = $voice_categories;
 
+        if ($request['gender']) {
+            $avatar = 'public/defaults/avatars/male.svg';
+        } else {
+            $avatar = 'public/defaults/avatars/female.svg';
+        }
+
+        Auth::guard('web_artist')->user()->avatar()->update([           
+            'link' => $avatar
+        ]);
 
         Auth::guard('web_artist')->user()->profile()->update([
             'dob' => date("Y-m-d", strtotime($request->dob)),

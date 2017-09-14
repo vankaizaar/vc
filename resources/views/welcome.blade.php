@@ -98,28 +98,12 @@ echo json_encode([
                                     <div class="row">
                                         <div class="col-md-6 col-md-offset-3">
                                             <br /><br />
-                                            <h2>How this works</h2>
-                                            <p>
-                                                Duis autem eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit
-                                                in vulputate velit esse molestie consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.
-                                            </p>
-                                            <p>
-                                                Duis autem eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit
-                                                in vulputate velit esse molestie consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.
-                                            </p>
-                                            <p>
-                                                Duis autem eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit
-                                                in vulputate velit esse molestie consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.
-                                            </p>
-                                            <p>
-                                                Duis autem eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit
-                                                in vulputate velit esse molestie consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.
-                                            </p>
-                                            <p>
-                                                <a class="btn btn-success" href="http://j.mp/metronictheme" target="_blank">
-                                                    Learn more...
-                                                </a>
-                                            </p>
+                                            <h2 class="text-center">How this works</h2>
+                                            <p class="lead text-center">
+                                                You tell us what you need recorded.
+                                                We tell you how much it is going to cost and how long it will take.
+                                                You can select the voice actor yourself or let us choose for you.
+                                            </p>                                           
                                         </div>
                                     </div>
                                 </div>
@@ -207,9 +191,9 @@ echo json_encode([
                                             <div class="col-md-6 col-md-offset-3">
                                                 <div class="panel panel-success">               
                                                     <div class="panel-body">
-                                                        
-                                                            <h2>Contact us</h2>
-                                                       
+
+                                                        <h2>Contact us</h2>
+
                                                         <form class="form-horizontal" role="form" method="POST" action="{{ route('contactus.store') }}">
                                                             {{ csrf_field() }}
                                                             <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
