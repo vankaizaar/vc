@@ -51,7 +51,7 @@ class RegisterController extends Controller {
     //Create a new artist instance after a validation.
     protected function create(array $data) {
         return Artist::create([
-                    'name' => $data['name'],
+                    'name' => title_case($data['name']),
                     'email' => $data['email'],
                     'password' => bcrypt($data['password']),
         ]);

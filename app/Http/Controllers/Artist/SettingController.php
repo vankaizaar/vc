@@ -26,6 +26,10 @@ class SettingController extends Controller {
             $request['password'] = bcrypt($request['new_password']);
         }
 
+        $name = title_case($request['name']);
+
+        $request['name'] = $name;
+
         $artist->update($request->all());
 
         return redirect('profile')->with('success', 'Your settings have been updated.');
