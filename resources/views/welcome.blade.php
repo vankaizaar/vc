@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
         <link href="{{asset('css/app.css')}}" rel="stylesheet">
         <link href="{{asset('css/bar-ui/css/bar-ui.css')}}" rel="stylesheet">
+        <meta name="google-site-verification" content="a5B4llYBASpMS40-ppb8lfjpgq4BB7e6O-xxEGnZlcA" />
 
         <!-- Scripts -->
         <script>
