@@ -37,8 +37,8 @@ class ContactUSController extends Controller {
             'email' => $request->get('email'),
             'user_message' => $request->get('message')
                 ), function($message) {
-            $message->from('zakariadavis@gmail.com');
-            $message->to('d.zakaria@thedbagency.com', 'Zakaria Davis')->subject('VoiceCast Contact Form');
+            $message->from('support@talentguru.africa');
+            $message->to('chris@talentguru.africa', 'Chris Bitti')->subject('Talent Guru Contact Form');
         });
 
         return redirect('/')->with('success', 'Thank you for contacting us we will get back to you soon.');
