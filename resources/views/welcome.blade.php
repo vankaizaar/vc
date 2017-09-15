@@ -38,7 +38,7 @@ echo json_encode([
                             <a href="{{ url('/artist_register') }}" class="account-management"><i class="glyphicon glyphicon-pencil"></i>Sign up</a>
                             <a href="{{ url('/artist_login') }}" class="account-management"><i class="glyphicon glyphicon-log-in"></i>Login</a>
                             @else
-                            <a href="{{ url('/artist_home') }}" class="account-management pull-right"><i class="glyphicon glyphicon-user"></i>Your Profile</a>
+                            <a href="{{ url('/artist_home') }}" class="account-management pull-right"><i class="glyphicon glyphicon-user"></i>Your voice artistfile</a>
                             @endif
                         </div>
                     </div>
@@ -77,22 +77,7 @@ echo json_encode([
                                     </div>
                                 </div>                                
 
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-md-6 col-md-offset-3">
-<!--                                            <h3><span class="highlighted">1</span>Enter details of your submission</h3>
-                                            <p>
-                                                Duis autem eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit
-                                                in vulputate velit esse molestie consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.
-                                            </p>
-                                            <p>
-                                                <a class="btn btn-success" href="http://j.mp/metronictheme" target="_blank">
-                                                    Learn more...
-                                                </a>
-                                            </p>-->
-                                        </div>
-                                    </div>
-                                </div>
+
                             </div>                            
                             <div class="tab-pane" id="tab_default_3">
                                 <div class="container">
@@ -120,53 +105,111 @@ echo json_encode([
                                                 <div class="panel panel-default ">
                                                     <div class="panel-heading accordion-toggle question-toggle collapsed" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question0">
                                                         <h4 class="panel-title">
-                                                            <a href="#" class="ing">Q: What is Lorem Ipsum?</a>
+                                                            <a href="#" class="ing">Q: What are the key traits required to be a voice artist in {{ config('app.name', 'Talent Guru') }}?</a>
                                                         </h4>
 
                                                     </div>
                                                     <div id="question0" class="panel-collapse collapse" style="height: 0px;">
                                                         <div class="panel-body">
                                                             <h5><span class="label label-primary">Answer</span></h5>
-
-                                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five <a href="http://jquery2dotnet.com/" class="label label-success">http://jquery2dotnet.com/</a> centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                                            </p>
+                                                            <p><span>These are the characteristics of the most successful voice artists:</span></p>
+                                                            <p><strong>High-quality standards:</strong></p>
+                                                            <p><span>voice artists who craft professional deliverables and are detail oriented. Only flawless and properly edited deliverables will be accepted.</span></p>
+                                                            <p><strong>Speed response:</strong></p>
+                                                            <p><span>{{ config('app.name', 'Talent Guru') }} site is designed so that the fastest voice artists receive project invitations first. They also receive more invitations to projects.</span></p>
+                                                            <p><strong>Availability:</strong></p>
+                                                            <p><span>Reliable voice artists who are frequently available are prioritised. If a voice artist is not available, they should notify {{ config('app.name', 'Talent Guru') }} in advance.</p>
+                                                            <p><strong>Communication:</strong></p>
+                                                            <p><span>When something unexpected occurs the best way to proceed is to contact a Manager. Communicating proactively is key to succeeding as a voice artist.</span></p>
+                                                            <p><strong>Follow directions:</strong></p>
+                                                            <p><span>The ability to follow directions is very important; all successful voice artists are experts in reading and understanding exactly what is needed from them.</span></p>                                                            
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="panel panel-default ">
                                                     <div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question1">
                                                         <h4 class="panel-title">
-                                                            <a href="#" class="ing">Q: Why do we use it?</a>
+                                                            <a href="#" class="ing">Q: {{ config('app.name', 'Talent Guru') }} Quality requirements ?</a>
                                                         </h4>
 
                                                     </div>
                                                     <div id="question1" class="panel-collapse collapse" style="height: 0px;">
                                                         <div class="panel-body">
                                                             <h5><span class="label label-primary">Answer</span></h5>
+                                                            <p><span>The Quality Control team uses the following premises when reviewing any recording that is submitted to the system:</span></p>
+                                                            <p><strong>voice artistject Requirements:</strong></p>
+                                                            <ul>
+                                                                <li><span>Does the voice match the age, gender, accent, and language selected by the client?</span></li>
+                                                            </ul>
+                                                            <p><strong>voice artistject Instructions:</strong></p>
+                                                            <ul>
+                                                                <li><span>Did the voice artist follow the projects instructions provided in the remarks section?</span></li>
+                                                                <li><span>Did the voice artist use the reference of the sample or the external material attached by the client? </span></li>
+                                                                <li><span>Did the voice artist read the script exactly as provided?</span></li>
+                                                                <li><span>If the voice artist submitted multiple takes, are these complete and organized?</span></li>
+                                                            </ul>
+                                                            <p><strong>Technical Requirements:</strong></p>
+                                                            <ul>
+                                                                <li><span>There isn't room echo. </span></li>
+                                                                <li><span>The voice sounds at a proper distance from the mic.</span></li>
+                                                                <li><span>There isn't distortion/clipping.</span></li>
+                                                                <li><span>The volume is normalized around -3dB Peak.</span></li>
+                                                                <li><span>There are no editing issues (i.e. clicks, pops, audible cuts).</span></li>
+                                                                <li><span>There isn't more silence than needed at the start or end (0.5 secs is suggested).</span></li>
+                                                                <li><span>The audio doesn't sound heavily processed (i.e. noise reduction plugin, EQ).</span></li>
+                                                                <li><span>There isn't heavy compression and/or limiting.</span></li>
+                                                                <li><span>The voice sounds as if it was recorded with professional equipment.</span></li>
+                                                                <li><span>There aren't breath noises (i.e. loud, undesired and distracting).</span></li>
+                                                                <li><span>There aren't mouth clicks/mouth noises (i.e. loud, undesired and distracting).</span></li>
+                                                                <li><span>There aren't plosives.</span></li>
+                                                                <li><span>There isn't hiss/white noise.</span></li>
+                                                                <li><span>There isn't an electrical noise/hum.</span></li>
+                                                                <li><span>There aren't background noises (i.e. cars, mouse clicks, fans, pages, people, etc.).</span></li>
+                                                                <li><span>There aren't sibilance issues.</span></li>
+                                                            </ul>
+                                                            <p><strong>Performance Requirements:</strong></p>
+                                                            <ul>
+                                                                <li>Does the voice doesn’t sound monotone/flat?</li>
+                                                                <li><span>Does the voice sound robotic or computer generated?</span></li>
+                                                                <li><span>Are there pronunciation issues, mumbled or unclear words?</span></li>
+                                                                <li><span>Does the voice sound nasal/raspy?</span></li>
+                                                            </ul>
+                                                            <p><strong>Other requirements:</strong></p>
+                                                            <ul>
+                                                                <li>Did the voice artist include any contact details, or content not relevant to the project? If the project is marked with the syncing option:</li>
+                                                                <li>Is the deliverable synced as instructed by the client?</li>
+                                                                <li>If the audio has background music, is the voice easy to understand?</li>
+                                                                <li><span>Does the sample convey a complete idea? I.e. the sentences are complete, and the demo is clear.</span></li>
+                                                                <li><span>If the sample has multiple voices, it is clear which is the pro's voice?</span></li>
+                                                                <li><span>If the sample has background music, is the voice easy to understand? Is the mix balanced?</span></li>
+                                                                <li><span>Is the sample well labeled regarding of category and other relevant attributes? (Gender, age, purpose, language, accent).</span></li>
+                                                            </ul>
 
-                                                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="panel panel-default ">
                                                     <div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question2">
                                                         <h4 class="panel-title">
-                                                            <a href="#" class="ing">Q: Where does it come from?</a>
+                                                            <a href="#" class="ing">Q: What are samples for?</a>
                                                         </h4>
 
                                                     </div>
                                                     <div id="question2" class="panel-collapse collapse" style="height: 0px;">
                                                         <div class="panel-body">
                                                             <h5><span class="label label-primary">Answer</span></h5>
-
-                                                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+                                                            <p><strong>What is a sample?</strong></p>
+                                                            <p><span>A sample can be a fraction of a complete project, or the full project, intended to show the style of a voice artist's work. voice artistjects from a voice artist’s personal portfolio can be uploaded as samples too, once they have passed the application process.</span></p>
+                                                            <p>The deliverable submitted in the application process will be the first sample in a voice artist’s profile. When a project is completed, {{ config('app.name', 'Talent Guru') }} will ask the client if their deliverable can be used as a sample by the voice artist.</p>
+                                                            <p><strong>What are samples for?</strong></p>
+                                                            <p>Adding samples in the correct categories is key for voice artists to show their work to clients and attract them. voice artists are free to upload and organize them as they wish. Whenever a client reviews a profile, they will see it in the way the voice artist ordered it.</p>                                                                                                                   
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="panel panel-default ">
                                                     <div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question3">
                                                         <h4 class="panel-title">
-                                                            <a href="#" class="ing">Q: Where can I get some?</a>
+                                                            <a href="#" class="ing">Q: How to reset your password? </a>
                                                         </h4>
 
                                                     </div>
@@ -174,7 +217,36 @@ echo json_encode([
                                                         <div class="panel-body">
                                                             <h5><span class="label label-primary">Answer</span></h5>
 
-                                                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. </p>
+                                                            <p><span>If you have forgotten your password or wish to change it please follow the steps below.</span></p>
+                                                            <p><strong>Forgot your password?</strong></p>
+                                                            <ol>
+                                                                <li><span>Go to the log in page and click on reset password.</span></li>
+                                                                <li><span>Submit your email address associated with your {{ config('app.name', 'Talent Guru') }} account</span></li>
+                                                                <li><span>We will send you an email to reset your password and to very the process.</span></li>
+                                                            </ol>
+                                                            <p><strong>Want to change your password?</strong></p>
+                                                            <ol>
+                                                                <li><span>Log in to your {{ config('app.name', 'Talent Guru') }} account.</span></li>
+                                                                <li><span>On the navigation bar click on </span><em><span>Edit Settings.</span></em></li>
+                                                                <li><span>Submit your new password</span>&nbsp;</li>
+                                                            </ol>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="panel panel-default ">
+                                                    <div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question4">
+                                                        <h4 class="panel-title">
+                                                            <a href="#" class="ing">Q: In which formats are audio files submitted? </a>
+                                                        </h4>
+
+                                                    </div>
+                                                    <div id="question4" class="panel-collapse collapse" style="height: 0px;">
+                                                        <div class="panel-body">
+                                                            <h5><span class="label label-primary">Answer</span></h5>
+                                                            <p><span>You can use the audio recording program of your choice, but you must record your voice over in mono, 44.1 kHz, 16 bit, .wav format, with a volume of around -3db peak or it will not be accepted by our website.</span></p>
+                                                            <p><span>If the audio format is not correct, you will see a red error message that tells you the file you are attempting to upload is in the incorrect format. Many audio programs default to 32-bit .wav files. If you are having trouble uploading, be sure to double-check the bit rate.</span></p>
+                                                            <p><span>Keep in mind that long .wav files can take a while to upload, depending on your Internet connection speed, so be sure to allow yourself plenty of time. Also, be sure the file has finished uploading before clicking the submit button. If you try to click submit before the file has uploaded completely, you will see an error message.</span></p>                                                            
                                                         </div>
                                                     </div>
                                                 </div>
@@ -260,15 +332,7 @@ echo json_encode([
                     <div class="col-md-2">
                         <a href="{{ url('/') }}"><img class="img-responsive" src="{{asset('images/footer-logo.png')}}"></a>
                     </div>
-                    <!--<div class="col-md-3">
-                        <h4>Additional Services</h4>
-                        <ul class="footer-menu">
-                            <li><a href="#">Link</a></li>
-                            <li><a href="#">Link</a></li>
-                            <li><a href="#">Link</a></li>
-                            <li><a href="#">Link</a></li>
-                        </ul>
-                    </div>-->
+                  
                     <div class="col-md-3">
                         <h4>Company Information</h4>
                         <ul class="footer-menu">

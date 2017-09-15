@@ -53,15 +53,9 @@ echo json_encode([
 
                                         <h1>About VoiceCast</h1>
 
-                                        <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
-
-                                        <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
-
-                                        <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
-
-                                        <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
-
-                                        <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
+                                        <p>{{ config('app.name', 'Talent Guru') }} is set to be the largest voice over fulfillment service in Africa. With a target of 10,000+ voice actors that speak 50+ languages and dialects, you can hire a professional voice actor faster and more affordably than ever before. </p>
+                                        <p>You can get voiceovers for ads, movies, narrations, podcasts, presentations, audio books, audio guides, and video games. </p>
+                                        <p>We promise you’ll love your voiceover: you get unlimited revisions and a 100% satisfaction guarantee. Join the thousands of professionals that use {{ config('app.name', 'Talent Guru') }} exclusively for their voice over fulfillment.</p>
 
                                     </div>
                                 </div>
@@ -74,20 +68,11 @@ echo json_encode([
                             <div class="row">
                                 <div class="col-md-2">
                                     <a href="{{ url('/') }}"><img class="img-responsive" src="{{asset('images/footer-logo.png')}}"></a>
-                                </div>
-                                <!--<div class="col-md-3">
-                                    <h4>Additional Services</h4>
-                                    <ul class="footer-menu">
-                                        <li><a href="#">Link</a></li>
-                                        <li><a href="#">Link</a></li>
-                                        <li><a href="#">Link</a></li>
-                                        <li><a href="#">Link</a></li>
-                                    </ul>
-                                </div>-->
+                                </div>                                
                                 <div class="col-md-3">
                                     <h4>Company Information</h4>
                                     <ul class="footer-menu">
-                                        <li><a href="{{ url('about') }}">About Voice Cast</a></li>
+                                        <li><a href="{{ url('about') }}">About {{ config('app.name', 'Talent Guru') }}</a></li>
                                         <li><a href="{{ url('terms-conditions') }}">Terms & Conditions</a></li>
                                         <li><a href="{{ url('privacy-policy') }}">Privacy Policy</a></li>                            
                                     </ul>
@@ -102,7 +87,7 @@ echo json_encode([
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <p class="text-right"><small>(C) 2017 Voice Cast Audio Limited. All rights reserved.&nbsp; </small></p>
+                                    <p class="text-right"><small>(C) 2017 {{ config('app.name', 'Talent Guru') }} Limited. All rights reserved.&nbsp; </small></p>
                                 </div>
                             </div>
                         </div>
