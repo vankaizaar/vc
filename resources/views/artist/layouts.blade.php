@@ -104,7 +104,7 @@ echo json_encode([
                     <div class="col-md-3">
                         <h4>Company Information</h4>
                         <ul class="footer-menu">
-                            <li><a href="{{ url('about') }}">About Voice Cast</a></li>
+                            <li><a href="{{ url('about') }}">About {{ config('app.name', 'Talent Guru') }}</a></li>
                             <li><a href="{{ url('terms-conditions') }}">Terms & Conditions</a></li>
                             <li><a href="{{ url('privacy-policy') }}">Privacy Policy</a></li>                            
                         </ul>
@@ -119,7 +119,7 @@ echo json_encode([
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <p class="text-right"><small>(C) 2017 Voice Cast Audio Limited. All rights reserved.&nbsp; </small></p>
+                        <p class="text-right"><small>(C) 2017 {{ config('app.name', 'Talent Guru') }} Limited. All rights reserved.&nbsp; </small></p>
                     </div>
                 </div>
             </div>
