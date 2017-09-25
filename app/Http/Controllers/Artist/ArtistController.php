@@ -28,7 +28,7 @@ class ArtistController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function create() {
-        //
+        
     }
 
     /**
@@ -87,9 +87,9 @@ class ArtistController extends Controller {
     public function destroy($id) {
         //
     }
-    
+
     public function searchActiveArtists(Request $request) {
-        $artists = Artist::filter($request->all())->paginateFilter(10);       
+        $artists = Artist::filter($request->all())->paginateFilter(10);
         return view('member.artist.index')
                         ->with('artists', $artists);
     }
