@@ -9173,8 +9173,9 @@ ul.footer-menu li a {
 }
 
 #tab_default_1 {
-  background: -webkit-gradient(linear, left top, right top, from(#17197d), color-stop(25%, #17197d), color-stop(50%, rgba(109, 32, 123, 0)), color-stop(75%, #c22679), to(#c22679));
-  background: linear-gradient(to right, #17197d 0%, #17197d 25%, rgba(109, 32, 123, 0) 50%, #c22679 75%, #c22679 100%);
+  background: #17197d;
+  background: -webkit-gradient(linear, left top, right top, from(#17197d), color-stop(25%, #17197d), color-stop(75%, #c22679), to(#c22679));
+  background: linear-gradient(to right, #17197d 0%, #17197d 25%, #c22679 75%, #c22679 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17197d', endColorstr='#c22679',GradientType=1 );
 }
 
