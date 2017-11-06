@@ -9172,98 +9172,16 @@ ul.footer-menu li a {
   margin-top: 10px;
 }
 
-.bg-overlay {
-  background: url(/images/cta2.jpg?c8bf387fe7874d9f9c0e97e7f0275957);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: left center;
-  color: #fff;
-  height: 500px;
+#tab_default_1 {
+  background: -webkit-gradient(linear, left top, right top, from(#17197d), color-stop(25%, #17197d), color-stop(50%, rgba(109, 32, 123, 0)), color-stop(75%, #c22679), to(#c22679));
+  background: linear-gradient(to right, #17197d 0%, #17197d 25%, rgba(109, 32, 123, 0) 50%, #c22679 75%, #c22679 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17197d', endColorstr='#c22679',GradientType=1 );
 }
 
-@media (min-width: 320px) {
-  /* smartphones, iPhone, portrait 480x320 phones */
-
-  .bg-overlay {
-    background: url(/images/cta2.jpg?c8bf387fe7874d9f9c0e97e7f0275957);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center center;
-    color: #fff;
-    height: 150px;
-  }
-}
-
-@media (min-width: 481px) {
-  /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-
-  .bg-overlay {
-    background: url(/images/cta2.jpg?c8bf387fe7874d9f9c0e97e7f0275957);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center center;
-    color: #fff;
-    height: 250px;
-  }
-}
-
-@media (min-width: 641px) {
-  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-
-  .bg-overlay {
-    background: url(/images/cta2.jpg?c8bf387fe7874d9f9c0e97e7f0275957);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center center;
-    color: #fff;
-    height: 350px;
-  }
-}
-
-@media (min-width: 961px) {
-  /* tablet, landscape iPad, lo-res laptops ands desktops */
-
-  .bg-overlay {
-    background: url(/images/cta2.jpg?c8bf387fe7874d9f9c0e97e7f0275957);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center center;
-    color: #fff;
-    height: 400px;
-  }
-}
-
-@media (min-width: 1025px) {
-  /* big landscape tablets, laptops, and desktops */
-
-  .bg-overlay {
-    background: url(/images/cta2.jpg?c8bf387fe7874d9f9c0e97e7f0275957);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center center;
-    color: #fff;
-    height: 500px;
-  }
-}
-
-.bg-overlay .cta {
-  font-family: 'Open Sans', san-serif !important;
-  font-weight: 700;
-  text-shadow: 0px 1px 2px black;
-}
-
-.bg-overlay p {
-  font-family: 'Open Sans', san-serif;
-  font-weight: 400;
-  font-size: 1.3em;
-  text-shadow: 0px 1px 1px black;
-}
-
-.bg-overlay .btn {
-  border: 0;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  font-weight: 600;
+#tab_default_5,
+#tab_default_3,
+#tab_default_4 {
+  min-height: calc(80vh - 177px);
 }
 
 /*
