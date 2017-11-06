@@ -68,15 +68,17 @@ echo json_encode([
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane active" id="tab_default_1">
-                                <div class="container-fluid bg-overlay">
-                                    <div class="row text-center">
-                                        <h1 class="center cta">Are you the next big Voice Artist?</h1>
-                                        <p class="center">Thousands of brands await opportunities <br /> to partner with you and thrill their audiences.</h4>
-                                            <br><br>
-                                            <a href="{{ url('/artist_register') }}"><button type="button" class="btn btn-warning btn-lg text-uppercase">Upload your demo now</button></a>
-                                    </div>
-                                </div>                                
-
+                               <a href="{{ url('/artist_register') }}">
+                                    <div class="container-fluid bg-overlay">
+                                        <div class="row text-center">
+                                        <!-- <h1 class="center cta">Are you the next big Voice Artist?</h1>
+                                            <p class="center">Thousands of brands await opportunities <br /> to partner with you and thrill their audiences.</h4>
+                                                <br><br>
+                                                <a href="{{ url('/artist_register') }}"><button type="button" class="btn btn-warning btn-lg text-uppercase">Upload your demo now</button></a>
+                                                -->
+                                        </div>
+                                    </div>                                
+                               </a>
 
                             </div>                            
                             <div class="tab-pane" id="tab_default_3">
