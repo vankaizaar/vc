@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ config('app.name', 'VoiceCast') }} - Privacy Policy</title>
+        <title>{{ config('app.name', 'TalentGuru') }} - Privacy Policy</title>
         <!-- Styles -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-flash.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -54,12 +54,12 @@ echo json_encode([
                                         <h1>Privacy Policy</h1>
 
                                         <p><small>Last updated: Sep 1, 2017</small></p>
-                                        <p>By visiting and using the VoiceCast Inc. website (owned and operated by VoiceCast Inc.) ("<strong>VoiceCast Inc.</strong>", "<strong>we</strong>", "<strong>us</strong>" or "<strong>our</strong>") and located at the url <<a href="https://xxxxxxxxx.com/">xxxxxxxxx.com</a>> (the "<strong>Site</strong>"), you agree to accept the practices described in this privacy policy (the "<strong>Privacy Policy</strong>"). If you do not agree to the terms of this Privacy Policy, please do not use the Site. This Privacy Policy is part of, and is governed by, the terms and conditions set forth in the VoiceCast Inc. Terms of Use.</p>
-                                        <p>VoiceCast Inc. reserves the right to modify this Privacy Policy at any time, so each time you use the Site, you should check the date of this Privacy Policy (which appears above) and review any changes that have been made since your last visit to the Site. Where appropriate or required by law, we shall affirmatively notify you of any changes to this Privacy Policy.</p>
+                                        <p>By visiting and using the TalentGuru Inc. website (owned and operated by TalentGuru Inc.) ("<strong>TalentGuru Inc.</strong>", "<strong>we</strong>", "<strong>us</strong>" or "<strong>our</strong>") and located at the url <<a href="https://talentguru.africa">talentguru.africa</a>> (the "<strong>Site</strong>"), you agree to accept the practices described in this privacy policy (the "<strong>Privacy Policy</strong>"). If you do not agree to the terms of this Privacy Policy, please do not use the Site. This Privacy Policy is part of, and is governed by, the terms and conditions set forth in the TalentGuru Inc. Terms of Use.</p>
+                                        <p>TalentGuru Inc. reserves the right to modify this Privacy Policy at any time, so each time you use the Site, you should check the date of this Privacy Policy (which appears above) and review any changes that have been made since your last visit to the Site. Where appropriate or required by law, we shall affirmatively notify you of any changes to this Privacy Policy.</p>
                                         <p>We want to develop relationships with our customers based on respect and integrity. We are aware of the trust and confidence you demonstrate when you visit the Site and provide us with information. This Privacy Policy is posted to demonstrate our commitment to protecting your privacy online.</p>
                                         <ol>
                                             <li>
-                                                <strong>Information Collection By VoiceCast Inc..</strong>
+                                                <strong>Information Collection By TalentGuru Inc..</strong>
                                                 <ol class="list-letter">
                                                     <li>
                                                         <strong>Information You Directly and Voluntarily Provide to Us: </strong>
@@ -71,9 +71,9 @@ echo json_encode([
                                                     <li>
                                                         <strong>How We Directly Collect Personal Information: </strong>
                                                         There are a number of different ways that we collect Personal Information from you. These may include:                        <ul class="bullet">
-                                                            <li><strong>Purchases</strong>. We collect your Personal Information when purchase VoiceCast Inc. products through the Site. We will require sufficient information to complete your purchase, which will include your name, postal address, email address, telephone number and credit card information.</li>
+                                                            <li><strong>Purchases</strong>. We collect your Personal Information when purchase TalentGuru Inc. products through the Site. We will require sufficient information to complete your purchase, which will include your name, postal address, email address, telephone number and credit card information.</li>
                                                             <li><strong>Customer Support</strong>. You may provide us with Personal Information when you call or email us to request technical assistance with our products or information that you would like to receive about our products.</li>
-                                                            <li><strong>Email/Direct Mail Campaigns That You Approve</strong>. If you elect to receive promotional communications from us, from time to time we may contact you with information about new products, promotions or special offers. If you want to stop receiving promotional communications from us, you can follow the unsubscribe instructions at the bottom of a promotional email or contact us at <a href="mailto:support@xxxxxx.com">support@xxxxxx.com</a>.</li>
+                                                            <li><strong>Email/Direct Mail Campaigns That You Approve</strong>. If you elect to receive promotional communications from us, from time to time we may contact you with information about new products, promotions or special offers. If you want to stop receiving promotional communications from us, you can follow the unsubscribe instructions at the bottom of a promotional email or contact us at <a href="mailto:support@talentguru.africa">support@talentguru.africa</a>.</li>
                                                         </ul>
                                                     </li>
                                                     <li>
@@ -97,7 +97,7 @@ echo json_encode([
                                                 <p>If you visit the Site from a third-party website the third-party website may give you a unique code, cookie or graphic which will uniquely identify you. This will only happen if you link directly from a third party website to the Site. Your activities on the Site while such a code is active may be reported back to the third party website. The presence of a third party navigation bar at the top of any page on the Site is an indication that the third party website may be able to see your activity on the Site.</p>
                                                 <p>The Site may include third-party advertising, links to other websites, and other content from third-party businesses. These third-party sites, businesses, and advertisers, or advertising companies working on their behalf, may use web beacons and cookies to measure the effectiveness of their ads, personalize or optimize advertising content and to track users who click on the links made available through the Site. We do not have access to or control over web beacons or cookies that these third parties may use. We are not responsible for the privacy practices or the content of these third-party websites. You are encouraged to review the privacy policies of the different websites you visit.</p>
                                                 <p>Some third-party advertising companies may provide a mechanism to opt-out of their technology. For more information about the opt out process, you may visit the Network Advertising Initiative website, available at <a href="http://www.networkadvertising.org/managing/opt_out.asp" target="_blank">http://www.networkadvertising.org/managing/opt_out.asp</a>.</p>
-                                                <p>We may also provide social media features through the Site that enable you to share information with your social networks and to interact with VoiceCast Inc. on various social media sites. Your use of these features may result in the collection or sharing of information about you by these sites, depending on the feature. We encourage you to review the privacy policies and settings on the social media sites with which you interact to make sure you understand the information that may be collected, used, and shared by those sites.</p>
+                                                <p>We may also provide social media features through the Site that enable you to share information with your social networks and to interact with TalentGuru Inc. on various social media sites. Your use of these features may result in the collection or sharing of information about you by these sites, depending on the feature. We encourage you to review the privacy policies and settings on the social media sites with which you interact to make sure you understand the information that may be collected, used, and shared by those sites.</p>
                                             </li>
                                             <li>
                                                 <strong>Use of Information Collected By Us.</strong>
@@ -132,16 +132,16 @@ echo json_encode([
                                             </li>
                                             <li>
                                                 <strong>Corrections/Information Removal.</strong>
-                                                <p>If your name, e-mail or postal address, telephone number or other Personal Information changes, you may update, correct or omit the relevant information by contacting us at <a href="mailto:support@xxxxxx.com">support@xxxxxx.com</a>.</p>
+                                                <p>If your name, e-mail or postal address, telephone number or other Personal Information changes, you may update, correct or omit the relevant information by contacting us at <a href="mailto:support@talentguru.africa">support@talentguru.africa</a>.</p>
                                             </li>
 
                                             <li>
                                                 <strong>Your California Privacy Rights.</strong>
-                                                <p>California Civil Code Section 1798.83, also known as the "Shine The Light" law, permits our customers who are California residents to request and obtain from us once a year, free of charge, information about the Personal Information (if any) we disclosed to third parties for direct marketing purposes in the preceding calendar year. If applicable, this information would include a list of the categories of Personal Information that was shared with these third parties and the names and addresses of the third parties with which we shared information in the immediately preceding calendar year. If you are a California resident and would like to make such a request, please submit your request in writing to: VoiceCast</p>
+                                                <p>California Civil Code Section 1798.83, also known as the "Shine The Light" law, permits our customers who are California residents to request and obtain from us once a year, free of charge, information about the Personal Information (if any) we disclosed to third parties for direct marketing purposes in the preceding calendar year. If applicable, this information would include a list of the categories of Personal Information that was shared with these third parties and the names and addresses of the third parties with which we shared information in the immediately preceding calendar year. If you are a California resident and would like to make such a request, please submit your request in writing to: TalentGuru</p>
                                             </li>
                                             <li>
                                                 <strong>Business Transfer.</strong>
-                                                <p>In the event that VoiceCast Inc. is sold, has its assets acquired or transferred, whether voluntarily or involuntarily, or merges or becomes affiliated with any other division, individual or entity, any customer information owned or under the control of VoiceCast Inc. may be one of the transferred assets. We reserve the right, as part of such transaction, to transfer or assign the Personal Information and other information we have collected from users of the Site.</p>
+                                                <p>In the event that TalentGuru Inc. is sold, has its assets acquired or transferred, whether voluntarily or involuntarily, or merges or becomes affiliated with any other division, individual or entity, any customer information owned or under the control of TalentGuru Inc. may be one of the transferred assets. We reserve the right, as part of such transaction, to transfer or assign the Personal Information and other information we have collected from users of the Site.</p>
                                             </li>
                                             <li>
                                                 <strong>Limitations On Liability.</strong>
@@ -149,7 +149,7 @@ echo json_encode([
                                             </li>
                                             <li>
                                                 <strong>Use of Information Outside of Your Country of Residence.</strong>
-                                                <p>The Site is directed to users located in the Kenya. If you are located outside of the Kenya and choose to provide your Personal Information to us, you should be aware that VoiceCast Inc. may transfer your Personal Information to the Kenya and process it there. The privacy laws in the Kenya may not be as protective as those in your jurisdiction. Your consent to this Privacy Policy followed by your submission of such information represents your agreement to such transfer.</p>
+                                                <p>The Site is directed to users located in the Kenya. If you are located outside of the Kenya and choose to provide your Personal Information to us, you should be aware that TalentGuru Inc. may transfer your Personal Information to the Kenya and process it there. The privacy laws in the Kenya may not be as protective as those in your jurisdiction. Your consent to this Privacy Policy followed by your submission of such information represents your agreement to such transfer.</p>
                                             </li>
                                             <li>
                                                 <strong>Governing Law.</strong>
@@ -181,7 +181,7 @@ echo json_encode([
                                 <div class="col-md-3">
                                     <h4>Company Information</h4>
                                     <ul class="footer-menu">
-                                        <li><a href="{{ url('about') }}">About Voice Cast</a></li>
+                                        <li><a href="{{ url('about') }}">About {{ config('app.name', 'Talent Guru') }}</a></li>
                                         <li><a href="{{ url('terms-conditions') }}">Terms & Conditions</a></li>
                                         <li><a href="{{ url('privacy-policy') }}">Privacy Policy</a></li>                            
                                     </ul>

@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ config('app.name', 'VoiceCast') }} - Privacy Policy</title>
+        <title>{{ config('app.name', 'Talent Guru') }} - Privacy Policy</title>
         <!-- Styles -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-flash.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -51,7 +51,7 @@ echo json_encode([
                                 <div class="panel panel-success">               
                                     <div class="panel-body">
 
-                                        <h1>About VoiceCast</h1>
+                                        <h1>About {{ config('app.name', 'Talent Guru') }}</h1>
 
                                         <p>{{ config('app.name', 'Talent Guru') }} is set to be the largest voice over fulfillment service in Africa. With a target of 10,000+ voice actors that speak 50+ languages and dialects, you can hire a professional voice actor faster and more affordably than ever before. </p>
                                         <p>You can get voiceovers for ads, movies, narrations, podcasts, presentations, audio books, audio guides, and video games. </p>
