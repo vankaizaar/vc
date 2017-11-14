@@ -137,11 +137,11 @@ echo json_encode([
                                                         <div class="panel-body">
                                                             <h5><span class="label label-primary">Answer</span></h5>
                                                             <p><span>The Quality Control team uses the following premises when reviewing any recording that is submitted to the system:</span></p>
-                                                            <p><strong>voice artistject Requirements:</strong></p>
+                                                            <p><strong>Project Requirements:</strong></p>
                                                             <ul>
                                                                 <li><span>Does the voice match the age, gender, accent, and language selected by the client?</span></li>
                                                             </ul>
-                                                            <p><strong>voice artistject Instructions:</strong></p>
+                                                            <p><strong>Project Instructions:</strong></p>
                                                             <ul>
                                                                 <li><span>Did the voice artist follow the projects instructions provided in the remarks section?</span></li>
                                                                 <li><span>Did the voice artist use the reference of the sample or the external material attached by the client? </span></li>

@@ -51,9 +51,9 @@ echo json_encode([
                                 <div class="panel panel-success">               
                                     <div class="panel-body">
 
-                                        <h1>About {{ config('app.name', 'Talent Guru') }}</h1>
+                                        <h1>About {{ config('app.name', 'Talent Guru') }} Voice</h1>
 
-                                        <p>{{ config('app.name', 'Talent Guru') }} is set to be the largest voice over fulfillment service in Africa. With a target of 10,000+ voice actors that speak 50+ languages and dialects, you can hire a professional voice actor faster and more affordably than ever before. </p>
+                                        <p>{{ config('app.name', 'Talent Guru') }} Voice is set to be the largest voice over fulfillment service in Africa. With a target of 10,000+ voice actors that speak 50+ languages and dialects, you can hire a professional voice actor faster and more affordably than ever before. </p>
                                         <p>You can get voiceovers for ads, movies, narrations, podcasts, presentations, audio books, audio guides, and video games. </p>
                                         <p>We promise you’ll love your voiceover: you get unlimited revisions and a 100% satisfaction guarantee. Join the thousands of professionals that use {{ config('app.name', 'Talent Guru') }} exclusively for their voice over fulfillment.</p>
 
