@@ -104,7 +104,7 @@ echo json_encode([
                     <div class="col-md-3">
                         <h4>Company Information</h4>
                         <ul class="footer-menu">
-                            <li><a href="{{ url('about') }}">About {{ config('app.name', 'Talent Guru') }}</a></li>
+                            <!--<li><a href="{{ url('about') }}">About {{ config('app.name', 'Talent Guru') }}</a></li>-->
                             <li><a href="{{ url('terms-conditions') }}">Terms & Conditions</a></li>
                             <li><a href="{{ url('privacy-policy') }}">Privacy Policy</a></li>                            
                         </ul>

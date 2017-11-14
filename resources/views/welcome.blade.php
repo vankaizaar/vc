@@ -55,7 +55,7 @@ echo json_encode([
 
                             <li>
                                 <a href="#tab_default_3" data-toggle="tab">
-                                    How this works</a>
+                                    About {{ config('app.name', 'Talent Guru') }}</a>
                             </li>
                             <li>
                                 <a href="#tab_default_4" data-toggle="tab">
@@ -84,11 +84,9 @@ echo json_encode([
                                     <div class="row">
                                         <div class="col-md-6 col-md-offset-3">
                                             <br /><br />
-                                            <h2 class="text-center">How this works</h2>
+                                            <h2 class="text-center"></h2>
                                             <p class="lead text-center">
-                                                You tell us what you need recorded.
-                                                We tell you how much it is going to cost and how long it will take.
-                                                You can select the voice actor yourself or let us choose for you.
+                                                {{ config('app.name', 'Talent Guru') }} is a platform where african artists can make money. 
                                             </p>                                           
                                         </div>
                                     </div>
@@ -336,7 +334,7 @@ echo json_encode([
                     <div class="col-md-3">
                         <h4>Company Information</h4>
                         <ul class="footer-menu">
-                            <li><a href="{{ url('about') }}">About {{ config('app.name', 'Talent Guru') }}</a></li>
+                            <!--<li><a href="{{ url('about') }}">About {{ config('app.name', 'Talent Guru') }}</a></li>-->
                             <li><a href="{{ url('terms-conditions') }}">Terms & Conditions</a></li>
                             <li><a href="{{ url('privacy-policy') }}">Privacy Policy</a></li>                            
                         </ul>
