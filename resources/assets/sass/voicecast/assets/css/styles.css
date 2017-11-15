@@ -267,7 +267,7 @@ ul.footer-menu li a {
 }
 
 
-#tab_default_1{
+.graded2{
     background: #0100C6;
     background: -moz-linear-gradient(left, #0100C6 0%, #0100C6 25%, #1802AD 75%, #1802AD 100%);
     background: -webkit-linear-gradient(left, #17197d 0%,#17197d 25%,#1802AD 75%,#1802AD 100%);
@@ -285,4 +285,10 @@ section.spaced2{
 
 section.spaced4{
     padding: 4em 0em;
+}
+
+.graded{    
+    background: #2BC0E4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #EAECC6, #2BC0E4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EAECC6, #2BC0E4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
