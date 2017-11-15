@@ -192,7 +192,7 @@ echo json_encode([
                                     <div class="row">
                                         <div class="col-md-6 col-md-offset-3">
                                             <br /><br />
-                                            <h2>Frequently asked questions</h2>
+                                            <h2>Voice Over Artists FAQs</h2>
 
                                             <div class="panel-group" id="faqAccordion">
                                                 <div class="panel panel-default ">
