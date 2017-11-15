@@ -278,3 +278,11 @@ ul.footer-menu li a {
 #tab_default_5,#tab_default_3,#tab_default_4{
     min-height: calc(80vh - 177px);
 }
+
+section.spaced2{
+    padding: 2em 0em;
+}
+
+section.spaced1{
+    padding: 1em 0em;
+}

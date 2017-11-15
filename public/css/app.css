@@ -9185,6 +9185,14 @@ ul.footer-menu li a {
   min-height: calc(80vh - 177px);
 }
 
+section.spaced2 {
+  padding: 2em 0em;
+}
+
+section.spaced1 {
+  padding: 1em 0em;
+}
+
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
