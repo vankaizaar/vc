@@ -80,44 +80,54 @@ echo json_encode([
 
                             </div>                            
                             <div class="tab-pane" id="tab_default_3">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-md-6 col-md-offset-3">                                           
-                                            <h2 class="text-center">What is {{ config('app.name', 'Talent Guru') }}?</h2>
-                                            <p class="lead text-center">
-                                                {{ config('app.name', 'Talent Guru') }}  is Africa’s largest marketplace for digital services and an online platform where talented African artists can make money. 
-                                            </p>                                           
-                                        </div>
+                                <section class="spaced2">
+                                    <div class="container">
+                                        <section class="spaced4">
+                                            <div class="row">
+                                                <div class="col-md-6 col-md-offset-3">   
+
+                                                    <h2 class="text-center">What is {{ config('app.name', 'Talent Guru') }}?</h2>
+                                                    <p class="lead text-center">
+                                                        {{ config('app.name', 'Talent Guru') }}  is Africa’s largest marketplace for digital services and an online platform where talented African artists can make money. 
+                                                    </p>   
+
+                                                </div>
+                                            </div>
+                                        </section>
+                                        <section class="spaced4">
+                                            <div class="row">
+                                                <div class="col-md-6 col-md-offset-3">
+                                                    <h2 class="text-center">What service categories will be available on {{ config('app.name', 'Talent Guru') }}?</h2>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-2"><img src="images/categories/design.png" alt="Design" class="img-responsive center-block" /></div>
+                                                <div class="col-md-2"><img src="images/categories/motion-graphics.png" alt="Motion Graphics" class="img-responsive center-block" /></div>
+                                                <div class="col-md-2"><img src="images/categories/script-writing.png" alt="Script Writing" class="img-responsive center-block" /></div>
+                                                <div class="col-md-2"><img src="images/categories/coding-tech.png" alt="Coding & Tech" class="img-responsive center-block" /></div>
+                                                <div class="col-md-2"><img src="images/categories/music.png" alt="Music" class="img-responsive center-block" /></div>
+                                                <div class="col-md-2"><img src="images/categories/voice-over.png" alt="Voice Over" class="img-responsive center-block" /></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-2"><img src="images/categories/modelling.png" alt="Modelling" class="img-responsive center-block" /></div>
+                                                <div class="col-md-2"><img src="images/categories/make-up.png" alt="Makeup" class="img-responsive center-block" /></div>
+                                                <div class="col-md-2"><img src="images/categories/photography.png" alt="Photography" class="img-responsive center-block" /></div>
+                                                <div class="col-md-2"><img src="images/categories/strategy.png" alt="Strategy" class="img-responsive center-block" /></div>
+                                                <div class="col-md-2"><img src="images/categories/media-buy.png" alt="Media Buy" class="img-responsive center-block" /></div>
+                                            </div>   
+                                        </section>
+                                        <section class="spaced4">
+                                            <div class="row">
+                                                <div class="col-md-8 col-md-offset-2">
+                                                    <h2 class="text-center">Signing Up</h2>
+                                                    <p class="lead text-center">
+                                                        Signing up for {{ config('app.name', 'Talent Guru') }} is free for artists. At the moment we are signing up voice over artists subsequently the platform will be open for other artists in different categories to sign up. 
+                                                    </p> 
+                                                </div>
+                                            </div>
+                                        </section>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-md-6 col-md-offset-3">
-                                            <h2 class="text-center">What service categories will be available on {{ config('app.name', 'Talent Guru') }}?</h2>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-2"><img src="images/categories/design.png" alt="Design" class="img-responsive center-block" /></div>
-                                        <div class="col-md-2"><img src="images/categories/motion-graphics.png" alt="Motion Graphics" class="img-responsive center-block" /></div>
-                                        <div class="col-md-2"><img src="images/categories/script-writing.png" alt="Script Writing" class="img-responsive center-block" /></div>
-                                        <div class="col-md-2"><img src="images/categories/coding-tech.png" alt="Coding & Tech" class="img-responsive center-block" /></div>
-                                        <div class="col-md-2"><img src="images/categories/music.png" alt="Music" class="img-responsive center-block" /></div>
-                                        <div class="col-md-2"><img src="images/categories/voice-over.png" alt="Voice Over" class="img-responsive center-block" /></div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-2"><img src="images/categories/modelling.png" alt="Modelling" class="img-responsive center-block" /></div>
-                                        <div class="col-md-2"><img src="images/categories/make-up.png" alt="Makeup" class="img-responsive center-block" /></div>
-                                        <div class="col-md-2"><img src="images/categories/photography.png" alt="Photography" class="img-responsive center-block" /></div>
-                                        <div class="col-md-2"><img src="images/categories/strategy.png" alt="Strategy" class="img-responsive center-block" /></div>
-                                        <div class="col-md-2"><img src="images/categories/media-buy.png" alt="Media Buy" class="img-responsive center-block" /></div>
-                                    </div>   
-                                     <div class="row">
-                                        <div class="col-md-8 col-md-offset-2">
-                                            <h2 class="text-center">Signing Up</h2>
-                                             <p class="lead text-center">
-                                                Signing up for {{ config('app.name', 'Talent Guru') }} is free for artists. At the moment we are signing up voice over artists subsequently the platform will be open for other artists in different categories to sign up. 
-                                            </p> 
-                                        </div>
-                                    </div>
-                                </div>
+                                </section>
                             </div>
                             <div class="tab-pane" id="tab_default_4">
                                 <div class="container">
