@@ -85,9 +85,9 @@ echo json_encode([
                                         <div class="row">
                                             <div class="col-md-6 col-md-offset-3">   
 
-                                                <h2 class="text-center">What is {{ config('app.name', 'Talent Guru') }}?</h2>
+                                                <h2 class="text-center">What is {{ config('app.name', 'TalentGuru') }}?</h2>
                                                 <p class="lead text-center">
-                                                    {{ config('app.name', 'Talent Guru') }} is Africa’s largest digital platform that connects African talent to opportunities.
+                                                    {{ config('app.name', 'TalentGuru') }} is Africa’s largest talent marketplace, an online platform where talented African artists can make money. {{ config('app.name', 'Talent Guru') }} will only feature professionals and experts in their respective fields. Our rigorous selective process is guaranteed to only keep on board the best of the best.
                                                 </p>   
 
                                             </div>
@@ -124,7 +124,7 @@ echo json_encode([
                                             <div class="col-md-8 col-md-offset-2">
                                                 <h2 class="text-center">Signing Up Is Absolutely Free</h2>
                                                 <p class="lead text-center">
-                                                    In phase one we are accepting voice-over artists. Stay tuned as we open up the platform to more talents.
+                                                    Signing up for {{ config('app.name', 'TalentGuru') }} is free for artists. At the moment we are signing up voice over artists subsequently the platform will be open for other artists in different categories to sign up. 
                                                 </p> 
                                             </div>
                                         </div>
