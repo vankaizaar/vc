@@ -122,7 +122,7 @@ echo json_encode([
                                     <section class="spaced4">
                                         <div class="row">
                                             <div class="col-md-8 col-md-offset-2">
-                                                <h2 class="text-center">Signing Up Is Absolutely Free</h2>
+                                                <h2 class="text-center">Signing Up</h2>
                                                 <p class="lead text-center">
                                                     Signing up for {{ config('app.name', 'TalentGuru') }} is free for artists. At the moment we are signing up voice over artists subsequently the platform will be open for other artists in different categories to sign up. 
                                                 </p> 
