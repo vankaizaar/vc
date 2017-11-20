@@ -1,4 +1,4 @@
 @extends('errors.template')
 
-@section('title', 'Page Not Found')
+@section('title', 'Operation Not Allowed')
 @section('details', $exception->getMessage())
