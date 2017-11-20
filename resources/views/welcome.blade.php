@@ -143,63 +143,25 @@ echo json_encode([
                                         </div>
                                     </section>
                                 </div>
+                                <section class="spaced4 graded">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-8 col-md-offset-2">
+                                                <h2 class="text-center whiten">Not A Voice Over Artist?</h2>
+                                                <p class="lead text-center whiten">
+                                                    Don't worry, pre-register today and we will inform you when your talent category is ready.
+                                                </p> 
+                                                <a href="{{ url('/subscribers/create') }}" style="text-decoration: none;">
+                                                    <button class="btn btn-primary text-uppercase center-block">
+                                                       Pre-Register
+                                                    </button>      
+                                                </a>
+                                            </div>
+                                        </div>
 
+                                    </div>
+                                </section>
                             </div>                            
-                            <!--                            <div class="tab-pane" id="tab_default_3">
-                                                            <section class="spaced2">
-                                                                <div class="container">
-                                                                    <section class="spaced4">
-                                                                        <div class="row">
-                                                                            <div class="col-md-6 col-md-offset-3">   
-                            
-                                                                                <h2 class="text-center">What is {{ config('app.name', 'Talent Guru') }}?</h2>
-                                                                                <p class="lead text-center">
-                                                                                    {{ config('app.name', 'Talent Guru') }} is Africa’s largest digital platform that connects African talent to opportunities.
-                                                                                </p>   
-                            
-                                                                            </div>
-                                                                        </div>
-                                                                    </section>
-                                                                </div>
-                            
-                                                                <section class="spaced4 graded">
-                                                                    <div class="container">
-                                                                        <div class="row">
-                                                                            <div class="col-md-6 col-md-offset-3">
-                                                                                <h2 class="text-center">What service categories will be available on {{ config('app.name', 'Talent Guru') }}?</h2>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="row">
-                                                                            <div class="col-md-2"><img src="images/categories/design.png" alt="Design" class="img-responsive center-block" /></div>
-                                                                            <div class="col-md-2"><img src="images/categories/motion-graphics.png" alt="Motion Graphics" class="img-responsive center-block" /></div>
-                                                                            <div class="col-md-2"><img src="images/categories/script-writing.png" alt="Script Writing" class="img-responsive center-block" /></div>
-                                                                            <div class="col-md-2"><img src="images/categories/coding-tech.png" alt="Coding & Tech" class="img-responsive center-block" /></div>
-                                                                            <div class="col-md-2"><img src="images/categories/music.png" alt="Music" class="img-responsive center-block" /></div>
-                                                                            <div class="col-md-2"><img src="images/categories/voice-over.png" alt="Voice Over" class="img-responsive center-block" /></div>
-                                                                        </div>
-                                                                        <div class="row">
-                                                                            <div class="col-md-2"><img src="images/categories/modelling.png" alt="Modelling" class="img-responsive center-block" /></div>
-                                                                            <div class="col-md-2"><img src="images/categories/make-up.png" alt="Makeup" class="img-responsive center-block" /></div>
-                                                                            <div class="col-md-2"><img src="images/categories/photography.png" alt="Photography" class="img-responsive center-block" /></div>
-                                                                            <div class="col-md-2"><img src="images/categories/strategy.png" alt="Strategy" class="img-responsive center-block" /></div>
-                                                                            <div class="col-md-2"><img src="images/categories/media-buy.png" alt="Media Buy" class="img-responsive center-block" /></div>
-                                                                        </div>   
-                                                                    </div>
-                                                                </section>
-                                                                <div class="container">
-                                                                    <section class="spaced4">
-                                                                        <div class="row">
-                                                                            <div class="col-md-8 col-md-offset-2">
-                                                                                <h2 class="text-center">Signing Up Is Absolutely Free</h2>
-                                                                                <p class="lead text-center">
-                                                                                    In phase one we are accepting voice-over artists. Stay tuned as we open up the platform to more talents.
-                                                                                </p> 
-                                                                            </div>
-                                                                        </div>
-                                                                    </section>
-                                                                </div>
-                                                            </section>
-                                                        </div>-->
                             <div class="tab-pane" id="tab_default_4">
                                 <div class="container">
                                     <div class="row">

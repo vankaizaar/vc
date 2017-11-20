@@ -129,5 +129,11 @@ Route::get('about', function () {
     return view('pages.about');
 });
 
+//Subscibers 
+Route::resource('subscribers', 'Subscriber\SubscriberController', ['only' => [
+        'create', 'store'
+]]);
+
+
 
 

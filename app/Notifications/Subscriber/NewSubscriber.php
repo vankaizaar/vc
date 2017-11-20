@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Notifications;
+namespace App\Notifications\Subscriber;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
-use App\Models\Artist;
+use App\Models\Subscriber\Subscriber;
 
-class NewUserNotification extends Notification {
+class NewSubscriber extends Notification {
 
     use Queueable;
 
@@ -17,9 +17,8 @@ class NewUserNotification extends Notification {
      *
      * @return void
      */
-    public function __construct(Artist $artist) {
-        //
-        $this->artist = $artist;
+    public function __construct(Subscriber $subscriber) {
+        $this->subscriber = $subscriber;
     }
 
     /**
@@ -41,10 +40,10 @@ class NewUserNotification extends Notification {
     public function toMail($notifiable) {
         return (new MailMessage)
                         ->subject("Welcome to Talent Guru")
-                        ->greeting('Hello, ' . $this->artist->name)
+                        ->greeting('Hello, ' . $this->subscriber->fullname)
                         ->line('Welcome to Talent Guru, and thank you for signing up with us.')
-                        ->action('Start uploading your samples here.', url('/audio/create'))
-                        ->line('Thank you for using our application!');
+                        ->line('This is to notify you that we have recieved your pre-registration, and once we have completed our platform we will notify you.')
+                        ->line('Thank you for using our platform!');
     }
 
     /**
