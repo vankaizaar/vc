@@ -42,8 +42,8 @@ class NewSubscriber extends Notification {
                         ->subject("Welcome to Talent Guru")
                         ->greeting('Hello, ' . $this->subscriber->fullname)
                         ->line('Welcome to Talent Guru, and thank you for signing up with us.')
-                        ->line('This is to notify you that we have recieved your pre-registration, and once we have completed our platform we will notify you.')
-                        ->line('Thank you for using our platform!');
+                        ->line("This is to notify you that we have received your pre-registration. We will keep you posted on updates related to this platform and specifically the categories you've signed up for.")
+                        ->line('Thank you for for connecting with us. We are looking forward to working with you!');
     }
 
     /**
