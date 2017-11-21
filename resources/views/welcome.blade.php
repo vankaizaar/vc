@@ -93,6 +93,15 @@ echo json_encode([
 
                                             </div>
                                         </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div align="center" class="embed-responsive embed-responsive-16by9">
+                                                    <video controls class="embed-responsive-item">
+                                                        <source src="video/video.mp4" type="video/mp4">
+                                                    </video>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </section>
                                 </div>
                                 <section class="spaced4 graded">
@@ -153,7 +162,7 @@ echo json_encode([
                                                 </p> 
                                                 <a href="{{ url('/subscribers/create') }}" style="text-decoration: none;">
                                                     <button class="btn btn-primary text-uppercase center-block">
-                                                       Pre-Register
+                                                        Pre-Register
                                                     </button>      
                                                 </a>
                                             </div>
