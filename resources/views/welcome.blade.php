@@ -82,11 +82,11 @@ echo json_encode([
                                 </section>
 
                                 <div class="container">
-                                    <section class="spaced4">
+                                    <section class="spaced2">
                                         <div class="row">
                                             <div class="col-md-8 col-md-offset-2">   
 
-                                                <h2 class="text-center">What is {{ config('app.name', 'TalentGuru') }}?</h2>
+                                                <h2 class="text-center" style="margin-top:0px;">What is {{ config('app.name', 'TalentGuru') }}?</h2>
                                                 <p class="lead text-center">
                                                     {{ config('app.name', 'TalentGuru') }} is Africa’s largest talent marketplace, an online platform where talented African artists can make money. {{ config('app.name', 'Talent Guru') }} will only feature professionals and experts in their respective fields. Our rigorous selective process is guaranteed to only keep on board the best of the best.
                                                 </p>   
@@ -104,7 +104,7 @@ echo json_encode([
                                         </div>
                                     </section>
                                 </div>
-                                <section class="spaced4 graded">
+                                <section class="spaced2 graded">
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-md-6 col-md-offset-3">
@@ -136,40 +136,37 @@ echo json_encode([
                                     </div>
                                 </section>
                                 <div class="container">
-                                    <section class="spaced4">
+                                    <section class="spaced2">
                                         <div class="row">
-                                            <div class="col-md-8 col-md-offset-2">
-                                                <h2 class="text-center">Signing Up</h2>
-                                                <p class="lead text-center">
-                                                    Signing up for {{ config('app.name', 'TalentGuru') }} is free for artists. At the moment we are signing up voice over artists subsequently the platform will be open for other artists in different categories to sign up. 
-                                                </p> 
-                                                <a href="{{ url('/artist_register') }}" style="text-decoration: none;">
-                                                    <button class="btn btn-primary text-uppercase center-block">
-                                                        Sign up now
-                                                    </button>      
-                                                </a>
+                                            <div class="col-md-6">
+                                                <section class="bordered-right" style="border-right:1px solid grey;padding:0px 2em">
+                                                    <h2 class="text-center">Signing Up</h2>
+                                                    <p class="lead text-center">
+                                                        Signing up for {{ config('app.name', 'TalentGuru') }} is free for artists. At the moment we are signing up voice over artists subsequently the platform will be open for other artists in different categories to sign up. 
+                                                    </p> 
+                                                    <a href="{{ url('/artist_register') }}" style="text-decoration: none;">
+                                                        <button class="btn btn-primary text-uppercase center-block">
+                                                            Sign up now
+                                                        </button>      
+                                                    </a>
+                                                </section>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <h2 class="text-center">Not A Voice Over Artist?</h2>
+                                                    <p class="lead text-center">
+                                                        Don't worry, pre-register today and we will inform you when your talent category is ready.
+                                                    </p> 
+                                                    <a href="{{ url('/subscribers/create') }}" style="text-decoration: none;">
+                                                        <button class="btn btn-primary text-uppercase center-block">
+                                                            Pre-Register
+                                                        </button>      
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </section>
-                                </div>
-                                <section class="spaced4 graded">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-md-8 col-md-offset-2">
-                                                <h2 class="text-center whiten">Not A Voice Over Artist?</h2>
-                                                <p class="lead text-center whiten">
-                                                    Don't worry, pre-register today and we will inform you when your talent category is ready.
-                                                </p> 
-                                                <a href="{{ url('/subscribers/create') }}" style="text-decoration: none;">
-                                                    <button class="btn btn-primary text-uppercase center-block">
-                                                        Pre-Register
-                                                    </button>      
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </section>
+                                </div>                                
                             </div>                            
                             <div class="tab-pane" id="tab_default_4">
                                 <div class="container">
