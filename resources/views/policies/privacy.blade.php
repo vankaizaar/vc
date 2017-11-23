@@ -143,7 +143,7 @@ echo json_encode([
                                 <div class="col-md-3">
                                     <h4>Social Media</h4>
                                     <ul class="footer-menu">
-                                        <li><a href="https://www.facebook.com/Talentguruafrica-1780916165535105/"><i class="fa fa-facebook-square"></i></a> <a href="#"><i class="fa fa-twitter-square"></i></a> <a href="#"><i class="fa fa-instagram"></i></a></li>                           
+                                        <li><a href="https://www.facebook.com/Talentguruafrica-1780916165535105/" target="new"><i class="fa fa-facebook-square"></i></a> <a href="https://www.instagram.com/talentguruafrica/" target="new"><i class="fa fa-instagram"></i></a></li>
                                     </ul>
                                 </div>
                                 <div class="col-md-1"></div>
