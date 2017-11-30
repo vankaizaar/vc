@@ -320,69 +320,65 @@ echo json_encode([
                             </div>
                             <div class="tab-pane" id="tab_default_5">
                                 <section class="spaced2">
-                                    <div class="artist-content">
-                                        <div class="container">
-                                            <div class="row">
-                                                <div class="col-md-6 col-md-offset-3">
-                                                    <h3 class="text-center" style="margin-top:0px;">Contact us</h3>
-                                                    <div class="panel panel-success">               
-                                                        <div class="panel-body">
-
-
-
-                                                            <form class="form-horizontal" role="form" method="POST" action="{{ route('contactus.store') }}">
-                                                                {{ csrf_field() }}
-                                                                <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
-                                                                    <label for="name" class="col-md-4 control-label">Full name</label>
-                                                                    <div class="col-md-8">
-                                                                        <input  type="text" name="name" value="{{ old('name') }}" class="form-control" placeholder="Enter Name" required/>
-                                                                        @if ($errors->has('name'))
-                                                                        <span class="help-block">
-                                                                            <strong>{{ $errors->first('name') }}</strong>
-                                                                        </span>
-                                                                        @endif
-                                                                    </div>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-6 col-md-offset-3">
+                                                <h3 class="text-center" style="margin-top:0px;">Contact us</h3>
+                                                <div class="panel panel-success">               
+                                                    <div class="panel-body">
+                                                        <form class="form-horizontal" role="form" method="POST" action="{{ route('contactus.store') }}">
+                                                            {{ csrf_field() }}
+                                                            <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
+                                                                <label for="name" class="col-md-4 control-label">Full name</label>
+                                                                <div class="col-md-8">
+                                                                    <input  type="text" name="name" value="{{ old('name') }}" class="form-control" placeholder="Enter Name" required/>
+                                                                    @if ($errors->has('name'))
+                                                                    <span class="help-block">
+                                                                        <strong>{{ $errors->first('name') }}</strong>
+                                                                    </span>
+                                                                    @endif
                                                                 </div>
+                                                            </div>
 
-                                                                <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
-                                                                    <label for="email" class="col-md-4 control-label">Email</label>
-                                                                    <div class="col-md-8">
-                                                                        <input  type="email" name="email" value="{{ old('email') }}" class="form-control" placeholder="Enter Email" required/>
-                                                                        @if ($errors->has('email'))
-                                                                        <span class="help-block">
-                                                                            <strong>{{ $errors->first('email') }}</strong>
-                                                                        </span>
-                                                                        @endif
-                                                                    </div>
+                                                            <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
+                                                                <label for="email" class="col-md-4 control-label">Email</label>
+                                                                <div class="col-md-8">
+                                                                    <input  type="email" name="email" value="{{ old('email') }}" class="form-control" placeholder="Enter Email" required/>
+                                                                    @if ($errors->has('email'))
+                                                                    <span class="help-block">
+                                                                        <strong>{{ $errors->first('email') }}</strong>
+                                                                    </span>
+                                                                    @endif
                                                                 </div>
+                                                            </div>
 
-                                                                <div class="form-group {{ $errors->has('message') ? 'has-error' : '' }}">
-                                                                    <label for="message" class="col-md-4 control-label">Message</label>
-                                                                    <div class="col-md-8">
+                                                            <div class="form-group {{ $errors->has('message') ? 'has-error' : '' }}">
+                                                                <label for="message" class="col-md-4 control-label">Message</label>
+                                                                <div class="col-md-8">
 
-                                                                        <textarea name="message" id="message" cols="30" rows="10" class="form-control" required maxlength="255" placeholder="Message">{{ old('message') }}</textarea>
-                                                                        @if ($errors->has('message'))
-                                                                        <span class="help-block">
-                                                                            <strong>{{ $errors->first('message') }}</strong>
-                                                                        </span>
-                                                                        @endif
-                                                                    </div>
+                                                                    <textarea name="message" id="message" cols="30" rows="10" class="form-control" required maxlength="255" placeholder="Message">{{ old('message') }}</textarea>
+                                                                    @if ($errors->has('message'))
+                                                                    <span class="help-block">
+                                                                        <strong>{{ $errors->first('message') }}</strong>
+                                                                    </span>
+                                                                    @endif
                                                                 </div>
+                                                            </div>
 
-                                                                <div class="form-group">
-                                                                    <div class="col-md-8 col-md-offset-4">
-                                                                        <button type="submit" class="btn btn-primary text-uppercase">
-                                                                            Send Message
-                                                                        </button>                                                        
-                                                                    </div>
+                                                            <div class="form-group">
+                                                                <div class="col-md-8 col-md-offset-4">
+                                                                    <button type="submit" class="btn btn-primary text-uppercase">
+                                                                        Send Message
+                                                                    </button>                                                        
                                                                 </div>
-                                                            </form>
-                                                        </div>
+                                                            </div>
+                                                        </form>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+
                                 </section>
                             </div>
                         </div>
