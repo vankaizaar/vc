@@ -6,7 +6,7 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-success">               
                 <div class="panel-body">
-                    <h2>Your uploaded voice samples</h2>
+                    <h3>Your uploaded voice samples</h3>
 
 
                     <table class="table table-striped table-hover ">

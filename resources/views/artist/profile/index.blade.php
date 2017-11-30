@@ -28,8 +28,9 @@
 
                                 </div>
                             @else
+                            <h3>Oops!</h3>
                                  <p>You are yet to create you profile. Please update it here.</p>
-                                  <a href = "profile/create" class = "btn btn-sm btn-warning text-uppercase">Edit your profile</a>
+                                  <a href = "profile/create" class = "btn btn-sm btn-primary text-uppercase">Edit your profile</a>
                             @endif
                             </div>                       
                         </div>

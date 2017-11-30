@@ -7,7 +7,7 @@
             <div class="panel panel-success">               
                 <div class="panel-body">   
                     <div class="col-md-12">
-                        <h3> <span class="highlighted">1</span>  Enter details of your submission</h3>
+                        <h4> <span class="highlighted">1</span>  Enter details of your submission</h4>
                         <br />
                     </div>
 
@@ -61,7 +61,7 @@
                             </div>
                         </div>
                         <div class="col-md-12">
-                            <h3> <span class="highlighted">2</span>  Upload your file here</h3>
+                            <h4> <span class="highlighted">2</span>  Upload your file here</h4>
                             <br />
                         </div>
                         <div class="form-group {{ $errors->has('link') ? ' has-error' : '' }}">
@@ -82,7 +82,7 @@
                             </div>
                         </div>
                         <div class="col-md-12">
-                            <h3> <span class="highlighted">3</span>Provide more information about this project</h3>
+                            <h4> <span class="highlighted">3</span>Provide more information about this project</h4>
                             <br />
                         </div>
                         <div class="form-group{{ $errors->has('about_sample') ? ' has-error' : '' }}">

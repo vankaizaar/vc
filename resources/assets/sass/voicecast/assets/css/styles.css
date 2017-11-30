@@ -1,11 +1,6 @@
 header {
-    background: #000000;
-    background: #0082c8;
-    background: -webkit-linear-gradient(left, #0082c8, #00c5c8);
-    background: -o-linear-gradient(left, #0082c8, #00c5c8);
-    background: -moz-linear-gradient(left, #0082c8, #00c5c8);
-    background: linear-gradient(to right, #0082c8, #00c5c8);
-    padding: 3em 0 5em 0;
+    background: #2874c8;    
+    padding: 3em 0 3em 0;
 }
 
 .search-box {
@@ -81,7 +76,7 @@ section.content {
 }
 
 .artist-content {
-    padding: 3em 0em;
+    padding: 2em 0em ;
     position: relative;
 }
 
@@ -149,12 +144,11 @@ section.content {
     color: #404040;
 }
 
-.tabbable-line>.tab-content {
-    margin-top: -4px;
+.tabbable-line>.tab-content {    
     background-color: #f1f1f1;
     border: 0;
     border: none;
-    padding: 0.5em 0;
+    padding: 0;
 }
 
 .portlet .tabbable-line>.tab-content {
@@ -201,7 +195,7 @@ section.content {
 }
 
 footer {
-    background: #021424;
+    background: #161d2d;
     padding: 3em 0em;
     color: #e9e9e9;
 }
@@ -217,6 +211,7 @@ footer h6 {
     font-weight: 700;
     font-family: 'Titillium Web', sans-serif;
     margin-top: 0;
+    margin-bottom: 0;
 }
 
 footer p {
@@ -268,11 +263,7 @@ ul.footer-menu li a {
 
 
 .graded2{
-    background: #0100C6;
-    background: -moz-linear-gradient(left, #0100C6 0%, #0100C6 25%, #1802AD 75%, #1802AD 100%);
-    background: -webkit-linear-gradient(left, #17197d 0%,#17197d 25%,#1802AD 75%,#1802AD 100%);
-    background: linear-gradient(to right, #0100C6 0%,#0100C6 25%,#1802AD 75%,#1802AD 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0100C6', endColorstr='#1802AD',GradientType=1 );
+    background: #030a14;   
 }
 
 #tab_default_5,#tab_default_3,#tab_default_4{
@@ -296,6 +287,44 @@ section.spaced4{
     background: linear-gradient(to right, #0082c8, #00c5c8);
 }
 
+.graded3{        
+    background: #2874c8;   
+}
+
 .whiten{
     color: whitesmoke;
 }
+
+.lead2{
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.4;
+}
+
+.lead3{
+    margin-bottom: 20px;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 1.4;
+}
+
+.main-slider{
+    height: 45vh;
+    position: relative;
+    width: 100%;
+}
+
+.main-slider .cta{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left:15%; 
+    max-width: 400px;
+}
+
+.cats{
+    max-width: 100px !important;
+}
+
+.no-top{margin-top: 0;}

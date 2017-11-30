@@ -92,7 +92,7 @@ class ProfileController extends Controller {
             'link' => $cover
         ]);
 
-        $artist->notify(new NewUserNotification($artist));
+        //$artist->notify(new NewUserNotification($artist));
 
         return redirect('profile')->with('success', 'Profile created ');
     }

@@ -6,7 +6,7 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-success">               
                 <div class="panel-body">
-                    <h2>Welcome back {{ Auth::guard('web_artist')->user()->name }}</h2>                  
+                    <h3>Welcome back {{ Auth::guard('web_artist')->user()->name }}</h3>                  
                 </div>
             </div>
 <!--            <div class="row">

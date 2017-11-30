@@ -5,7 +5,7 @@
         <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-success">                
                 <div class="panel-body">
-                    <h2>Lets get to know you</h2>
+                    <h3>Lets get to know you</h3>
                     <form action="{{route('profile.store')}}" class="form-horizontal" role="form" method="POST">
                         {{csrf_field()}}                                                                         
 

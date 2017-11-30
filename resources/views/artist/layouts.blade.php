@@ -31,26 +31,26 @@ echo json_encode([
             <header>
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-md-3 text-center">
                             <a href="{{ url('/') }}"><img src="{{asset('images/logo.png')}}"></a>
                         </div>
                         <div class="col-md-6">
 
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3 text-right">
                             <!--<a href="#" class="account-management"><i class="glyphicon glyphicon-pencil"></i>Sign up</a>
                             <a href="#" class="account-management"><i class="glyphicon glyphicon-log-in"></i>Login</a>-->
                             <!-- Authentication Links -->
                             @if (Auth::guard('web_artist')->guest())
                             <!--Artist Login and registration Links -->
-                            <a href="{{ url('/artist_register') }}" class="account-management"><i class="glyphicon glyphicon-pencil"></i>Sign up</a>
+                            <a href="{{ url('/artist_register') }}" class="account-management"><i class="glyphicon glyphicon-pencil"></i>Upload demo</a>
                             <a href="{{ url('/artist_login') }}" class="account-management"><i class="glyphicon glyphicon-log-in"></i>Login</a>                          
                             @else
 
                             <ul class="nav navbar-nav navbar-right">                            
                                 <li class="dropdown">
                                     <a href="{{route('profile.index')}}" class="dropdown-toggle profile-name" data-toggle="dropdown" role="button" aria-expanded="false">
-                                        {{ Auth::guard('web_artist')->user()->name }} <span class="caret"></span>
+                                        <span style="color:rgb(40, 116, 200) !important; font-weight:normal;">Logged in as {{ Auth::guard('web_artist')->user()->name }}</span> <br /> MENU <span class="glyphicon glyphicon-menu-hamburger"></span>
                                     </a>
 
                                     <ul class="dropdown-menu" role="menu">
@@ -81,6 +81,25 @@ echo json_encode([
                 </div>
             </header>
             <section class="content">  
+                <div class="tabbable-panel">
+                    <div class="tabbable-line">
+                        <ul class="nav nav-tabs ">
+                            <li>
+                                <a href="{{ url('/') }}#tab_default_1"  class="text-uppercase">
+                                    Home</a>
+                            </li>
+
+                            <li>
+                                <a href="{{ url('/') }}#tab_default_4"  class="text-uppercase">
+                                    FAQ</a>
+                            </li>                            
+                            <li>
+                                <a href="{{ url('/') }}#tab_default_5"  class="text-uppercase">
+                                    Contact us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="artist-content">
                     @yield('content')
                 </div>                
@@ -91,20 +110,11 @@ echo json_encode([
                 <div class="row">
                     <div class="col-md-2">
                         <a href="{{ url('/') }}"><img class="img-responsive" src="{{asset('images/footer-logo.png')}}"></a>
-                    </div>
-                    <!--<div class="col-md-3">
-                        <h4>Additional Services</h4>
-                        <ul class="footer-menu">
-                            <li><a href="#">Link</a></li>
-                            <li><a href="#">Link</a></li>
-                            <li><a href="#">Link</a></li>
-                            <li><a href="#">Link</a></li>
-                        </ul>
-                    </div>-->
+                        <br />
+                    </div>                    
                     <div class="col-md-3">
                         <h4>Company Information</h4>
-                        <ul class="footer-menu">
-                            <!--<li><a href="{{ url('about') }}">About {{ config('app.name', 'Talent Guru') }}</a></li>-->
+                        <ul class="footer-menu">                            
                             <li><a href="{{ url('terms-conditions') }}">Terms & Conditions</a></li>
                             <li><a href="{{ url('privacy-policy') }}">Privacy Policy</a></li>                            
                         </ul>
@@ -157,13 +167,13 @@ echo json_encode([
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110233202-1"></script>
         <script>
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag() {
-                        dataLayer.push(arguments);
-                    }
-                    gtag('js', new Date());
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
 
-                    gtag('config', 'UA-110233202-1');
+            gtag('config', 'UA-110233202-1');
         </script>
 
     </body>

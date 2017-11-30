@@ -8896,21 +8896,18 @@ span.highlighted {
   position: relative;
   display: inline-block;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  padding: 4px 0px 4px 12px;
-  font-size: 26px;
+  width: 30px;
+  height: 30px;
+  padding: 2px 0px 4px 10px;
+  font-size: 18px;
   color: #ffffff;
   background: #bb1c94;
   margin-right: 0.1em;
 }
 
 header {
-  background: #000000;
-  background: #0082c8;
-  background: -webkit-gradient(linear, left top, right top, from(#0082c8), to(#00c5c8));
-  background: linear-gradient(to right, #0082c8, #00c5c8);
-  padding: 3em 0 5em 0;
+  background: #2874c8;
+  padding: 3em 0 3em 0;
 }
 
 .search-box {
@@ -8987,7 +8984,7 @@ section.content {
 }
 
 .artist-content {
-  padding: 3em 0em;
+  padding: 2em 0em;
   position: relative;
 }
 
@@ -9056,11 +9053,10 @@ section.content {
 }
 
 .tabbable-line > .tab-content {
-  margin-top: -4px;
   background-color: #f1f1f1;
   border: 0;
   border: none;
-  padding: 0.5em 0;
+  padding: 0;
 }
 
 .portlet .tabbable-line > .tab-content {
@@ -9107,7 +9103,7 @@ section.content {
 }
 
 footer {
-  background: #021424;
+  background: #161d2d;
   padding: 3em 0em;
   color: #e9e9e9;
 }
@@ -9123,6 +9119,7 @@ footer h6 {
   font-weight: 700;
   font-family: 'Titillium Web', sans-serif;
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 footer p {
@@ -9173,10 +9170,7 @@ ul.footer-menu li a {
 }
 
 .graded2 {
-  background: #0100C6;
-  background: -webkit-gradient(linear, left top, right top, from(#0100C6), color-stop(25%, #0100C6), color-stop(75%, #1802AD), to(#1802AD));
-  background: linear-gradient(to right, #0100C6 0%, #0100C6 25%, #1802AD 75%, #1802AD 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0100C6', endColorstr='#1802AD',GradientType=1 );
+  background: #030a14;
 }
 
 #tab_default_5,
@@ -9202,8 +9196,49 @@ section.spaced4 {
   background: linear-gradient(to right, #0082c8, #00c5c8);
 }
 
+.graded3 {
+  background: #2874c8;
+}
+
 .whiten {
   color: whitesmoke;
+}
+
+.lead2 {
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.4;
+}
+
+.lead3 {
+  margin-bottom: 20px;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1.4;
+}
+
+.main-slider {
+  height: 45vh;
+  position: relative;
+  width: 100%;
+}
+
+.main-slider .cta {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 15%;
+  max-width: 400px;
+}
+
+.cats {
+  max-width: 100px !important;
+}
+
+.no-top {
+  margin-top: 0;
 }
 
 /*
@@ -9219,7 +9254,7 @@ and open the template in the editor.
 
 .btn-primary {
   color: #ffffff !important;
-  background-color: #BB1C94 !important;
+  background-color: #2874c8 !important;
   border-color: transparent !important;
   background-image: none !important;
   font-weight: 700;
@@ -9233,8 +9268,8 @@ and open the template in the editor.
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
   color: #ffffff !important;
-  background-color: #23051C !important;
-  border-color: #12030E !important;
+  background-color: #161d2d !important;
+  border-color: #161d2d !important;
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
 }
@@ -9262,14 +9297,14 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-  background-color: #BB1C94;
-  border-color: #12030E;
+  background-color: #161d2d;
+  border-color: #161d2d;
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
 }
 
 .btn-primary .badge {
-  color: #BB1C94;
+  color: #161d2d;
   background-color: #ffffff;
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
@@ -13683,6 +13718,106 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.focus {
 }
 
 
+
+/*@import "node_modules/bootstrap-responsive-tabs/dist/css/bootstrap-responsive-tabs";*/
+
+.unslider {
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.unslider-wrap {
+  position: relative;
+}
+
+.unslider-wrap.unslider-carousel > li {
+  float: left;
+}
+
+.unslider-vertical > ul {
+  height: 100%;
+}
+
+.unslider-vertical li {
+  float: none;
+  width: 100%;
+}
+
+.unslider-fade {
+  position: relative;
+}
+
+.unslider-fade .unslider-wrap li {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 8;
+}
+
+.unslider-fade .unslider-wrap li.unslider-active {
+  z-index: 10;
+}
+
+.unslider li,
+.unslider ol,
+.unslider ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.unslider-arrow {
+  position: absolute;
+  left: 20px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.unslider-arrow.next {
+  left: auto;
+  right: 20px;
+}
+
+/**
+ *   Here's where everything gets included. You don't need
+ *   to change anything here, and doing so might break
+ *   stuff. Here be dragons and all that.
+ */
+
+/**
+ *   Default variables
+ *
+ *   While these can be set with JavaScript, it's probably
+ *   better and faster to just set them here, compile to
+ *   CSS and include that instead to use some of that
+ *   hardware-accelerated goodness.
+ */
+
+.unslider-nav ol {
+  list-style: none;
+  text-align: center;
+}
+
+.unslider-nav ol li {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 4px;
+  background: transparent;
+  border-radius: 5px;
+  overflow: hidden;
+  text-indent: -999em;
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+
+.unslider-nav ol li.unslider-active {
+  background: #fff;
+  cursor: default;
+}
 
 .fb-profile img.fb-image-lg {
   z-index: 0;

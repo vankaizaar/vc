@@ -6,7 +6,7 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-success">               
                 <div class="panel-body">   
-                    <h2>Account Settings</h2>
+                    <h3>Account Settings</h3>
                     <form class="form-horizontal" role="form" method="POST" action="{{route('settings.update',['artist'=>$artist->id ])}}">
                         {{ csrf_field() }}
                         {{ method_field('PATCH') }}

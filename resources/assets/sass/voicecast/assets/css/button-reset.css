@@ -9,7 +9,7 @@ and open the template in the editor.
 */
 .btn-primary { 
     color: #ffffff !important; 
-    background-color: #BB1C94 !important; 
+    background-color: #2874c8 !important; 
     border-color: transparent !important; 
     background-image: none !important; 
     font-weight: 700;
@@ -24,8 +24,8 @@ and open the template in the editor.
 .btn-primary.active, 
 .open .dropdown-toggle.btn-primary { 
     color: #ffffff !important; 
-    background-color: #23051C !important; 
-    border-color: #12030E !important; 
+    background-color: #161d2d !important; 
+    border-color: #161d2d !important; 
     -webkit-box-shadow: none !important;
     -moz-box-shadow:    none !important;
     box-shadow:         none !important;
@@ -55,15 +55,15 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active, 
 .btn-primary[disabled].active, 
 fieldset[disabled] .btn-primary.active { 
-    background-color: #BB1C94; 
-    border-color: #12030E; 
+    background-color: #161d2d; 
+    border-color: #161d2d; 
     -webkit-box-shadow: none !important;
     -moz-box-shadow:    none !important;
     box-shadow:         none !important;
 } 
 
 .btn-primary .badge { 
-    color: #BB1C94; 
+    color: #161d2d; 
     background-color: #ffffff; 
     -webkit-box-shadow: none !important;
     -moz-box-shadow:    none !important;

@@ -5,6 +5,9 @@ window.swal = require('sweetalert2');
 require('selectize');
 require('soundmanager2');
 require('./bar-ui');
+require('./unslider-min');
+//require('bootstrap-responsive-tabs');
+window.CountUp = require('countup.js');
 
 
 //$(function () {
@@ -101,4 +104,27 @@ $("#link").change(function () {
 
 $('#submitAudio').submit(function (ev) {
     $('#progressDialog').modal('show');
+});
+
+jQuery(document).ready(function ($) {
+    $('.my-slider').unslider({
+        fade: true,
+        autoplay: true,
+        arrows: false,
+        animation: 'fade',
+        animateHeight:true,
+        nav:false
+    });
+});
+
+$(function(){
+  var hash = window.location.hash;
+  hash && $('ul.nav a[href="' + hash + '"]').tab('show');
+
+  $('.nav-tabs a').click(function (e) {
+    $(this).tab('show');
+    var scrollmem = $('body').scrollTop();
+    window.location.hash = this.hash;
+    $('html,body').scrollTop(scrollmem);
+  });
 });

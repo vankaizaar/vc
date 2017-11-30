@@ -14,9 +14,12 @@ use App\Models\Artist;
 //Auth Facade used in guard
 use Auth;
 
+//Trigger new user notification
+use App\Notifications\NewUserNotification;
+
 class RegisterController extends Controller {
     
-    protected $redirectPath = 'profile/create';
+    protected $redirectPath = 'audio/create';
 
     //shows registration form to Artist
     public function showRegistrationForm() {
@@ -31,6 +34,7 @@ class RegisterController extends Controller {
 
         //Create artist
         $artist = $this->create($request->all());
+        $artist->notify(new NewUserNotification($artist));
 
         //Authenticates artist
         $this->guard()->login($artist);
