@@ -8969,7 +8969,7 @@ a.account-management i {
 }
 
 a.account-management:hover {
-  color: #bb1c94;
+  color: #00e4ff;
 }
 
 .profile-name {
@@ -9025,7 +9025,7 @@ section.content {
 .tabbable-line > .nav-tabs > li:hover > a {
   border: 0;
   background: none !important;
-  color: #bb1c94;
+  color: #00e4ff;
 }
 
 .tabbable-line > .nav-tabs > li.open > a > i,
@@ -9045,7 +9045,7 @@ section.content {
 
 .tabbable-line > .nav-tabs > li.active > a {
   border: 0;
-  color: #bb1c94;
+  color: #2874c8;
 }
 
 .tabbable-line > .nav-tabs > li.active > a > i {
