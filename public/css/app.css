@@ -9176,7 +9176,7 @@ ul.footer-menu li a {
 #tab_default_5,
 #tab_default_3,
 #tab_default_4 {
-  min-height: calc(80vh - 177px);
+  min-height: calc(100vh - 177px);
 }
 
 section.spaced2 {
@@ -9232,7 +9232,14 @@ section.spaced4 {
 }
 
 .cats {
-  max-width: 100px !important;
+  max-width: 130px !important;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.cats:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .no-top {
