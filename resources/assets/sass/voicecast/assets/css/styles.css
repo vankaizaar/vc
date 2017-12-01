@@ -310,17 +310,15 @@ section.spaced4{
 }
 
 .main-slider{
-    height: 45vh;
+    height: 50vh;
     position: relative;
     width: 100%;
 }
 
 .main-slider .cta{
-    position: absolute;
+    position: relative;
     top: 50%;
     transform: translateY(-50%);
-    left:15%; 
-    max-width: 400px;
 }
 
 .cats{

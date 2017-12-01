@@ -71,9 +71,15 @@ echo json_encode([
                                                 <a href="{{ url('/artist_register') }}">
                                                     <div class="main-slider" style="background:url('images/cta2.jpg');background-size: cover; background-position:center center;">
                                                         <div class="cta">
-                                                            <img src="images/cta-main.png" alt="Call for voice over artists" class="img-responsive" />
+                                                            <div class="container">
+                                                                <div class="row">
+                                                                    <div class="col-md-4">
+                                                                        <img src="images/cta-main.png" alt="Call for voice over artists" class="img-responsive" />            
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                    </div>
+                                                    </div>                                                    
                                                 </a>
                                             </li>                                                                                       
                                         </ul>
@@ -83,7 +89,7 @@ echo json_encode([
                                 <div class="container">
                                     <section class="spaced2">
                                         <div class="row">
-                                            <div class="col-md-8 col-md-offset-2">   
+                                            <div class="col-md-10 col-md-offset-1">   
 
                                                 <h3 class="text-center no-top">What is {{ config('app.name', 'TalentGuru') }}?</h3>
                                                 <p class="lead2 text-justify">
@@ -93,7 +99,7 @@ echo json_encode([
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-offset-2 col-md-8">
+                                            <div class="col-md-offset-1 col-md-10">
                                                 <div align="center" class="embed-responsive embed-responsive-16by9">
                                                     <video controls class="embed-responsive-item" poster="video/video-banner.png">
                                                         <source src="video/video.mp4" type="video/mp4">
@@ -107,7 +113,7 @@ echo json_encode([
                                 <section class="spaced2 graded3">
                                     <div class="container">
                                         <div class="row">
-                                            <div class="col-md-8 col-md-offset-2">
+                                            <div class="col-md-10 col-md-offset-1">
                                                 <h3 class="text-center whiten no-top">What service categories will be available on {{ config('app.name', 'Talent Guru') }}?</h3>
                                             </div>
                                         </div>
