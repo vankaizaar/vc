@@ -9229,6 +9229,7 @@ section.spaced4 {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  z-index: 100;
 }
 
 .cats {
@@ -9244,6 +9245,16 @@ section.spaced4 {
 
 .no-top {
   margin-top: 0;
+}
+
+.uno:after {
+  content: '\A';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
 }
 
 /*

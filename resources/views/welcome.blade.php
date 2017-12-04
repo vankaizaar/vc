@@ -69,6 +69,21 @@ echo json_encode([
                                         <ul>
                                             <li>
                                                 <a href="{{ url('/artist_register') }}">
+                                                    <div class="main-slider uno" style="background:url('images/cta3.jpg');background-size: cover; background-position:center center;">
+                                                        <div class="cta">
+                                                            <div class="container">
+                                                                <div class="row">
+                                                                    <div class="col-md-4 col-md-offset-1">
+                                                                        <img src="images/cta-main.png" alt="Call for voice over artists" class="img-responsive" />            
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>                                                    
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="{{ url('/artist_register') }}">
                                                     <div class="main-slider" style="background:url('images/cta2.jpg');background-size: cover; background-position:center center;">
                                                         <div class="cta">
                                                             <div class="container">

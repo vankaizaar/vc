@@ -11151,6 +11151,7 @@ jQuery(document).ready(function ($) {
         arrows: false,
         animation: 'fade',
         animateHeight: true,
+        delay: 6000,
         nav: false
     });
 });
