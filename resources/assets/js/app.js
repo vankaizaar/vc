@@ -113,6 +113,7 @@ jQuery(document).ready(function ($) {
         arrows: false,
         animation: 'fade',
         animateHeight:true,
+        speed:350,
         delay:6000,
         nav:false
     });
