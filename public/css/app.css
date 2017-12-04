@@ -9043,6 +9043,10 @@ section.content {
   position: relative;
 }
 
+.tabbable-line > .nav-tabs > li.active:hover {
+  background: white;
+}
+
 .tabbable-line > .nav-tabs > li.active > a {
   border: 0;
   color: #2874c8;
