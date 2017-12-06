@@ -106,9 +106,50 @@ Route::group(['middleware' => 'member_auth'], function() {
     ]]);
 });
 //MEMBERS ROUTES END
+//MODELS ROUTES
+//Logged in models cannot access or send requests to these pages
+Route::group(['middleware' => 'model_guest'], function() {
+    //register model
+    Route::get('model_register', 'ModelAuth\RegisterController@showRegistrationForm');
+    Route::post('model_register', 'ModelAuth\RegisterController@register');
+    //login model
+    Route::get('model_login', 'ModelAuth\LoginController@showLoginForm');
+    Route::post('model_login', 'ModelAuth\LoginController@login');
+    //Model Password reset routes
+    Route::get('model_password/reset', 'ModelAuth\ForgotPasswordController@showLinkRequestForm');
+    Route::post('model_password/email', 'ModelAuth\ForgotPasswordController@sendResetLinkEmail');
+    Route::get('model_password/reset/{token}', 'ModelAuth\ResetPasswordController@showResetForm');
+    Route::post('model_password/reset', 'ModelAuth\ResetPasswordController@reset');
+});
 
-Route::resource('artist', 'Artist\ArtistController');
-
+//Only logged in artists can access or send requests to these pages
+Route::group(['middleware' => 'model_auth'], function() {
+    Route::post('model_logout', 'ModelAuth\LoginController@logout');
+    Route::get('/model_home', function() {
+        return view('model.home');
+    });
+    Route::resource('audio', 'Model\AudioController');
+    Route::resource('profile', 'Model\ProfileController');
+    Route::resource('avatar', 'Model\AvatarController');
+    Route::resource('cover', 'Model\CoverController');
+    Route::get('settings/{artist}/edit', 'Model\SettingController@edit')->name('settings.edit');
+    Route::patch('settings/{artist}', 'Model\SettingController@update')->name('settings.update');
+//    Route::get('jobs/listing', 'Member\JobController@listActiveJobs')->name('jobs.active');
+//    Route::get('jobs/listing', 'Member\JobController@searchActiveJobs')->name('jobs.search');
+//    Route::resource('jobs', 'Member\JobController', ['only' => [
+//            'show'
+//    ]]);
+//    Route::get('application/active', 'ApplicationController@listActiveApplication')->name('applications.active');
+//    Route::resource('application', 'ApplicationController', ['only' => [
+//            'store', 'destroy'
+//    ]]);
+//    Route::match(array('PUT','POST', 'PATCH'), "settings/{artist}", array(
+//        'uses' => 'Artist\SettingController@updateSettings',
+//        'as' => 'settings.update'
+//    ));
+});
+//MODELS ROUTES END
+//Route::resource('artist', 'Artist\ArtistController');
 //CONTACT US ROUTE
 Route::post('contact-us', ['as' => 'contactus.store', 'uses' => 'ContactUSController@contactUSPost']);
 
