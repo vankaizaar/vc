@@ -132,8 +132,8 @@ Route::group(['middleware' => 'model_auth'], function() {
     Route::resource('profile', 'Model\ProfileController');
     Route::resource('avatar', 'Model\AvatarController');
     Route::resource('cover', 'Model\CoverController');
-    Route::get('settings/{model}/edit', 'Model\SettingController@edit')->name('settings.edit');
-    Route::patch('settings/{model}', 'Model\SettingController@update')->name('settings.update');
+    Route::get('settings/{model}/edit', 'Model\SettingController@edit')->name('modelsettings.edit');
+    Route::patch('settings/{model}', 'Model\SettingController@update')->name('modelsettings.update');
 //    Route::get('jobs/listing', 'Member\JobController@listActiveJobs')->name('jobs.active');
 //    Route::get('jobs/listing', 'Member\JobController@searchActiveJobs')->name('jobs.search');
 //    Route::resource('jobs', 'Member\JobController', ['only' => [
