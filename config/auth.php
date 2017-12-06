@@ -46,6 +46,10 @@ return [
             'driver' => 'session',
             'provider' => 'members',
         ],
+        'web_model' => [
+            'driver' => 'session',
+            'provider' => 'models',
+        ],
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
@@ -82,6 +86,11 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\Member\Member::class,
         ],
+        //Model user provider
+        'members' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Model\Model::class,
+        ],
     // 'users' => [
     //     'driver' => 'database',
     //     'table' => 'users',
@@ -116,12 +125,21 @@ return [
             //expire time for these tokens in minutes
             'expire' => 60,
         ],
-        //Artist password broker
+        //Members password broker
         'members' => [
             //user provider for artist
             'provider' => 'members',
             //table to store password reset tokens for seller
             'table' => 'member_password_resets',
+            //expire time for these tokens in minutes
+            'expire' => 60,
+        ],
+        //Models password broker
+        'models' => [
+            //user provider for artist
+            'provider' => 'models',
+            //table to store password reset tokens for seller
+            'table' => 'model_password_resets',
             //expire time for these tokens in minutes
             'expire' => 60,
         ],
