@@ -150,10 +150,13 @@ Route::group(['middleware' => 'model_auth'], function() {
 });
 //MODELS ROUTES END
 //Route::resource('artist', 'Artist\ArtistController');
+/* * *
+  OTHER ROUTES BEGIN HERE
+ * * */
 //CONTACT US ROUTE
 Route::post('contact-us', ['as' => 'contactus.store', 'uses' => 'ContactUSController@contactUSPost']);
 
-//Polocies
+//Policies
 Route::get('privacy-policy', function () {
     return view('policies.privacy');
 });
