@@ -24,6 +24,7 @@
         "countup.js": "^1.9.3",
         "jquery-ui": "^1.12.1",
         "jquery-ui-bundle": "^1.12.1",
+        "justifiedGallery": "^3.6.3",
         "pace-progress": "^1.0.2",
         "selectize": "^0.12.4",
         "soundmanager2": "^2.97.20170602",
