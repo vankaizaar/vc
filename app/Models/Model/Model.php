@@ -12,6 +12,7 @@ use EloquentFilter\Filterable;
 use Illuminate\Database\Eloquent\Model;
 
 class Model extends Authenticatable {
+
     use Filterable;
     use Notifiable;
     use \App\Uuids;
@@ -23,7 +24,7 @@ class Model extends Authenticatable {
     ];
     //hidden attributes
     protected $hidden = [
-        'email','id','updated_at','created_at','password', 'remember_token',
+        'email', 'id', 'updated_at', 'created_at', 'password', 'remember_token',
     ];
 
     //Send password reset notification
@@ -37,19 +38,19 @@ class Model extends Authenticatable {
     }
 
     public function profile() {
-        return $this->hasOne('App\Models\Profile');
+        return $this->hasOne('App\Models\Model\ModelProfile');
     }
 
     public function cover() {
-        return $this->hasOne('App\Models\Cover');
+        return $this->hasOne('App\Models\Model\ModelCover');
     }
 
     public function avatar() {
-        return $this->hasOne('App\Models\Avatar');
+        return $this->hasOne('App\Models\Model\ModelAvatar');
     }
-    
+
     public function application() {
-        return $this->hasMany('App\Models\Application');
+        return $this->hasMany('App\Models\Model\ModelApplication');
     }
 
 }
