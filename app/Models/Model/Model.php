@@ -11,7 +11,7 @@ use App\Notifications\ModelResetPasswordNotification;
 use EloquentFilter\Filterable;
 use Illuminate\Database\Eloquent\Model;
 
-class Artist extends Authenticatable {
+class Model extends Authenticatable {
     use Filterable;
     use Notifiable;
     use \App\Uuids;
