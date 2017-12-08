@@ -73,7 +73,7 @@ echo json_encode([
                                                         <div class="cta">
                                                             <div class="container">
                                                                 <div class="row">
-                                                                    <div class="col-xs-10 col-sm-6 col-md-4 col-md-offset-1">
+                                                                    <div class="col-xs-10 col-sm-6 col-md-4 col-lg-4 col-md-offset-1 col-lg-offset-1">
                                                                         <img src="images/cta-main.png" alt="Call for voice over artists" class="img-responsive" />            
                                                                     </div>
                                                                 </div>
@@ -88,7 +88,7 @@ echo json_encode([
                                                         <div class="cta">
                                                             <div class="container">
                                                                 <div class="row">
-                                                                    <div class="col-xs-10 col-sm-6 col-md-4 col-md-offset-1">
+                                                                    <div class="col-xs-10 col-sm-6 col-md-4 col-lg-4 col-md-offset-1 col-lg-offset-1">
                                                                         <img src="images/cta-main.png" alt="Call for voice over artists" class="img-responsive" />            
                                                                     </div>
                                                                 </div>
