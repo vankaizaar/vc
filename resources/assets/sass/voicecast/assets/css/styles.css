@@ -328,7 +328,7 @@ section.spaced4{
 }
 
 .cats{
-    max-width: 130px !important;
+/*    max-width: 130px;*/
     transition: all .2s ease;
 }
 

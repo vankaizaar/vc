@@ -132,29 +132,37 @@ echo json_encode([
                                                 <h3 class="text-center whiten no-top">What service categories will be available on {{ config('app.name', 'Talent Guru') }}?</h3>
                                             </div>
                                         </div>
-                                        <section class="spaced2">
-                                            <div class="row">                                                
-                                                <div class="col-xs-3 col-md-offset-1 col-md-2"><img src="images/categories/design.png" alt="Design" class="img-responsive center-block cats" /></div>
-                                                <div class="col-xs-3 col-md-2"><img src="images/categories/motion-graphics.png" alt="Motion Graphics" class="img-responsive center-block cats" /></div>
-                                                <div class="col-xs-3 col-md-2"><img src="images/categories/script-writing.png" alt="Script Writing" class="img-responsive center-block cats" /></div>
-                                                <div class="col-xs-3 col-md-2"><img src="images/categories/coding-tech.png" alt="Coding & Tech" class="img-responsive center-block cats" /></div>
-                                                <div class="col-xs-3 col-md-2"><img src="images/categories/modelling.png" alt="Modelling" class="img-responsive center-block cats" /></div>                                                
-
-                                                <div class="col-xs-3 col-md-offset-1 col-md-2"><img src="images/categories/voice-over.png" alt="Voice Over" class="img-responsive center-block cats" /></div>
-                                                <div class="col-xs-3 col-md-2"><img src="images/categories/make-up.png" alt="Makeup" class="img-responsive center-block cats" /></div>
-                                                <div class="col-xs-3 col-md-2"><img src="images/categories/photography.png" alt="Photography" class="img-responsive center-block cats" /></div>
-                                                <div class="col-xs-3 col-md-2"><img src="images/categories/strategy.png" alt="Strategy" class="img-responsive center-block cats" /></div>
-                                                <div class="col-xs-3 col-md-2"><img src="images/categories/media-buy.png" alt="Media Buy" class="img-responsive center-block cats" /></div>                                                
-                                            </div>
-                                        </section>                                        
                                     </div>
+                                    <section class="spaced2">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-md-10 col-md-offset-1">
+                                                    <div class="row">                                                
+                                                        <div class="col-xs-3 col-sm-2 col-md-2"><img src="images/categories/design.png" alt="Design" class="img-responsive center-block cats" /></div>
+                                                        <div class="col-xs-3 col-sm-2 col-md-2"><img src="images/categories/motion-graphics.png" alt="Motion Graphics" class="img-responsive center-block cats" /></div>
+                                                        <div class="col-xs-3 col-sm-2 col-md-2"><img src="images/categories/script-writing.png" alt="Script Writing" class="img-responsive center-block cats" /></div>
+                                                        <div class="col-xs-3 col-sm-2 col-md-2"><img src="images/categories/coding-tech.png" alt="Coding & Tech" class="img-responsive center-block cats" /></div>
+
+                                                        <div class="col-xs-3 col-sm-2 col-md-2"><img src="images/categories/modelling.png" alt="Modelling" class="img-responsive center-block cats" /></div>                                                                                                
+                                                        <div class="col-xs-3 col-sm-2 col-md-2"><img src="images/categories/voice-over.png" alt="Voice Over" class="img-responsive center-block cats" /></div>
+                                                        <div class="col-xs-3 col-sm-2 col-md-2"><img src="images/categories/make-up.png" alt="Makeup" class="img-responsive center-block cats" /></div>
+                                                        <div class="col-xs-3 col-sm-2 col-md-2"><img src="images/categories/photography.png" alt="Photography" class="img-responsive center-block cats" /></div>                                               
+
+                                                        <div class="col-xs-3 col-sm-2 col-md-2"><img src="images/categories/strategy.png" alt="Strategy" class="img-responsive center-block cats" /></div>
+                                                        <div class="col-xs-3 col-sm-2 col-md-2"><img src="images/categories/media-buy.png" alt="Media Buy" class="img-responsive center-block cats" /></div>                                                
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>                                        
+
                                 </section>
                                 <div class="container">
                                     <section class="spaced2">
                                         <div class="row">
                                             <div class="col-xs-12 col-md-offset-2 col-md-4">
-                                                <section class="bordered-right hidden-xs" style="border-right:1px solid grey;padding:0px 2em">
-                                                    <h3 class="text-right hidden-xs no-top">Signing Up</h3>
+                                                <section class="bordered-right hidden-xs hidden-sm" style="border-right:1px solid grey;padding:0px 2em">
+                                                    <h3 class="text-right hidden-xs hidden-sm no-top">Signing Up</h3>
                                                     <p class="lead3 text-right hidden-xs">
                                                         Signing up for {{ config('app.name', 'TalentGuru') }} is free for artists. At the moment we are signing up voice over artists subsequently the platform will be open for other artists in different categories to sign up. 
                                                     </p> 
@@ -164,22 +172,24 @@ echo json_encode([
                                                         </button>      
                                                     </a>                                                                                                       
                                                 </section>
-                                                <h3 class="text-left visible-xs no-top">Signing Up</h3>
-                                                <p class="lead3 text-left visible-xs">
+                                                <h3 class="text-left visible-xs visible-sm no-top">Signing Up</h3>
+                                                <p class="lead3 text-left visible-xs visible-sm">
                                                     Signing up for {{ config('app.name', 'TalentGuru') }} is free for artists. At the moment we are signing up voice over artists subsequently the platform will be open for other artists in different categories to sign up. 
                                                 </p> 
-                                                <a href="{{ url('/artist_register') }}" style="text-decoration: none;" class="visible-xs">
+                                                <a href="{{ url('/artist_register') }}" style="text-decoration: none;" class="visible-xs visible-sm">
                                                     <button class="btn btn-primary text-uppercase pull-left">
                                                         Sign up now
                                                     </button>      
                                                 </a>
+                                                <p class="visible-xs visible-sm"><br /></p>
+                                                <p class="visible-xs visible-sm"><br /></p>
                                             </div>
 
                                             <div class="col-xs-12 col-md-4">
                                                 <h3 class="text-left no-top">Not A Voice Over Artist?</h3>
                                                 <p class="lead3 text-left">
                                                     Don't worry, pre-register today and we will inform you when your talent category is ready.
-                                                    <br /><br /> <br />
+                                                    <br class="hidden-sm hidden-xs" /><br class="hidden-sm hidden-xs" /> <br class="hidden-sm hidden-xs" />
                                                 </p> 
                                                 <a href="{{ url('/subscribers/create') }}" style="text-decoration: none;">
                                                     <button class="btn btn-primary text-uppercase pull-left">
