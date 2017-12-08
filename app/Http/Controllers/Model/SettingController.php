@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Artist;
+namespace App\Http\Controllers\Model;
 
 use Auth;
 use Hash;
-use App\Models\Artist;
+use App\Models\Model\Model;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreSetting;
 use App\Http\Controllers\Controller;
@@ -16,12 +16,12 @@ class SettingController extends Controller {
      *
      * @return \Illuminate\Http\Response
      */
-    public function edit(Artist $artist) {
+    public function edit(Model $model) {
         return view('artist.settings.edit')
-                        ->with('artist', $artist);
+                        ->with('model', $model);
     }
 
-    public function update(StoreSetting $request, Artist $artist) {
+    public function update(StoreSetting $request, Model $model) {
         if ($request->has('new_password')) {
             $request['password'] = bcrypt($request['new_password']);
         }
@@ -30,7 +30,7 @@ class SettingController extends Controller {
 
         $request['name'] = $name;
 
-        $artist->update($request->all());
+        $model->update($request->all());
 
         return redirect('profile')->with('success', 'Your settings have been updated.');
     }

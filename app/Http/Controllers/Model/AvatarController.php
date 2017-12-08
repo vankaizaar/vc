@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Artist;
+namespace App\Http\Controllers\Model;
 
 use Auth;
-use App\Models\Artist;
-use App\Models\Avatar;
+use App\Models\Model\Model;
+use App\Models\Model\ModelAvatar;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreAvatar;
 use App\Http\Controllers\Controller;

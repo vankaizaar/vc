@@ -19,7 +19,7 @@ class ArtistController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request) {
-        return Artist::filter($request->all())->with('cover')->with('avatar')->with('profile')->with('audio')->get();
+        return Model::filter($request->all())->with('cover')->with('avatar')->with('profile')->with('audio')->get();
     }
 
     /**
@@ -47,14 +47,14 @@ class ArtistController extends Controller {
      * @param  \App\Models\Artist\Artist  $artist
      * @return \Illuminate\Http\Response
      */
-    public function show(Artist $artist) {
+    public function show(Model $model) {
         $member_id = Auth::guard('web_member')->user()->id;
-        $artist_id = $artist->id;
+        $model_id = $model->id;
 
         return view('member.artist.show')
                         ->with('member_id', $member_id)
-                        ->with('artist_id', $artist_id)
-                        ->with('artist', $artist);
+                        ->with('model_id', $model_id)
+                        ->with('model', $model);
     }
 
     /**
@@ -88,8 +88,8 @@ class ArtistController extends Controller {
         //
     }
 
-    public function searchActiveArtists(Request $request) {
-        $artists = Artist::filter($request->all())->paginateFilter(10);
+    public function searchActiveModels(Request $request) {
+        $models = Model::filter($request->all())->paginateFilter(10);
         return view('member.artist.index')
                         ->with('artists', $artists);
     }

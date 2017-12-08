@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Artist;
+namespace App\Http\Controllers\Model;
 
 use Auth;
-use App\Models\Artist;
-use App\Models\Cover;
+use App\Models\Model\Model;
+use App\Models\Model\ModelCover;
 use App\Http\Requests\StoreCover;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
