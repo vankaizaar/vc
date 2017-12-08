@@ -34,7 +34,7 @@ echo json_encode([
                         </div>
                         <div class="col-md-3">
                             @if (Auth::guard('web_artist')->guest())
-                            <a href="{{ url('/artist_register') }}" class="account-management"><i class="glyphicon glyphicon-pencil"></i>Upload demo</a>
+                            <a href="{{ url('/artist_register') }}" class="account-management"><i class="glyphicon glyphicon-upload"></i>Upload demo</a>
                             <a href="{{ url('/artist_login') }}" class="account-management"><i class="glyphicon glyphicon-log-in"></i>Login</a>
                             @else
                             <a href="{{ url('/artist_home') }}" class="account-management pull-right"><i class="glyphicon glyphicon-user"></i>Your Profile</a>

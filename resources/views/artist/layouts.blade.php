@@ -43,7 +43,7 @@ echo json_encode([
                             <!-- Authentication Links -->
                             @if (Auth::guard('web_artist')->guest())
                             <!--Artist Login and registration Links -->
-                            <a href="{{ url('/artist_register') }}" class="account-management"><i class="glyphicon glyphicon-pencil"></i>Upload demo</a>
+                            <a href="{{ url('/artist_register') }}" class="account-management"><i class="glyphicon glyphicon-upload"></i>Upload demo</a>
                             <a href="{{ url('/artist_login') }}" class="account-management"><i class="glyphicon glyphicon-log-in"></i>Login</a>                          
                             @else
 

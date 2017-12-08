@@ -35,7 +35,7 @@ echo json_encode([
                         </div>
                         <div class="col-md-3 text-right">
                             @if (Auth::guard('web_artist')->guest())
-                            <a href="{{ url('/artist_register') }}" class="account-management"><i class="glyphicon glyphicon-pencil"></i>Upload demo</a>
+                            <a href="{{ url('/artist_register') }}" class="account-management"><i class="glyphicon glyphicon-upload"></i>Upload demo</a>
                             <a href="{{ url('/artist_login') }}" class="account-management"><i class="glyphicon glyphicon-log-in"></i>Login</a>
                             @else
                             <a href="{{ url('/artist_home') }}" class="account-management pull-right"><i class="glyphicon glyphicon-user"></i>Your profile</a>
@@ -73,7 +73,7 @@ echo json_encode([
                                                         <div class="cta">
                                                             <div class="container">
                                                                 <div class="row">
-                                                                    <div class="col-md-4 col-md-offset-1">
+                                                                    <div class="col-xs-8 col-sm-3 col-md-4 col-md-offset-1">
                                                                         <img src="images/cta-main.png" alt="Call for voice over artists" class="img-responsive" />            
                                                                     </div>
                                                                 </div>
@@ -88,7 +88,7 @@ echo json_encode([
                                                         <div class="cta">
                                                             <div class="container">
                                                                 <div class="row">
-                                                                    <div class="col-md-4 col-md-offset-1">
+                                                                    <div class="col-xs-8 col-sm-3 col-md-4 col-md-offset-1">
                                                                         <img src="images/cta-main.png" alt="Call for voice over artists" class="img-responsive" />            
                                                                     </div>
                                                                 </div>
@@ -138,18 +138,18 @@ echo json_encode([
                                             <div class="row">
                                                 <div class="col-md-10 col-md-offset-1">
                                                     <div class="row">                                                
-                                                        <div class="col-xs-3 col-sm-2 col-md-2"><img src="images/categories/design.png" alt="Design" class="img-responsive center-block cats" /></div>
-                                                        <div class="col-xs-3 col-sm-2 col-md-2"><img src="images/categories/motion-graphics.png" alt="Motion Graphics" class="img-responsive center-block cats" /></div>
-                                                        <div class="col-xs-3 col-sm-2 col-md-2"><img src="images/categories/script-writing.png" alt="Script Writing" class="img-responsive center-block cats" /></div>
-                                                        <div class="col-xs-3 col-sm-2 col-md-2"><img src="images/categories/coding-tech.png" alt="Coding & Tech" class="img-responsive center-block cats" /></div>
+                                                        <div class="col-xs-4 col-sm-3 col-md-2"><img src="images/categories/design.png" alt="Design" class="img-responsive center-block cats" /></div>
+                                                        <div class="col-xs-4 col-sm-3 col-md-2"><img src="images/categories/motion-graphics.png" alt="Motion Graphics" class="img-responsive center-block cats" /></div>
+                                                        <div class="col-xs-4 col-sm-3 col-md-2"><img src="images/categories/script-writing.png" alt="Script Writing" class="img-responsive center-block cats" /></div>
+                                                        <div class="col-xs-4 col-sm-3 col-md-2"><img src="images/categories/coding-tech.png" alt="Coding & Tech" class="img-responsive center-block cats" /></div>
 
-                                                        <div class="col-xs-3 col-sm-2 col-md-2"><img src="images/categories/modelling.png" alt="Modelling" class="img-responsive center-block cats" /></div>                                                                                                
-                                                        <div class="col-xs-3 col-sm-2 col-md-2"><img src="images/categories/voice-over.png" alt="Voice Over" class="img-responsive center-block cats" /></div>
-                                                        <div class="col-xs-3 col-sm-2 col-md-2"><img src="images/categories/make-up.png" alt="Makeup" class="img-responsive center-block cats" /></div>
-                                                        <div class="col-xs-3 col-sm-2 col-md-2"><img src="images/categories/photography.png" alt="Photography" class="img-responsive center-block cats" /></div>                                               
+                                                        <div class="col-xs-4 col-sm-3 col-md-2"><img src="images/categories/modelling.png" alt="Modelling" class="img-responsive center-block cats" /></div>                                                                                                
+                                                        <div class="col-xs-4 col-sm-3 col-md-2"><img src="images/categories/voice-over.png" alt="Voice Over" class="img-responsive center-block cats" /></div>
+                                                        <div class="col-xs-4 col-sm-3 col-md-2"><img src="images/categories/make-up.png" alt="Makeup" class="img-responsive center-block cats" /></div>
+                                                        <div class="col-xs-4 col-sm-3 col-md-2"><img src="images/categories/photography.png" alt="Photography" class="img-responsive center-block cats" /></div>                                               
 
-                                                        <div class="col-xs-3 col-sm-2 col-md-2"><img src="images/categories/strategy.png" alt="Strategy" class="img-responsive center-block cats" /></div>
-                                                        <div class="col-xs-3 col-sm-2 col-md-2"><img src="images/categories/media-buy.png" alt="Media Buy" class="img-responsive center-block cats" /></div>                                                
+                                                        <div class="col-xs-4 col-sm-3 col-md-2"><img src="images/categories/strategy.png" alt="Strategy" class="img-responsive center-block cats" /></div>
+                                                        <div class="col-xs-4 col-sm-3 col-md-2"><img src="images/categories/media-buy.png" alt="Media Buy" class="img-responsive center-block cats" /></div>                                                
                                                     </div>
                                                 </div>
                                             </div>
