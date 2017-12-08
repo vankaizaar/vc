@@ -47,14 +47,14 @@ class RegisterController extends Controller {
     protected function validator(array $data) {
         return Validator::make($data, [
                     'name' => 'required|max:255',
-                    'email' => 'required|email|max:255|unique:artists',
+                    'email' => 'required|email|max:255|unique:models',
                     'password' => 'required|min:6|confirmed',
         ]);
     }
 
     //Create a new artist instance after a validation.
     protected function create(array $data) {
-        return Artist::create([
+        return Model::create([
                     'name' => title_case($data['name']),
                     'email' => $data['email'],
                     'password' => bcrypt($data['password']),
