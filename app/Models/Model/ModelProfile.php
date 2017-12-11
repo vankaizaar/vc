@@ -24,7 +24,7 @@ class ModelProfile extends Model {
         'dob'
     ];
 
-    public function member() {
+    public function model() {
         return $this->belongsTo('App\Models\Model\Model');
     }
 

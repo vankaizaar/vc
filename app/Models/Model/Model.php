@@ -32,19 +32,32 @@ class Model extends Authenticatable {
         $this->notify(new ModelResetPasswordNotification($token));
     }
 
-    //1 - Many relation to Audio
-    public function audio() {
-        return $this->hasMany('App\Models\Audio');
+    //1 - Many relation to Albums
+    public function albums() {
+        return $this->hasMany('App\Models\Model\ModelAlbum');
+    }
+    
+    //1 - Many relation to Pictures
+    public function pictures() {
+        return $this->hasMany('App\Models\Model\ModelPicture');
     }
 
+     //1 - 1 relation to Profile
     public function profile() {
         return $this->hasOne('App\Models\Model\ModelProfile');
     }
+    
+    //1 - 1 relation to BillingInfo
+    public function billingInfo() {
+        return $this->hasOne('App\Models\Model\ModelBillingInfo');
+    }
 
+    //1 - 1 relation to Cover
     public function cover() {
         return $this->hasOne('App\Models\Model\ModelCover');
     }
 
+    //1 - 1 relation to Avatar
     public function avatar() {
         return $this->hasOne('App\Models\Model\ModelAvatar');
     }
