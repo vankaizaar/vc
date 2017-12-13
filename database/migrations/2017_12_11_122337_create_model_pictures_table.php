@@ -13,16 +13,21 @@ class CreateModelPicturesTable extends Migration {
      */
     public function up() {
         Schema::create('model_pictures', function (Blueprint $table) {
-            $table->increments('id');
-            $table->char('model_id', 36);
-            $table->char('album_id', 36);
+            $table->uuid('id');
+            $table->char('model_album_id', 36);
+            $table->char('model_user_id', 36);
             $table->string('link')->nullable();
-
             $table->timestamps();
+            $table->primary('id');
         });
         Schema::table('model_pictures', function(Blueprint $table) {
-            $table->foreign('model_id')
-                    ->references('id')->on('models')
+            $table->foreign('model_album_id')
+                    ->references('id')->on('model_albums')
+                    ->onDelete('cascade');
+        });
+        Schema::table('model_pictures', function(Blueprint $table) {
+            $table->foreign('model_user_id')
+                    ->references('id')->on('model_users')
                     ->onDelete('cascade');
         });
     }

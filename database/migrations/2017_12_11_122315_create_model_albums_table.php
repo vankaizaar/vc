@@ -4,26 +4,26 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateModelAlbumsTable extends Migration
-{
+class CreateModelAlbumsTable extends Migration {
+
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up()
-    {
+    public function up() {
         Schema::create('model_albums', function (Blueprint $table) {
-            $table->increments('id');
-            $table->char('model_id',36);
-            $table->string('title')->nullable();            
-            $table->string('about_album')->nullable();            
+            $table->uuid('id');
+            $table->char('model_user_id', 36);
+            $table->string('title')->nullable();
+            $table->string('about_album')->nullable();
             $table->string('type')->nullable();
             $table->timestamps();
+            $table->primary('id');
         });
         Schema::table('model_albums', function(Blueprint $table) {
-            $table->foreign('model_id')
-                    ->references('id')->on('models')
+            $table->foreign('model_user_id')
+                    ->references('id')->on('model_users')
                     ->onDelete('cascade');
         });
     }
@@ -33,8 +33,8 @@ class CreateModelAlbumsTable extends Migration
      *
      * @return void
      */
-    public function down()
-    {
+    public function down() {
         Schema::dropIfExists('model_albums');
     }
+
 }

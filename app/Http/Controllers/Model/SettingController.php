@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Model;
 
 use Auth;
 use Hash;
-use App\Models\Model\Model;
+use App\Models\Model\ModelUser;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreSetting;
 use App\Http\Controllers\Controller;
@@ -16,12 +16,12 @@ class SettingController extends Controller {
      *
      * @return \Illuminate\Http\Response
      */
-    public function edit(Model $model) {
+    public function edit(ModelUser $model) {
         return view('artist.settings.edit')
                         ->with('model', $model);
     }
 
-    public function update(StoreSetting $request, Model $model) {
+    public function update(StoreSetting $request, ModelUser $model) {
         if ($request->has('new_password')) {
             $request['password'] = bcrypt($request['new_password']);
         }

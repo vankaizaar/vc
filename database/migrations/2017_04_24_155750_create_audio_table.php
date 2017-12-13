@@ -16,7 +16,7 @@ class CreateAudioTable extends Migration {
             $table->increments('id');
             $table->char('artist_id', 36);
             $table->string('link')->nullable();
-            $table->string('about_album')->nullable();
+            $table->string('about_sample')->nullable();
             $table->string('title')->nullable();
             $table->string('type')->nullable();
             $table->string('language')->nullable();

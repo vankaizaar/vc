@@ -9,13 +9,13 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 
 //Model Model
-use App\Models\Model\Model;
+use App\Models\Model\ModelUser;
 
 //Auth Facade used in guard
 use Auth;
 
 //Trigger new user notification
-use App\Notifications\NewUserNotification;
+use App\Notifications\NewModelUserNotification;
 
 class RegisterController extends Controller {
     
@@ -34,16 +34,16 @@ class RegisterController extends Controller {
 
         //Create model
         $model = $this->create($request->all());
-        $model->notify(new NewUserNotification($model));
+        $model->notify(new NewModelUserNotification($model));
 
-        //Authenticates artist
+        //Authenticates model
         $this->guard()->login($model);
 
-        //Redirects artists
+        //Redirects models
         return redirect($this->redirectPath);
     }
 
-    //Validates artist's Input
+    //Validates models's Input
     protected function validator(array $data) {
         return Validator::make($data, [
                     'name' => 'required|max:255',
@@ -52,9 +52,9 @@ class RegisterController extends Controller {
         ]);
     }
 
-    //Create a new artist instance after a validation.
+    //Create a new model instance after a validation.
     protected function create(array $data) {
-        return Model::create([
+        return ModelUser::create([
                     'name' => title_case($data['name']),
                     'email' => $data['email'],
                     'password' => bcrypt($data['password']),

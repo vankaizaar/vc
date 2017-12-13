@@ -37,7 +37,7 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
-        //Our new custom driver.
+        //Our new custom drivers.
         'web_artist' => [
             'driver' => 'session',
             'provider' => 'artists',
@@ -48,7 +48,7 @@ return [
         ],
         'web_model' => [
             'driver' => 'session',
-            'provider' => 'models',
+            'provider' => 'model_users',
         ],
         'api' => [
             'driver' => 'token',
@@ -87,14 +87,14 @@ return [
             'model' => App\Models\Member\Member::class,
         ],
         //Model user provider
-        'members' => [
+        'model_users' => [
             'driver' => 'eloquent',
-            'model' => App\Models\Model\Model::class,
+            'model' => App\Models\Model\ModelUser::class,
         ],
-    // 'users' => [
-    //     'driver' => 'database',
-    //     'table' => 'users',
-    // ],
+     'users' => [
+            'driver' => 'database',
+            'table' => 'users',
+        ],
     ],
     /*
       |--------------------------------------------------------------------------
@@ -127,7 +127,7 @@ return [
         ],
         //Members password broker
         'members' => [
-            //user provider for artist
+            //user provider for members
             'provider' => 'members',
             //table to store password reset tokens for seller
             'table' => 'member_password_resets',
@@ -136,8 +136,8 @@ return [
         ],
         //Models password broker
         'models' => [
-            //user provider for artist
-            'provider' => 'models',
+            //user provider for model
+            'provider' => 'model_users',
             //table to store password reset tokens for seller
             'table' => 'model_password_resets',
             //expire time for these tokens in minutes

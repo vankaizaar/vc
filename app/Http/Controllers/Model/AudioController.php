@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Model;
 use Illuminate\Http\Request;
 use App\Models\Audio;
 use Auth;
-use App\Models\Model\Model;
+use App\Models\Model\ModelUser;
 use App\Http\Requests\StoreAudio;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\Controller;

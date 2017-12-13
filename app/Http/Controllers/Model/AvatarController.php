@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Model;
 
 use Auth;
-use App\Models\Model\Model;
+use App\Models\Model\ModelUser;
 use App\Models\Model\ModelAvatar;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreAvatar;

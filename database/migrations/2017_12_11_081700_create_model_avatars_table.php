@@ -14,14 +14,14 @@ class CreateModelAvatarsTable extends Migration
     public function up() {
         Schema::create('model_avatars', function (Blueprint $table) {
             $table->increments('id');
-            $table->char('model_id',36);
+            $table->char('model_user_id',36);
             
             $table->string('link')->nullable();
             $table->timestamps();
         });
         Schema::table('model_avatars', function(Blueprint $table) {
-           $table->foreign('model_id')
-                    ->references('id')->on('models')
+           $table->foreign('model_user_id')
+                    ->references('id')->on('model_users')
                     ->onDelete('cascade');
         });
     }

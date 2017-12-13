@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Model;
 use Auth;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Model\Model;
+use App\Models\Model\ModelUser;
 use App\Models\Model\ModelProfile;
 use App\Models\Model\ModelAvatar;
 use App\Models\Model\ModelCover;

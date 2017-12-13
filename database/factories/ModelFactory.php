@@ -110,7 +110,7 @@ $factory->define(App\Models\Member\MemberProfile::class, function (Faker\Generat
 });
 
 /* Models Factory */
-$factory->define(App\Models\Model\Model::class, function (Faker\Generator $faker) {
+$factory->define(App\Models\Model\ModelUser::class, function (Faker\Generator $faker) {
     static $password;
 
     return [
@@ -128,9 +128,7 @@ $factory->define(App\Models\Model\ModelProfile::class, function (Faker\Generator
         'city' => $faker->city,
         'telephone' => $faker->phoneNumber,
         'about' => $faker->text(200),
-        'gender' => $faker->boolean(),
-        'native_language' => $faker->randomElement($array = array('English', 'French', 'Swahili')),
-        'voice_categories' => $faker->words($nb = 3, $asText = true),
+        'gender' => $faker->boolean(),                
     ];
 });
 

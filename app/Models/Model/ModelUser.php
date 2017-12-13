@@ -6,12 +6,12 @@ namespace App\Models\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 //Trait for sending notifications in laravel
 use Illuminate\Notifications\Notifiable;
-//Notification for Artist
-use App\Notifications\ModelResetPasswordNotification;
+//Notification for Model
+use App\Notifications\ModelUserResetPasswordNotification;
 use EloquentFilter\Filterable;
 use Illuminate\Database\Eloquent\Model;
 
-class Model extends Authenticatable {
+class ModelUser extends Authenticatable {
 
     use Filterable;
     use Notifiable;
@@ -29,41 +29,41 @@ class Model extends Authenticatable {
 
     //Send password reset notification
     public function sendPasswordResetNotification($token) {
-        $this->notify(new ModelResetPasswordNotification($token));
+        $this->notify(new ModelUserResetPasswordNotification($token));
     }
 
     //1 - Many relation to Albums
-    public function albums() {
+    public function modelAlbum() {
         return $this->hasMany('App\Models\Model\ModelAlbum');
     }
     
     //1 - Many relation to Pictures
-    public function pictures() {
+    public function modelPicture() {
         return $this->hasMany('App\Models\Model\ModelPicture');
     }
 
      //1 - 1 relation to Profile
-    public function profile() {
+    public function modelProfile() {
         return $this->hasOne('App\Models\Model\ModelProfile');
     }
     
     //1 - 1 relation to BillingInfo
-    public function billingInfo() {
+    public function modelBillingInfo() {
         return $this->hasOne('App\Models\Model\ModelBillingInfo');
     }
 
     //1 - 1 relation to Cover
-    public function cover() {
+    public function modelCover() {
         return $this->hasOne('App\Models\Model\ModelCover');
     }
 
     //1 - 1 relation to Avatar
-    public function avatar() {
+    public function modelAvatar() {
         return $this->hasOne('App\Models\Model\ModelAvatar');
     }
 
-    public function application() {
-        return $this->hasMany('App\Models\Model\ModelApplication');
-    }
+//    public function application() {
+//        return $this->hasMany('App\Models\Model\ModelApplication');
+//    }
 
 }

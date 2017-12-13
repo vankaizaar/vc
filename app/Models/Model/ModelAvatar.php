@@ -9,6 +9,6 @@ class ModelAvatar extends Model
     protected $fillable = ['link', 'model_id'];
 
     public function model() {
-        return $this->belongsTo('App\Models\Model\Model');
+        return $this->belongsTo('App\Models\Model\ModelUser');
     }
 }

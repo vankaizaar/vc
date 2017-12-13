@@ -11,12 +11,13 @@ class ModelProfile extends Model {
 
     public $incrementing = false;
     protected $fillable = [
-        'model_id',
+        'model_user_id',
         'gender',
         'dob',
         'telephone',
         'country',
         'city',
+        'about',
     ];
     protected $dates = [
         'created_at',
@@ -24,8 +25,8 @@ class ModelProfile extends Model {
         'dob'
     ];
 
-    public function model() {
-        return $this->belongsTo('App\Models\Model\Model');
+    public function modelUser() {
+        return $this->belongsTo('App\Models\Model\ModelUser');
     }
 
 }

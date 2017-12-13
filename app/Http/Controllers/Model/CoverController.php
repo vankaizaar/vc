@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Model;
 
 use Auth;
-use App\Models\Model\Model;
+use App\Models\Model\ModelUser;
 use App\Models\Model\ModelCover;
 use App\Http\Requests\StoreCover;
 use Illuminate\Http\Request;

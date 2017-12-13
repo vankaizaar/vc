@@ -9,8 +9,8 @@ class ModelCover extends Model {
     protected $fillable = ['link', 'model_id'];
  
 
-    public function model() {
-        return $this->belongsTo('App\Models\Model\Model');
+    public function modelUser() {
+        return $this->belongsTo('App\Models\Model\ModelUser');
     }
 
 }

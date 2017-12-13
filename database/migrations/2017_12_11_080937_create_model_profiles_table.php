@@ -14,19 +14,19 @@ class CreateModelProfilesTable extends Migration {
     public function up() {
         Schema::create('model_profiles', function (Blueprint $table) {
             $table->uuid('id');
-            $table->char('model_id', 36);
-
+            $table->char('model_user_id',36);
             $table->date('dob')->nullable();
             $table->string('country')->nullable();
             $table->string('city')->nullable();
             $table->string('telephone')->nullable();
             $table->boolean('gender')->nullable();
+            $table->text('about')->nullable();
             $table->timestamps();
             $table->primary('id');
         });
         Schema::table('model_profiles', function(Blueprint $table) {
-            $table->foreign('model_id')
-                    ->references('id')->on('models')
+            $table->foreign('model_user_id')
+                    ->references('id')->on('model_users')
                     ->onDelete('cascade');
         });
     }
