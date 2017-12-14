@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7995f8a3fc9b58df90c183704662f2d7",
+    "content-hash": "67aaab19ec40377e809acd9824a5da33",
     "packages": [
         {
             "name": "arrilot/laravel-widgets",
@@ -3161,16 +3161,16 @@
         },
         {
             "name": "tcg/voyager",
-            "version": "v1.0.2",
+            "version": "v1.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/the-control-group/voyager.git",
-                "reference": "e7c63a3ff9db2614ada63e20bcde7f34f02000d3"
+                "reference": "62fb624d1fde0a3bbc364619858b5004ec8e991c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/the-control-group/voyager/zipball/e7c63a3ff9db2614ada63e20bcde7f34f02000d3",
-                "reference": "e7c63a3ff9db2614ada63e20bcde7f34f02000d3",
+                "url": "https://api.github.com/repos/the-control-group/voyager/zipball/62fb624d1fde0a3bbc364619858b5004ec8e991c",
+                "reference": "62fb624d1fde0a3bbc364619858b5004ec8e991c",
                 "shasum": ""
             },
             "require": {
@@ -3178,7 +3178,7 @@
                 "doctrine/dbal": "^2.5",
                 "illuminate/support": "~5.4.0|~5.5.0",
                 "intervention/image": "^2.4",
-                "larapack/doctrine-support": "~0.1.2",
+                "larapack/doctrine-support": "~0.1.4",
                 "larapack/voyager-hooks": "~1.0.2",
                 "league/flysystem": "~1.0.41"
             },
@@ -3223,7 +3223,7 @@
                 "laravel",
                 "panel"
             ],
-            "time": "2017-09-21T16:08:00+00:00"
+            "time": "2017-12-07T18:33:31+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
