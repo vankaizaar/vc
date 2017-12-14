@@ -19,25 +19,25 @@ use App\Notifications\NewModelUserNotification;
 
 class RegisterController extends Controller {
     
-    protected $redirectPath = 'audio/create';
+    protected $redirectPath = 'gallery/create';
 
-    //shows registration form to Artist
+    //shows registration form to models
     public function showRegistrationForm() {
-        return view('artist.auth.register');
+        return view('model.auth.register');
     }
 
-    //Handles registration request for artist
+    //Handles registration request for model
     public function register(Request $request) {
 
         //Validates data
         $this->validator($request->all())->validate();
 
         //Create model
-        $model = $this->create($request->all());
-        $model->notify(new NewModelUserNotification($model));
+        $modelUser = $this->create($request->all());
+        $modelUser->notify(new NewModelUserNotification($modelUser));
 
         //Authenticates model
-        $this->guard()->login($model);
+        $this->guard()->login($modelUser);
 
         //Redirects models
         return redirect($this->redirectPath);
@@ -47,7 +47,7 @@ class RegisterController extends Controller {
     protected function validator(array $data) {
         return Validator::make($data, [
                     'name' => 'required|max:255',
-                    'email' => 'required|email|max:255|unique:models',
+                    'email' => 'required|email|max:255|unique:model_users',
                     'password' => 'required|min:6|confirmed',
         ]);
     }
@@ -61,7 +61,7 @@ class RegisterController extends Controller {
         ]);
     }
 
-    //Get the guard to authenticate Artist
+    //Get the guard to authenticate Models
     protected function guard() {
         return Auth::guard('web_model');
     }

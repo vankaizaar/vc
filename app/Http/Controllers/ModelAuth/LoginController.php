@@ -19,7 +19,7 @@ class LoginController extends Controller
     /**Trait**/
     use AuthenticatesUsers;
     
-    //**Custom guard for artist**//
+    //**Custom guard for models**//
     protected function guard()
     {
         return Auth::guard('web_model');
