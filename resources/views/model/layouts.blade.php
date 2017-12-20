@@ -41,34 +41,34 @@ echo json_encode([
                             <!--<a href="#" class="account-management"><i class="glyphicon glyphicon-pencil"></i>Sign up</a>
                             <a href="#" class="account-management"><i class="glyphicon glyphicon-log-in"></i>Login</a>-->
                             <!-- Authentication Links -->
-                            @if (Auth::guard('web_artist')->guest())
+                            @if (Auth::guard('web_model')->guest())
                             <!--Artist Login and registration Links -->
-                            <a href="{{ url('/artist_register') }}" class="account-management"><i class="glyphicon glyphicon-pencil"></i>Upload demo</a>
-                            <a href="{{ url('/artist_login') }}" class="account-management"><i class="glyphicon glyphicon-log-in"></i>Login</a>                          
+                            <a href="{{ url('/model_register') }}" class="account-management"><i class="glyphicon glyphicon-pencil"></i>Upload demo</a>
+                            <a href="{{ url('/model_login') }}" class="account-management"><i class="glyphicon glyphicon-log-in"></i>Login</a>                          
                             @else
 
                             <ul class="nav navbar-nav navbar-right">                            
                                 <li class="dropdown">
                                     <a href="{{route('profile.index')}}" class="dropdown-toggle profile-name" data-toggle="dropdown" role="button" aria-expanded="false">
-                                        <span style="color:rgb(40, 116, 200) !important; font-weight:normal;">Logged in as {{ Auth::guard('web_artist')->user()->name }}</span> <br /> MENU <span class="glyphicon glyphicon-menu-hamburger"></span>
+                                        <span style="color:rgb(40, 116, 200) !important; font-weight:normal;">Logged in as {{ Auth::guard('web_model')->user()->name }}</span> <br /> MENU <span class="glyphicon glyphicon-menu-hamburger"></span>
                                     </a>
 
                                     <ul class="dropdown-menu" role="menu">
-                                        <li><a href="{{route('profile.index')}}">Your Profile</a></li>                                    
+                                        <li><a href="{{route('modelprofile.index')}}">Your Profile</a></li>                                    
                                         <li class="divider"></li>                                        
                                         <li><a href="{{route('audio.create')}}">Upload voice samples</a></li>                                    
                                         <li><a href="{{route('audio.index')}}">Manage your samples</a></li>                                                                        
                                         <li class="divider"></li>
-                                        <li><a href="{{route('settings.edit',Auth::guard('web_artist')->user()->id)}}">Edit settings</a></li>                                     
+                                        <li><a href="{{route('settings.edit',Auth::guard('web_model')->user()->id)}}">Edit settings</a></li>                                     
                                         <li class="divider"></li>
                                         <li>
-                                            <a href="{{ url('/artist_logout') }}"
+                                            <a href="{{ url('/model_logout') }}"
                                                onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">
                                                 Logout
                                             </a>
 
-                                            <form id="logout-form" action="{{ url('/artist_logout') }}" method="POST" style="display: none;">
+                                            <form id="logout-form" action="{{ url('/model_logout') }}" method="POST" style="display: none;">
                                                 {{ csrf_field() }}
                                             </form>
                                         </li>

@@ -128,7 +128,8 @@ Route::group(['middleware' => 'model_auth'], function() {
     Route::get('/model_home', function() {
         return view('model.home');
     });
-    Route::resource('modelaudio', 'Model\AudioController');
+//    Route::resource('modelaudio', 'Model\AudioController');
+    Route::resource('modelalbums', 'Model\ModelAlbumController');
     Route::resource('modelprofile', 'Model\ProfileController');
     Route::resource('modelavatar', 'Model\AvatarController');
     Route::resource('modelcover', 'Model\CoverController');

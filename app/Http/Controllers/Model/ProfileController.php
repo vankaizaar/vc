@@ -10,7 +10,7 @@ use App\Models\Model\ModelProfile;
 use App\Http\Requests\StoreProfile;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Notifications\NewUserNotification;
+use App\Notifications\NewModelUserNotification;
 
 class ProfileController extends Controller {
 
@@ -20,8 +20,8 @@ class ProfileController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        $id = Auth::guard('web_artist')->user()->id;
-        return view('artist.profile.index')
+        $id = Auth::guard('web_model')->user()->id;
+        return view('model.profile.index')
                         ->with('profile', Profile::where('artist_id', $id)->first())
                         ->with('avatar', Avatar::where('artist_id', $id)->first())
                         ->with('cover', Cover::where('artist_id', $id)->first())

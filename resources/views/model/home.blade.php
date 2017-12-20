@@ -6,7 +6,7 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-success">               
                 <div class="panel-body">
-                    <h3>Welcome back {{ Auth::guard('web_artist')->user()->name }}</h3>                  
+                    <h3>Welcome back {{ Auth::guard('web_model')->user()->name }}</h3>                  
                 </div>
             </div>
 <!--            <div class="row">
@@ -57,10 +57,10 @@
                 <div class="col-md-12">
                     <div id="outer">
                         <div class="itemwrapper">
-                            <a href="{{route('audio.index')}}"><img src="{{asset('images/browse-through-your-samples.jpg')}}" alt="Browse through your samples" class="img-responsive" /></a>
+                            <a href="{{route('modelalbums.index')}}"><img src="{{asset('images/browse-through-your-samples.jpg')}}" alt="Browse through your samples" class="img-responsive" /></a>
                         </div>
                         <div class="itemwrapper">
-                            <a href="{{route('audio.create')}}"><img src="{{asset('images/upload-a-voice-sample-now.jpg')}}" alt="Upload a voice sample now" class="img-responsive" /></a>
+                            <a href="{{route('modelalbums.create')}}"><img src="{{asset('images/upload-a-voice-sample-now.jpg')}}" alt="Upload a voice sample now" class="img-responsive" /></a>
                         </div>
                     </div>
                 </div>

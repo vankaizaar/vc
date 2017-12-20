@@ -28,6 +28,6 @@ class LoginController extends Controller
     /**show artist the login form**/
     public function showLoginForm() 
     {       
-        return view('artist.auth.login');        
+        return view('model.auth.login');        
     }
 }

@@ -1,4 +1,4 @@
-@extends('artist.layouts')
+@extends('model.layouts')
 
 @section('content')
 <div class="container">
@@ -7,9 +7,9 @@
             <div class="panel panel-success">               
                 <div class="panel-body">
                     <div class="col-md-6 col-md-offset-4">
-                        <h3>Artist Login</h3>
+                        <h3>Model Login</h3>
                     </div>
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/artist_login') }}">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/model_login') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">

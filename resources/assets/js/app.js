@@ -6,6 +6,7 @@ require('selectize');
 require('soundmanager2');
 require('./bar-ui');
 require('./unslider-min');
+require('./bootstrap-filestyle.min');
 //require('bootstrap-responsive-tabs');
 window.CountUp = require('countup.js');
 

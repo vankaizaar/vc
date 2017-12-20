@@ -19,7 +19,7 @@ use App\Notifications\NewModelUserNotification;
 
 class RegisterController extends Controller {
     
-    protected $redirectPath = 'gallery/create';
+    protected $redirectPath = 'modelalbums/create';
 
     //shows registration form to models
     public function showRegistrationForm() {

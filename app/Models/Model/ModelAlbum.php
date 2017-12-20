@@ -14,6 +14,7 @@ class ModelAlbum extends Model {
 
     protected $fillable = ['model_user_id', 'title', 'type', 'about_album'];
     protected $hidden = ['id', 'model_user_id', 'updated_at', 'created_at'];
+    protected $with = ['modelpicture'];
 
     //Many - 1 relation to Albums
     public function modelUser() {
