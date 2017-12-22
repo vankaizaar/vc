@@ -126,9 +126,12 @@ $factory->define(App\Models\Model\ModelProfile::class, function (Faker\Generator
         'dob' => $faker->dateTimeThisCentury->format('Y-m-d'),
         'country' => $faker->country,
         'city' => $faker->city,
+        'height' => $faker->randomFloat($nbMaxDecimals = 2, $min = 4.1, $max = 7.11),
+        'weight' => $faker->numberBetween($min = 45, $max = 100),
+        'model_categories' => $faker->words($nb = 3, $asText = true),
         'telephone' => $faker->phoneNumber,
         'about' => $faker->text(200),
-        'gender' => $faker->boolean(),                
+        'gender' => $faker->boolean(),
     ];
 });
 
@@ -141,27 +144,27 @@ $factory->define(App\Models\Model\ModelBillingInfo::class, function (Faker\Gener
 });
 
 $factory->define(App\Models\Model\ModelAlbum::class, function (Faker\Generator $faker) {
-    return [        
+    return [
         'title' => $faker->sentence($nbWords = 6, $variableNbWords = true),
         'about_album' => $faker->paragraph($nbSentences = 3, $variableNbSentences = true),
-        'type' => $faker->randomElement($array = array('TV Commercial', 'Product Shoot', 'Fashion')),        
+        'type' => $faker->randomElement($array = array('TV Commercial', 'Product Shoot', 'Fashion')),
     ];
 });
 
 $factory->define(App\Models\Model\ModelPicture::class, function (Faker\Generator $faker) {
     return [
-        'link' => $faker->imageUrl($width = 640, $height = 480),        
+        'link' => $faker->imageUrl($width = 640, $height = 480),
     ];
 });
 
 $factory->define(App\Models\Model\ModelCover::class, function (Faker\Generator $faker) {
     return [
-        'link' => 'public/defaults/covers/cover.jpg',
+        'link' => 'public/defaults/covers/models/cover.jpg',
     ];
 });
 
 $factory->define(App\Models\Model\ModelAvatar::class, function (Faker\Generator $faker) {
     return [
-        'link' => $faker->randomElement($array = array('public/defaults/avatars/male.svg', 'public/defaults/avatars/female.svg')),
+        'link' => $faker->randomElement($array = array('public/defaults/avatars/models/male.svg', 'public/defaults/avatars/models/female.svg')),
     ];
 });

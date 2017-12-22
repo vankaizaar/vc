@@ -6,7 +6,7 @@ use Auth;
 use Hash;
 use App\Models\Model\ModelUser;
 use Illuminate\Http\Request;
-use App\Http\Requests\StoreSetting;
+use App\Http\Requests\Models\StoreSetting;
 use App\Http\Controllers\Controller;
 
 class SettingController extends Controller {
@@ -17,7 +17,7 @@ class SettingController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function edit(ModelUser $model) {
-        return view('artist.settings.edit')
+        return view('model.settings.edit')
                         ->with('model', $model);
     }
 
@@ -32,7 +32,7 @@ class SettingController extends Controller {
 
         $model->update($request->all());
 
-        return redirect('profile')->with('success', 'Your settings have been updated.');
+        return redirect('modelprofile')->with('success', 'Your settings have been updated.');
     }
 
 }

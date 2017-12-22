@@ -1,4 +1,4 @@
-@extends('artist.layouts')
+@extends('model.layouts')
 
 @section('content')
 <div class="container">
@@ -7,7 +7,7 @@
             <div class="panel panel-success">               
                 <div class="panel-body">   
                     <h3>Account Settings</h3>
-                    <form class="form-horizontal" role="form" method="POST" action="{{route('settings.update',['artist'=>$artist->id ])}}">
+                    <form class="form-horizontal" role="form" method="POST" action="{{route('modelsettings.update',['modeluser'=>$model->id ])}}">
                         {{ csrf_field() }}
                         {{ method_field('PATCH') }}
                         <div class="form-group">
@@ -20,7 +20,7 @@
                             <label for="name" class="col-md-4 control-label">Name</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="{{ $artist->name }}" placeholder="name" autofocus>
+                                <input id="name" type="text" class="form-control" name="name" value="{{ $model->name }}" placeholder="name" autofocus>
 
                                 @if ($errors->has('name'))
                                 <span class="help-block">
@@ -34,7 +34,7 @@
                             <label for="email" class="col-md-4 control-label">E-Mail Address</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" placeholder="Email" value="{{ $artist->email }}">
+                                <input id="email" type="email" class="form-control" name="email" placeholder="Email" value="{{ $model->email }}">
 
                                 @if ($errors->has('email'))
                                 <span class="help-block">

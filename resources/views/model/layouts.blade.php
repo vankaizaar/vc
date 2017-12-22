@@ -56,15 +56,17 @@ echo json_encode([
                                     <ul class="dropdown-menu" role="menu">
                                         <li><a href="{{route('modelprofile.index')}}">Your Profile</a></li>                                    
                                         <li class="divider"></li>                                        
-                                        <li><a href="{{route('audio.create')}}">Upload voice samples</a></li>                                    
-                                        <li><a href="{{route('audio.index')}}">Manage your samples</a></li>                                                                        
+                                        <li><a href="{{route('modelalbums.create')}}">Upload Gallery</a></li>                                    
+                                        <li><a href="{{route('modelalbums.index')}}">Manage Galleries</a></li>                                                                        
                                         <li class="divider"></li>
-                                        <li><a href="{{route('settings.edit',Auth::guard('web_model')->user()->id)}}">Edit settings</a></li>                                     
+                                        <li><a href="{{route('modelsettings.edit',Auth::guard('web_model')->user()->id)}}">Edit settings</a></li>                                     
+                                        <li class="divider"></li>
+                                        <li><a href="{{route('modelbillinginfo.index')}}">Billing Information</a></li>                                     
                                         <li class="divider"></li>
                                         <li>
                                             <a href="{{ url('/model_logout') }}"
                                                onclick="event.preventDefault();
-                document.getElementById('logout-form').submit();">
+            document.getElementById('logout-form').submit();">
                                                 Logout
                                             </a>
 
@@ -140,39 +142,43 @@ echo json_encode([
 
         <script type="text/javascript">
             @if (Session::has('success'))
-            swal({title: "Success!",
-                text: "{{Session::get('success')}}",
-                type: "success",
-                timer: 3000,
-                confirmButtonColor: "#43ABDB"
-            }).catch(swal.noop);
+                    swal({title: "Success!",
+                            text: "{{Session::get('success')}}",
+                            type: "success",
+                            timer: 3000,
+                            confirmButtonColor: "#43ABDB"
+                    }).catch(swal.noop);
             @endif
                     @if (Session::has('status'))
-            swal({title: "Success!",
-                text: "{{Session::get('status')}}",
-                type: "success",
-                timer: 5000,
-                confirmButtonColor: "#43ABDB"
-            }).catch(swal.noop);
+                    swal({title: "Success!",
+                            text: "{{Session::get('status')}}",
+                            type: "success",
+                            timer: 5000,
+                            confirmButtonColor: "#43ABDB"
+                    }).catch(swal.noop);
             @endif
                     @if (Session::has('error'))
-            swal({title: "Error!",
-                text: "{{Session::get('success')}}",
-                type: "error",
-                timer: 3000,
-                confirmButtonColor: "#43ABDB"
-            }).catch(swal.noop);
+                    swal({title: "Error!",
+                            text: "{{Session::get('success')}}",
+                            type: "error",
+                            timer: 3000,
+                            confirmButtonColor: "#43ABDB"
+                    }).catch(swal.noop);
             @endif
         </script>    
+        <script type="text/javascript">
+                    $(function () {
+                    $("[data-toggle='tooltip']").tooltip();
+                    });
+        </script>
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110233202-1"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag() {
-                dataLayer.push(arguments);
+            dataLayer.push(arguments);
             }
             gtag('js', new Date());
-
             gtag('config', 'UA-110233202-1');
         </script>
 

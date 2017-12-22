@@ -1,4 +1,4 @@
-@extends('artist.layouts')
+@extends('model.layouts')
 @section('content')
 <div class="container">
     <div class="row">
@@ -6,7 +6,7 @@
             <div class="panel panel-success">                
                 <div class="panel-body">
                     <h3>Lets get to know you</h3>
-                    <form action="{{route('profile.store')}}" class="form-horizontal" role="form" method="POST">
+                    <form action="{{route('modelprofile.store')}}" class="form-horizontal" role="form" method="POST">
                         {{csrf_field()}}                                                                         
 
                         <div class="form-group{{ $errors->has('gender') ? ' has-error' : '' }}">
@@ -32,6 +32,87 @@
                                 @if ($errors->has('dob'))
                                 <span class="help-block">
                                     <strong>{{ $errors->first('dob') }}</strong>
+                                </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group {{ $errors->has('height') ? ' has-error' : '' }}">
+                            <label for="height" class="col-md-4 control-label">Height</label>
+                            <div class="col-md-8">
+                                <select name="height" id="height" class="form-control" required>                                    
+                                    <optgroup label="Select height">                                         
+                                        <option value="4.0" @if(old('height') == '4.0') selected @endif>4&rsquo;</option>
+                                        <option value="4.1" @if(old('height') == '4.1') selected @endif>4&rsquo;&nbsp;1&rdquo;</option>
+                                        <option value="4.2" @if(old('height') == '4.2') selected @endif>4&rsquo;&nbsp;2&rdquo;</option>
+                                        <option value="4.3" @if(old('height') == '4.3') selected @endif>4&rsquo;&nbsp;3&rdquo;</option>
+                                        <option value="4.4" @if(old('height') == '4.4') selected @endif>4&rsquo;&nbsp;4&rdquo;</option>
+                                        <option value="4.5" @if(old('height') == '4.5') selected @endif>4&rsquo;&nbsp;5&rdquo;</option>
+                                        <option value="4.6" @if(old('height') == '4.6') selected @endif>4&rsquo;&nbsp;6&rdquo;</option>
+                                        <option value="4.7" @if(old('height') == '4.7') selected @endif>4&rsquo;&nbsp;7&rdquo;</option>
+                                        <option value="4.8" @if(old('height') == '4.8') selected @endif>4&rsquo;&nbsp;8&rdquo;</option>
+                                        <option value="4.9" @if(old('height') == '4.9') selected @endif>4&rsquo;&nbsp;9&rdquo;</option>
+                                        <option value="4.10" @if(old('height') == '4.10') selected @endif>4&rsquo;&nbsp;10&rdquo;</option>
+                                        <option value="4.11" @if(old('height') == '4.11') selected @endif>4&rsquo;&nbsp;11&rdquo;</option>
+                                    </optgroup>
+                                    <optgroup label="5&rsquo;">
+                                        <option value="5.0" @if(old('height') == '5.0') selected @endif>5&rsquo;</option>
+                                        <option value="5.1" @if(old('height') == '5.1') selected @endif>5&rsquo;&nbsp;1&rdquo;</option>
+                                        <option value="5.2" @if(old('height') == '5.2') selected @endif>5&rsquo;&nbsp;2&rdquo;</option>
+                                        <option value="5.3" @if(old('height') == '5.3') selected @endif>5&rsquo;&nbsp;3&rdquo;</option>
+                                        <option value="5.4" @if(old('height') == '5.4') selected @endif>5&rsquo;&nbsp;4&rdquo;</option>
+                                        <option value="5.5" @if(old('height') == '5.5') selected @endif>5&rsquo;&nbsp;5&rdquo;</option>
+                                        <option value="5.6" @if(old('height') == '5.6') selected @endif>5&rsquo;&nbsp;6&rdquo;</option>
+                                        <option value="5.7" @if(old('height') == '5.7') selected @endif>5&rsquo;&nbsp;7&rdquo;</option>
+                                        <option value="5.8" @if(old('height') == '5.8') selected @endif>5&rsquo;&nbsp;8&rdquo;</option>
+                                        <option value="5.9" @if(old('height') == '5.9') selected @endif>5&rsquo;&nbsp;9&rdquo;</option>
+                                        <option value="5.10" @if(old('height') == '5.10') selected @endif>5&rsquo;&nbsp;10&rdquo;</option>
+                                        <option value="5.11" @if(old('height') == '5.11') selected @endif>5&rsquo;&nbsp;11&rdquo;</option>
+                                    </optgroup>
+                                    <optgroup label="6&rsquo;">
+                                        <option value="6.0" @if(old('height') == '6.0') selected @endif>6&rsquo;</option>
+                                        <option value="6.1" @if(old('height') == '6.1') selected @endif>6&rsquo;&nbsp;1&rdquo;</option>
+                                        <option value="6.2" @if(old('height') == '6.2') selected @endif>6&rsquo;&nbsp;2&rdquo;</option>
+                                        <option value="6.3" @if(old('height') == '6.3') selected @endif>6&rsquo;&nbsp;3&rdquo;</option>
+                                        <option value="6.4" @if(old('height') == '6.4') selected @endif>6&rsquo;&nbsp;4&rdquo;</option>
+                                        <option value="6.5" @if(old('height') == '6.5') selected @endif>6&rsquo;&nbsp;5&rdquo;</option>
+                                        <option value="6.6" @if(old('height') == '6.6') selected @endif>6&rsquo;&nbsp;6&rdquo;</option>
+                                        <option value="6.7" @if(old('height') == '6.7') selected @endif>6&rsquo;&nbsp;7&rdquo;</option>
+                                        <option value="6.8" @if(old('height') == '6.8') selected @endif>6&rsquo;&nbsp;8&rdquo;</option>
+                                        <option value="6.9" @if(old('height') == '6.9') selected @endif>6&rsquo;&nbsp;9&rdquo;</option>
+                                        <option value="6.10" @if(old('height') == '6.10') selected @endif>6&rsquo;&nbsp;10&rdquo;</option>
+                                        <option value="6.11" @if(old('height') == '6.11') selected @endif>6&rsquo;&nbsp;11&rdquo;</option>
+                                    </optgroup>
+                                    <optgroup label="7&rsquo;">
+                                        <option value="7.0" @if(old('height') == '7.0') selected @endif>7&rsquo;</option>
+                                        <option value="7.1" @if(old('height') == '7.1') selected @endif>7&rsquo;&nbsp;1&rdquo;</option>
+                                        <option value="7.2" @if(old('height') == '7.2') selected @endif>7&rsquo;&nbsp;2&rdquo;</option>
+                                        <option value="7.3" @if(old('height') == '7.3') selected @endif>7&rsquo;&nbsp;3&rdquo;</option>
+                                        <option value="7.4" @if(old('height') == '7.4') selected @endif>7&rsquo;&nbsp;4&rdquo;</option>
+                                        <option value="7.5" @if(old('height') == '7.5') selected @endif>7&rsquo;&nbsp;5&rdquo;</option>
+                                        <option value="7.6" @if(old('height') == '7.6') selected @endif>7&rsquo;&nbsp;6&rdquo;</option>
+                                        <option value="7.7" @if(old('height') == '7.7') selected @endif>7&rsquo;&nbsp;7&rdquo;</option>
+                                        <option value="7.8" @if(old('height') == '7.8') selected @endif>7&rsquo;&nbsp;8&rdquo;</option>
+                                        <option value="7.9" @if(old('height') == '7.9') selected @endif>7&rsquo;&nbsp;9&rdquo;</option>
+                                        <option value="7.10" @if(old('height') == '7.10') selected @endif>7&rsquo;&nbsp;10&rdquo;</option>
+                                        <option value="7.11" @if(old('height') == '7.11') selected @endif>7&rsquo;&nbsp;11&rdquo;</option>
+                                    </optgroup>
+                                </select>
+                                @if ($errors->has('height'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('height') }}</strong>
+                                </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('weight') ? ' has-error' : '' }}">
+                            <label for="weight" class="col-md-4 control-label">Weight</label>
+                            <div class="col-md-8">
+                                <input id="weight" type="text" class="form-control" name="weight" value="{{ old('weight') }}" placeholder="Weight in kgs" required autofocus>
+                                @if ($errors->has('weight'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('weight') }}</strong>
                                 </span>
                                 @endif
                             </div>
@@ -83,186 +164,32 @@
                                 </span>
                                 @endif
                             </div>
-                        </div>
+                        </div>                        
 
-                        <div class="form-group{{ $errors->has('native_language') ? ' has-error' : '' }}">
-                            <label for="native_language" class="col-md-4 control-label">What are your native languages?</label>
+                        <div class="form-group{{ $errors->has('model_categories') ? ' has-error' : '' }}">
+                            <label for="model_categories" class="col-md-4 control-label">What modeling categories can you execute really well?</label>
                             <div class="col-md-8">
                                 <div class="checkbox">
-                                    <label class="checkbox"><input type="checkbox" name="native_language[]" value="English" @if(is_array(old('native_language')) && in_array('English', old('native_language'))) checked @endif>English</label>
-                                    <label class="checkbox"><input type="checkbox" name="native_language[]" value="Swahili" @if(is_array(old('native_language')) && in_array('Swahili', old('native_language'))) checked @endif>Swahili</label>
-                                    <label class="checkbox"><input type="checkbox" name="native_language[]" value="French" @if(is_array(old('native_language')) && in_array('French', old('native_language'))) checked @endif>French</label>
-                                    <label class="checkbox"><input type="checkbox" name="native_language[]" value="Portuguese" @if(is_array(old('native_language')) && in_array('Portuguese', old('native_language'))) checked @endif>Portuguese</label>
-                                    <label class="checkbox"><input type="checkbox" name="native_language[]" value="Spanish" @if(is_array(old('native_language')) && in_array('Spanish', old('native_language'))) checked @endif>Spanish</label>
-                                    <label class="checkbox"><input type="checkbox" name="native_language[]" value="German" @if(is_array(old('native_language')) && in_array('German', old('native_language'))) checked @endif>German</label>
-                                    <label class="checkbox"><input type="checkbox" name="native_language[]" value="Japanese" @if(is_array(old('native_language')) && in_array('Japanese', old('native_language'))) checked @endif>Japanese</label>
-                                    <label class="checkbox"><input type="checkbox" name="native_language[]" value="Arabic" @if(is_array(old('native_language')) && in_array('Arabic', old('native_language'))) checked @endif>Arabic</label>
+                                    <label class="checkbox"><input type="checkbox" data-toggle='tooltip' data-placement='left' data-original-title="tooltip here" name="model_categories[]" value="Fashion Model" @if(is_array(old('model_categories')) && in_array('Fashion Model', old('model_categories'))) checked @endif>Fashion Model</label>
+                                    <label class="checkbox"><input type="checkbox" data-toggle='tooltip' data-placement='left' data-original-title="These models are the ones you find in the editorial spreads of pages like Elle, Vogue, Glamour, etc." name="model_categories[]" value="Editorial Fashion Model" @if(is_array(old('model_categories')) && in_array('Editorial Fashion Model', old('model_categories'))) checked @endif>Editorial Fashion Model</label>
+                                    <label class="checkbox"><input type="checkbox" data-toggle='tooltip' data-placement='left' data-original-title="These models are the ones you see in the clothing catalogs, posing in a variety of outfits." name="model_categories[]" value="Fashion Catalog Model" @if(is_array(old('model_categories')) && in_array('Fashion Catalog Model', old('model_categories'))) checked @endif>Fashion Catalog Model</label>
+                                    <label class="checkbox"><input type="checkbox" data-toggle='tooltip' data-placement='left' data-original-title="These models walk the catwalk or runway." name="model_categories[]" value="Runway Model" @if(is_array(old('model_categories')) && in_array('Runway Model', old('model_categories'))) checked @endif>Runway Model</label>                                    
+                                    <label class="checkbox"><input type="checkbox" data-toggle='tooltip' data-placement='left' data-original-title="These models are used for many different types of publications, such as: magazines, print advertisements, billboards, posters, calendars, campaigns, booklets, flyers, banners." name="model_categories[]" value="Print Model" @if(is_array(old('model_categories')) && in_array('Print Model', old('model_categories'))) checked @endif>Print Model</label>
+                                    <label class="checkbox"><input type="checkbox" data-toggle='tooltip' data-placement='left' data-original-title="Glamour modeling focuses much more on the model’s appeal, beauty, and body than it does anything else." name="model_categories[]" value="Glamour Model" @if(is_array(old('model_categories')) && in_array('Glamour Model', old('model_categories'))) checked @endif>Glamour Model</label>
+                                    <label class="checkbox"><input type="checkbox" data-toggle='tooltip' data-placement='left' data-original-title="This is a model that is hired to represent a brand, product, or service." name="model_categories[]" value="Promotional Model" @if(is_array(old('model_categories')) && in_array('Promotional Model', old('model_categories'))) checked @endif>Promotional Model</label>
+                                    <label class="checkbox"><input type="checkbox" data-toggle='tooltip' data-placement='left' data-original-title="A catalog model has the same job description as a “fashion catalog model”, yet none of the same size requirements." name="model_categories[]" value="Catalog Model" @if(is_array(old('model_categories')) && in_array('Catalog Model', old('model_categories'))) checked @endif>Catalog Model</label>
+                                    <label class="checkbox"><input type="checkbox" data-toggle='tooltip' data-placement='left' data-original-title="Fitness models are toned, in-shape, healthy, and have good muscle tone. " name="model_categories[]" value="Fitness Model" @if(is_array(old('model_categories')) && in_array('Fitness Model', old('model_categories'))) checked @endif>Fitness Model</label>
+                                    <label class="checkbox"><input type="checkbox" data-toggle='tooltip' data-placement='left' data-original-title="These models typically model their “parts”, such as their hands, legs, feet, stomach, etc." name="model_categories[]" value="Parts Model" @if(is_array(old('model_categories')) && in_array('Parts Model', old('model_categories'))) checked @endif>Parts Model</label>
+                                    <label class="checkbox"><input type="checkbox" data-toggle='tooltip' data-placement='left' data-original-title="Art models work with visual artists. The model is the subject of the intended art piece, usually being required to pose while the artist interprets and creates a piece of art." name="model_categories[]" value="Art Model" @if(is_array(old('model_categories')) && in_array('Art Model', old('model_categories'))) checked @endif>Art Model</label>
                                 </div>
 
-                                @if ($errors->has('native_language'))
+                                @if ($errors->has('model_categories'))
                                 <span class="help-block">
-                                    <strong>{{ $errors->first('native_language') }}</strong>
+                                    <strong>{{ $errors->first('model_categories') }}</strong>
                                 </span>
                                 @endif
                             </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('voice_categories') ? ' has-error' : '' }}">
-                            <label for="voice_categories" class="col-md-4 control-label">What voice genders and ages can you execute really well?</label>
-                            <div class="col-md-8">
-                                <div class="checkbox">
-                                    <label class="checkbox"><input type="checkbox" name="voice_categories[]" value="Male Child" @if(is_array(old('voice_categories')) && in_array('Male Child', old('voice_categories'))) checked @endif>Male | Child</label>
-                                    <label class="checkbox"><input type="checkbox" name="voice_categories[]" value="Male Teenage" @if(is_array(old('voice_categories')) && in_array('Male Teenage', old('voice_categories'))) checked @endif>Male | Teenage</label>
-                                    <label class="checkbox"><input type="checkbox" name="voice_categories[]" value="Male Young Adult" @if(is_array(old('voice_categories')) && in_array('Male Young Adult', old('voice_categories'))) checked @endif>Male | Young Adult</label>
-                                    <label class="checkbox"><input type="checkbox" name="voice_categories[]" value="Male Middle Age" @if(is_array(old('voice_categories')) && in_array('Male Middle Age', old('voice_categories'))) checked @endif>Male | Middle Age</label>
-                                    <label class="checkbox"><input type="checkbox" name="voice_categories[]" value="Male Senior" @if(is_array(old('voice_categories')) && in_array('Male Senior', old('voice_categories'))) checked @endif>Male | Senior</label>
-                                    <label class="checkbox"><input type="checkbox" name="voice_categories[]" value="Female Child" @if(is_array(old('voice_categories')) && in_array('Female Child', old('voice_categories'))) checked @endif>Female | Child</label>
-                                    <label class="checkbox"><input type="checkbox" name="voice_categories[]" value="Female Teenage" @if(is_array(old('voice_categories')) && in_array('Female Teenage', old('voice_categories'))) checked @endif>Female | Teenage</label>
-                                    <label class="checkbox"><input type="checkbox" name="voice_categories[]" value="Female Young Adult" @if(is_array(old('voice_categories')) && in_array('Female Young Adult', old('voice_categories'))) checked @endif>Female | Young Adult</label>
-                                    <label class="checkbox"><input type="checkbox" name="voice_categories[]" value="Female Middle Age" @if(is_array(old('voice_categories')) && in_array('Female Middle Age', old('voice_categories'))) checked @endif>Female | Middle Age</label>
-                                    <label class="checkbox"><input type="checkbox" name="voice_categories[]" value="Female Senior" @if(is_array(old('voice_categories')) && in_array('Female Senior', old('voice_categories'))) checked @endif>Female | Senior</label>
-                                </div>
-
-                                @if ($errors->has('voice_categories'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('voice_categories') }}</strong>
-                                </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="city" class="col-md-4 control-label">In your opinion, how much time do you reckon it would take you to record, edit, and "clean up" a great quality track for the following projects?</label>
-                            <div class="col-md-8">
-                                <div class="form-group {{ $errors->has('project_5000_time') ? ' has-error' : '' }}">
-                                    <div class="col-sm-4">
-                                        A project of <b>5000</b> words <br />
-                                        (short audiobooks, manuals)
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input id="project_5000_time" type="text" class="form-control" name="project_5000_time" value="{{ old('project_5000_time') }}" required>
-                                        @if ($errors->has('project_5000_time'))
-                                        <span class="help-block">
-                                            <strong>{{ $errors->first('project_5000_time') }}</strong>
-                                        </span>
-                                        @endif
-                                    </div>
-                                    <label class="control-label col-sm-2" for="project_5000_time">Minutes</label>
-                                </div>
-                                <div class="form-group {{ $errors->has('project_500_time') ? ' has-error' : '' }}">
-                                    <div class="col-sm-4">
-                                        A project of <b>500</b> words <br />
-                                        (short podcast, a video for a website)
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input id="project_500_time" type="text" class="form-control" name="project_500_time" value="{{ old('project_500_time') }}" required>
-                                        @if ($errors->has('project_500_time'))
-                                        <span class="help-block">
-                                            <strong>{{ $errors->first('project_500_time') }}</strong>
-                                        </span>
-                                        @endif
-                                    </div>
-                                    <label class="control-label col-sm-2" for="project_500_time">Minutes</label>
-                                </div>
-                                <div class="form-group {{ $errors->has('project_50_time') ? ' has-error' : '' }}">
-                                    <div class="col-sm-4">
-                                        A project of <b>50</b> words <br />
-                                        (a radio ad, a voicemail)
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input id="project_50_time" type="text" class="form-control" name="project_50_time" value="{{ old('project_50_time') }}" required>
-                                        @if ($errors->has('project_50_time'))
-                                        <span class="help-block">
-                                            <strong>{{ $errors->first('project_50_time') }}</strong>
-                                        </span>
-                                        @endif
-                                    </div>
-                                    <label class="control-label col-sm-2" for="project_50_time">Minutes</label>
-                                </div>
-                                <div class="form-group {{ $errors->has('project_5_time') ? ' has-error' : '' }}">
-                                    <div class="col-sm-4">
-                                        A project of <b>5</b> words <br />
-                                        (a phone prompt, a radio tag)
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input id="project_5_time" type="text" class="form-control" name="project_5_time" value="{{ old('project_5_time') }}" required>
-                                        @if ($errors->has('project_5_time'))
-                                        <span class="help-block">
-                                            <strong>{{ $errors->first('project_5_time') }}</strong>
-                                        </span>
-                                        @endif
-                                    </div>
-                                    <label class="control-label col-sm-2" for="project_5_time">Minutes</label>
-                                </div>                                
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="city" class="col-md-4 control-label">How much would you charge us to use your awesome voice on each of the following projects?</label>
-
-                            <div class="col-md-8">
-                                <p><strong>Please note this</strong></p>
-                                <ul>
-                                    <li>You don't have to worry about the billing, we will take care of it for you.</li>
-                                    <li>There's no risk to you! <b>You will be paid for everty accepted read you submit.</b></li>
-                                    <li>Most clients only need one take, but <b>some may ask for multiple takes</b></li>
-                                    <li>No music</li>
-                                    <li>No SFX</li>
-                                    <li>No revisions (we'll pay extra if your clients make changes to the original scripts)</li>
-                                    <li>No pickups</li>
-                                    <li>No other special editing</li>
-                                    <li>No commision fees to us (we will add our margin on top of your rates)</li>
-                                    <li>Your rates should be for a full buyout on all projects (we dont pay usage fees)</li>
-                                    <li>The "use" of the recorded audio file and market, if any, would be unknown or impossible to determine (considering that we are on a digital platform)</li>
-                                    <li><b>You don't have to worry about auditioning</b> (we actually pay extra to audition!)</li>
-                                </ul>
-
-                                <div class="form-group {{ $errors->has('project_5000_cost') ? ' has-error' : '' }}">
-                                    <label class="control-label col-sm-4" for="project_5000_cost">A project of <b>5000</b></label>
-                                    <div class="col-sm-8">
-                                        <input id="project_5000_cost" type="text" class="form-control" name="project_5000_cost" value="{{ old('project_5000_cost') }}" required>
-                                        @if ($errors->has('project_5000_cost'))
-                                        <span class="help-block">
-                                            <strong>{{ $errors->first('project_5000_cost') }}</strong>
-                                        </span>
-                                        @endif
-                                    </div>                                   
-                                </div>
-                                <div class="form-group {{ $errors->has('project_500_cost') ? ' has-error' : '' }}">
-                                    <label class="control-label col-sm-4" for="project_500_cost">A project of <b>500</b></label>
-                                    <div class="col-sm-8">
-                                        <input id="project_500_cost" type="text" class="form-control" name="project_500_cost" value="{{ old('project_500_cost') }}" required>
-                                        @if ($errors->has('project_500_cost'))
-                                        <span class="help-block">
-                                            <strong>{{ $errors->first('project_500_cost') }}</strong>
-                                        </span>
-                                        @endif
-                                    </div>                                    
-                                </div>
-                                <div class="form-group {{ $errors->has('project_50_cost') ? ' has-error' : '' }}">
-                                    <label class="control-label col-sm-4" for="project_50_cost">A project of <b>50</b></label>
-                                    <div class="col-sm-8">
-                                        <input id="project_50_cost" type="text" class="form-control" name="project_50_cost" value="{{ old('project_50_cost') }}" required>
-                                        @if ($errors->has('project_50_cost'))
-                                        <span class="help-block">
-                                            <strong>{{ $errors->first('project_50_cost') }}</strong>
-                                        </span>
-                                        @endif
-                                    </div>                                   
-                                </div>
-                                <div class="form-group {{ $errors->has('project_5_cost') ? ' has-error' : '' }}">
-                                    <label class="control-label col-sm-4" for="project_5_cost">A project of <b>5</b></label>
-                                    <div class="col-sm-8">
-                                        <input id="project_5_cost" type="text" class="form-control" name="project_5_cost" value="{{ old('project_5_cost') }}" required>
-                                         @if ($errors->has('project_5_cost'))
-                                        <span class="help-block">
-                                            <strong>{{ $errors->first('project_5_cost') }}</strong>
-                                        </span>
-                                        @endif
-                                    </div>                                    
-                                </div>                               
-                            </div>
-                        </div>
+                        </div>                        
 
                         <div class="form-group">
                             <div class="col-md-6">

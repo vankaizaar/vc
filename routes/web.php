@@ -130,7 +130,8 @@ Route::group(['middleware' => 'model_auth'], function() {
     });
 //    Route::resource('modelaudio', 'Model\AudioController');
     Route::resource('modelalbums', 'Model\ModelAlbumController');
-    Route::resource('modelprofile', 'Model\ProfileController');
+    Route::resource('modelprofile', 'Model\ModelProfileController');
+    Route::resource('modelbillinginfo', 'Model\ModelBillingInfoController');
     Route::resource('modelavatar', 'Model\AvatarController');
     Route::resource('modelcover', 'Model\CoverController');
     Route::get('modelsettings/{model}/edit', 'Model\SettingController@edit')->name('modelsettings.edit');

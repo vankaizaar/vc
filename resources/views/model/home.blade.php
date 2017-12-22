@@ -1,4 +1,4 @@
-@extends('artist.layouts')
+@extends('model.layouts')
 
 @section('content')
 <div class="container">

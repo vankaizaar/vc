@@ -14,11 +14,15 @@ class ModelProfile extends Model {
         'model_user_id',
         'gender',
         'dob',
+        'height',
+        'weight',
         'telephone',
         'country',
         'city',
         'about',
+        'model_categories',
     ];
+    protected $hidden = ['id', 'model_user_id', 'updated_at', 'created_at', 'dob', 'telephone'];
     protected $dates = [
         'created_at',
         'updated_at',

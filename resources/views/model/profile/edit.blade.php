@@ -1,22 +1,22 @@
-@extends('artist.layouts')
+@extends('model.layouts')
 @section('content')
 <div class="container">
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-success">
-
                 <div class="panel-body">
                     <h2><span class="highlighted">1</span> Update personal information</h2>
-                    <form action="{{route('profile.update',['id'=>$artist->id ])}}" class="form-horizontal" role="form" method="POST">
+                    <form action="{{route('modelprofile.update',['id'=>$modelprofile->id ])}}" class="form-horizontal" role="form" method="POST">
                         {{csrf_field()}}                                                                         
                         {{ method_field('PUT') }}
                         <div class="form-group{{ $errors->has('gender') ? ' has-error' : '' }}">
                             <label for="gender" class="col-md-4 control-label">Gender</label>
-                            <div class="col-md-6">                                
+                            <div class="col-md-6">       
+
                                 <select name="gender" id="gender" class="form-control" required> 
-                                    <option value="" {{ ($artist->gender === NULL) ? 'selected' :''}}>Select gender</option>
-                                    <option value="1" {{ ($artist->gender === 1) ? 'selected' :''}}>Male</option>
-                                    <option value="0" {{ ($artist->gender === 0) ? 'selected' :''}}>Female</option>
+                                    <option value="" {{ ($modelprofile->gender === NULL) ? 'selected' :''}}>Select gender</option>
+                                    <option value="1" {{ ($modelprofile->gender === 1) ? 'selected' :''}}>Male</option>
+                                    <option value="0" {{ ($modelprofile->gender === 0) ? 'selected' :''}}>Female</option>
                                 </select>
                                 @if ($errors->has('gender'))
                                 <span class="help-block">
@@ -29,7 +29,7 @@
                         <div class="form-group{{ $errors->has('dob') ? ' has-error' : '' }}">
                             <label for="dob" class="col-md-4 control-label">Date of birth</label>
                             <div class="col-md-6">
-                                <input id="dob" type="text" class="form-control datepicker" name="dob" value="{{ date('y-m-d',strtotime($artist->dob)) }}" required>
+                                <input id="dob" type="text" class="form-control datepicker" name="dob" value="{{ date('y-m-d',strtotime($modelprofile->dob)) }}" required>
                                 @if ($errors->has('dob'))
                                 <span class="help-block">
                                     <strong>{{ $errors->first('dob') }}</strong>
@@ -41,7 +41,7 @@
                         <div class="form-group{{ $errors->has('telephone') ? ' has-error' : '' }}">
                             <label for="telephone" class="col-md-4 control-label">Telephone</label>
                             <div class="col-md-6">
-                                <input id="telephone" type="text" class="form-control" name="telephone" value="{{ $artist->telephone }}" required autofocus>
+                                <input id="telephone" type="text" class="form-control" name="telephone" value="{{ $modelprofile->telephone }}" required autofocus>
                                 @if ($errors->has('telephone'))
                                 <span class="help-block">
                                     <strong>{{ $errors->first('telephone') }}</strong>
@@ -53,7 +53,7 @@
                         <div class="form-group{{ $errors->has('country') ? ' has-error' : '' }}">
                             <label for="country" class="col-md-4 control-label">Country</label>
                             <div class="col-md-6">
-                                <input id="country" type="text" class="form-control" name="country" value="{{ $artist->country }}" required autofocus>
+                                <input id="country" type="text" class="form-control" name="country" value="{{ $modelprofile->country }}" required autofocus>
                                 @if ($errors->has('country'))
                                 <span class="help-block">
                                     <strong>{{ $errors->first('country') }}</strong>
@@ -65,7 +65,7 @@
                         <div class="form-group{{ $errors->has('city') ? ' has-error' : '' }}">
                             <label for="city" class="col-md-4 control-label">City</label>
                             <div class="col-md-6">
-                                <input id="city" type="text" class="form-control" name="city" value="{{ $artist->city }}" required autofocus>
+                                <input id="city" type="text" class="form-control" name="city" value="{{ $modelprofile->city }}" required autofocus>
                                 @if ($errors->has('city'))
                                 <span class="help-block">
                                     <strong>{{ $errors->first('city') }}</strong>
@@ -74,198 +74,121 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{ $errors->has('height') ? ' has-error' : '' }}">
+                            <label for="height" class="col-md-4 control-label">Height</label>
+                            <div class="col-md-6">                                
+                                <select name="height" id="height" class="form-control" required>                                     
+                                    <option value="">Select height</option>              
+                                    <option value="4.0" {{ ($modelprofile->height === '4.0') ? 'selected' :''}}>4'</option>
+                                    <option value="4.1" {{ ($modelprofile->height === '4.1') ? 'selected' :''}}>4'1"</option>
+                                    <option value="4.2" {{ ($modelprofile->height === '4.2') ? 'selected' :''}}>4'2"</option>
+                                    <option value="4.3" {{ ($modelprofile->height === '4.3') ? 'selected' :''}}>4'3"</option>
+                                    <option value="4.4" {{ ($modelprofile->height === '4.4') ? 'selected' :''}}>4'4"</option>
+                                    <option value="4.5" {{ ($modelprofile->height === '4.5') ? 'selected' :''}}>4'5"</option>
+                                    <option value="4.6" {{ ($modelprofile->height === '4.6') ? 'selected' :''}}>4'6"</option>
+                                    <option value="4.7" {{ ($modelprofile->height === '4.7') ? 'selected' :''}}>4'7"</option>
+                                    <option value="4.8" {{ ($modelprofile->height === '4.8') ? 'selected' :''}}>4'8"</option>
+                                    <option value="4.9" {{ ($modelprofile->height === '4.9') ? 'selected' :''}}>4'9"</option>
+                                    <option value="4.10" {{ ($modelprofile->height === '4.10') ? 'selected' :''}}>4'10"</option>
+                                    <option value="4.11" {{ ($modelprofile->height === '4.11') ? 'selected' :''}}>4'11"</option>
+
+
+                                    <option value="5.0" {{ ($modelprofile->height === '5.0') ? 'selected' :''}}>5'</option>
+                                    <option value="5.1" {{ ($modelprofile->height === '5.1') ? 'selected' :''}}>5'1"</option>
+                                    <option value="5.2" {{ ($modelprofile->height === '5.2') ? 'selected' :''}}>5'2"</option>
+                                    <option value="5.3" {{ ($modelprofile->height === '5.3') ? 'selected' :''}}>5'3"</option>
+                                    <option value="5.4" {{ ($modelprofile->height === '5.4') ? 'selected' :''}}>5'4"</option>
+                                    <option value="5.5" {{ ($modelprofile->height === '5.5') ? 'selected' :''}}>5'5"</option>
+                                    <option value="5.6" {{ ($modelprofile->height === '5.6') ? 'selected' :''}}>5'6"</option>
+                                    <option value="5.7" {{ ($modelprofile->height === '5.7') ? 'selected' :''}}>5'7"</option>
+                                    <option value="5.8" {{ ($modelprofile->height === '5.8') ? 'selected' :''}}>5'8"</option>
+                                    <option value="5.9" {{ ($modelprofile->height === '5.9') ? 'selected' :''}}>5'9"</option>
+                                    <option value="5.10" {{ ($modelprofile->height === '5.10') ? 'selected' :''}}>5'10"</option>
+                                    <option value="5.11" {{ ($modelprofile->height === '5.11') ? 'selected' :''}}>5'11"</option>
+
+                                    <option value="6.0" {{ ($modelprofile->height === '6.0') ? 'selected' :''}}>6'</option>
+                                    <option value="6.1" {{ ($modelprofile->height === '6.1') ? 'selected' :''}}>6'1"</option>
+                                    <option value="6.2" {{ ($modelprofile->height === '6.2') ? 'selected' :''}}>6'2"</option>
+                                    <option value="6.3" {{ ($modelprofile->height === '6.3') ? 'selected' :''}}>6'3"</option>
+                                    <option value="6.4" {{ ($modelprofile->height === '6.4') ? 'selected' :''}}>6'4"</option>
+                                    <option value="6.5" {{ ($modelprofile->height === '6.5') ? 'selected' :''}}>6'5"</option>
+                                    <option value="6.6" {{ ($modelprofile->height === '6.6') ? 'selected' :''}}>6'6"</option>
+                                    <option value="6.7" {{ ($modelprofile->height === '6.7') ? 'selected' :''}}>6'7"</option>
+                                    <option value="6.8" {{ ($modelprofile->height === '6.8') ? 'selected' :''}}>6'8"</option>
+                                    <option value="6.9" {{ ($modelprofile->height === '6.9') ? 'selected' :''}}>6'9"</option>
+                                    <option value="6.10" {{ ($modelprofile->height === '6.10') ? 'selected' :''}}>6'10"</option>
+                                    <option value="6.11" {{ ($modelprofile->height === '6.11') ? 'selected' :''}}>6'11"</option>
+
+                                    <option value="7.0" {{ ($modelprofile->height === '7.0') ? 'selected' :''}}>7'</option>
+                                    <option value="7.1" {{ ($modelprofile->height === '7.1') ? 'selected' :''}}>7'1"</option>
+                                    <option value="7.2" {{ ($modelprofile->height === '7.2') ? 'selected' :''}}>7'2"</option>
+                                    <option value="7.3" {{ ($modelprofile->height === '7.3') ? 'selected' :''}}>7'3"</option>
+                                    <option value="7.4" {{ ($modelprofile->height === '7.4') ? 'selected' :''}}>7'4"</option>
+                                    <option value="7.5" {{ ($modelprofile->height === '7.5') ? 'selected' :''}}>7'5"</option>
+                                    <option value="7.6" {{ ($modelprofile->height === '7.6') ? 'selected' :''}}>7'6"</option>
+                                    <option value="7.7" {{ ($modelprofile->height === '7.7') ? 'selected' :''}}>7'7"</option>
+                                    <option value="7.8" {{ ($modelprofile->height === '7.8') ? 'selected' :''}}>7'8"</option>
+                                    <option value="7.9" {{ ($modelprofile->height === '7.9') ? 'selected' :''}}>7'9"</option>
+                                    <option value="7.10" {{ ($modelprofile->height === '7.10') ? 'selected' :''}}>7'10"</option>
+                                    <option value="7.11" {{ ($modelprofile->height === '7.11') ? 'selected' :''}}>7'11"</option>
+
+                                </select>
+                                @if ($errors->has('height'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('height') }}</strong>
+                                </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('weight') ? ' has-error' : '' }}">
+                            <label for="city" class="col-md-4 control-label">Weight</label>
+                            <div class="col-md-6">
+                                <input id="weight" type="text" class="form-control" name="weight" value="{{ $modelprofile->weight }}" required autofocus>
+                                @if ($errors->has('weight'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('weight') }}</strong>
+                                </span>
+                                @endif
+                            </div>
+                        </div>
+
                         <div class="form-group{{ $errors->has('about') ? ' has-error' : '' }}">
                             <label for="about" class="col-md-4 control-label">Tell us a bit about yourself</label>
                             <div class="col-md-6">
-                                <textarea name="about" id="about" cols="30" rows="10" class="form-control" required>{{ $artist->about }}</textarea> 
+                                <textarea name="about" id="about" cols="30" rows="10" class="form-control" required>{{ $modelprofile->about }}</textarea> 
                                 @if ($errors->has('about'))
                                 <span class="help-block">
                                     <strong>{{ $errors->first('about') }}</strong>
                                 </span>
                                 @endif
                             </div>
-                        </div>
-                        <h2><span class="highlighted">2</span> Update project related information</h2>
-                        <div class="form-group{{ $errors->has('native_language') ? ' has-error' : '' }}">
-                            <label for="native_language" class="col-md-4 control-label">What are your native languages?</label>
-                            <div class="col-md-8">                               
-                                <div class="checkbox">                                   
-                                    <label class="checkbox"><input type="checkbox" name="native_language[]" value="English" {{ in_array("English", $artist->native_language) ? "checked" : "" }}>English</label>
-                                    <label class="checkbox"><input type="checkbox" name="native_language[]" value="Swahili" {{ in_array("Swahili", $artist->native_language) ? "checked" : "" }}>Swahili</label>
-                                    <label class="checkbox"><input type="checkbox" name="native_language[]" value="French" {{ in_array("French", $artist->native_language) ? "checked" : "" }}>French</label>
-                                    <label class="checkbox"><input type="checkbox" name="native_language[]" value="Portuguese" {{ in_array("Portuguese", $artist->native_language) ? "checked" : "" }}>Portuguese</label>
-                                    <label class="checkbox"><input type="checkbox" name="native_language[]" value="Spanish" {{ in_array("Spanish", $artist->native_language) ? "checked" : "" }}>Spanish</label>
-                                    <label class="checkbox"><input type="checkbox" name="native_language[]" value="German" {{ in_array("German", $artist->native_language) ? "checked" : "" }}>German</label>
-                                    <label class="checkbox"><input type="checkbox" name="native_language[]" value="Japanese" {{ in_array("Japanese", $artist->native_language) ? "checked" : "" }}>Japanese</label>
-                                    <label class="checkbox"><input type="checkbox" name="native_language[]" value="Arabic" {{ in_array("Arabic", $artist->native_language) ? "checked" : "" }}>Arabic</label>
-                                </div>
+                        </div>                       
 
-                                @if ($errors->has('native_language'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('native_language') }}</strong>
-                                </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('voice_categories') ? ' has-error' : '' }}">
-                            <label for="voice_categories" class="col-md-4 control-label">What voice genders and ages can you execute really well?</label>
+                        <div class="form-group{{ $errors->has('model_categories') ? ' has-error' : '' }}">
+                            <label for="model_categories" class="col-md-4 control-label">What voice genders and ages can you execute really well?</label>
                             <div class="col-md-8">
-                                <div class="checkbox">
-                                    <label class="checkbox"><input type="checkbox" name="voice_categories[]" value="Male Child" {{ in_array("Male Child", $artist->voice_categories) ? "checked" : "" }}>Male | Child</label>
-                                    <label class="checkbox"><input type="checkbox" name="voice_categories[]" value="Male Teenage" {{ in_array("Male Teenage", $artist->voice_categories) ? "checked" : "" }}>Male | Teenage</label>
-                                    <label class="checkbox"><input type="checkbox" name="voice_categories[]" value="Male Young Adult" {{ in_array("Male Young Adult", $artist->voice_categories) ? "checked" : "" }}>Male | Young Adult</label>
-                                    <label class="checkbox"><input type="checkbox" name="voice_categories[]" value="Male Middle Age" {{ in_array("Male Middle Age", $artist->voice_categories) ? "checked" : "" }}>Male | Middle Age</label>
-                                    <label class="checkbox"><input type="checkbox" name="voice_categories[]" value="Male Senior" {{ in_array("Male Senior", $artist->voice_categories) ? "checked" : "" }}>Male | Senior</label>
-                                    <label class="checkbox"><input type="checkbox" name="voice_categories[]" value="Female Child" {{ in_array("Female Child", $artist->voice_categories) ? "checked" : "" }}>Female | Child</label>
-                                    <label class="checkbox"><input type="checkbox" name="voice_categories[]" value="Female Teenage" {{ in_array("Female Teenage", $artist->voice_categories) ? "checked" : "" }}>Female | Teenage</label>
-                                    <label class="checkbox"><input type="checkbox" name="voice_categories[]" value="Female Young Adult" {{ in_array("Female Young Adult", $artist->voice_categories) ? "checked" : "" }}>Female | Young Adult</label>
-                                    <label class="checkbox"><input type="checkbox" name="voice_categories[]" value="Female Middle Age" {{ in_array("Female Middle Age", $artist->voice_categories) ? "checked" : "" }}>Female | Middle Age</label>
-                                    <label class="checkbox"><input type="checkbox" name="voice_categories[]" value="Female Senior" {{ in_array("Female Senior", $artist->voice_categories) ? "checked" : "" }}>Female | Senior</label>
+                                <div class="checkbox">                                      
+                                    <label class="checkbox"><input type="checkbox" data-toggle='tooltip' data-placement='left' data-original-title="tooltip here" name="model_categories[]" value="Fashion Model" {{ in_array("Fashion Model", $modelprofile->model_categories) ? "checked" : "" }}>Fashion Model</label>
+                                    <label class="checkbox"><input type="checkbox" data-toggle='tooltip' data-placement='left' data-original-title="These models are the ones you find in the editorial spreads of pages like Elle, Vogue, Glamour, etc." name="model_categories[]" value="Editorial Fashion Model" {{ in_array("Editorial Fashion Model", $modelprofile->model_categories) ? "checked" : "" }}>Editorial Fashion Model</label>
+                                    <label class="checkbox"><input type="checkbox" data-toggle='tooltip' data-placement='left' data-original-title="These models are the ones you see in the clothing catalogs, posing in a variety of outfits." name="model_categories[]" value="Fashion Catalog Model" {{ in_array("Fashion Catalog Model", $modelprofile->model_categories) ? "checked" : "" }}>Fashion Catalog Model</label>
+                                    <label class="checkbox"><input type="checkbox" data-toggle='tooltip' data-placement='left' data-original-title="These models walk the catwalk or runway." name="model_categories[]" value="Runway Model" {{ in_array("Runway Model", $modelprofile->model_categories) ? "checked" : "" }}>Runway Model</label>                                    
+                                    <label class="checkbox"><input type="checkbox" data-toggle='tooltip' data-placement='left' data-original-title="These models are used for many different types of publications, such as: magazines, print advertisements, billboards, posters, calendars, campaigns, booklets, flyers, banners." name="model_categories[]" value="Print Model" {{ in_array("Print Model", $modelprofile->model_categories) ? "checked" : "" }}>Print Model</label>
+                                    <label class="checkbox"><input type="checkbox" data-toggle='tooltip' data-placement='left' data-original-title="Glamour modeling focuses much more on the model’s appeal, beauty, and body than it does anything else." name="model_categories[]" value="Glamour Model" {{ in_array("Glamour Model", $modelprofile->model_categories) ? "checked" : "" }}>Glamour Model</label>
+                                    <label class="checkbox"><input type="checkbox" data-toggle='tooltip' data-placement='left' data-original-title="This is a model that is hired to represent a brand, product, or service." name="model_categories[]" value="Promotional Model" {{ in_array("Promotional Model", $modelprofile->model_categories) ? "checked" : "" }}>Promotional Model</label>
+                                    <label class="checkbox"><input type="checkbox" data-toggle='tooltip' data-placement='left' data-original-title="A catalog model has the same job description as a “fashion catalog model”, yet none of the same size requirements." name="model_categories[]" value="Catalog Model" {{ in_array("Catalog Model", $modelprofile->model_categories) ? "checked" : "" }}>Catalog Model</label>
+                                    <label class="checkbox"><input type="checkbox" data-toggle='tooltip' data-placement='left' data-original-title="Fitness models are toned, in-shape, healthy, and have good muscle tone. " name="model_categories[]" value="Fitness Model" {{ in_array("Fitness Model", $modelprofile->model_categories) ? "checked" : "" }}>Fitness Model</label>
+                                    <label class="checkbox"><input type="checkbox" data-toggle='tooltip' data-placement='left' data-original-title="These models typically model their “parts”, such as their hands, legs, feet, stomach, etc." name="model_categories[]" value="Parts Model" {{ in_array("Parts Model", $modelprofile->model_categories) ? "checked" : "" }}>Parts Model</label>
+                                    <label class="checkbox"><input type="checkbox" data-toggle='tooltip' data-placement='left' data-original-title="Art models work with visual artists. The model is the subject of the intended art piece, usually being required to pose while the artist interprets and creates a piece of art." name="model_categories[]" value="Art Model" {{ in_array("Art Model", $modelprofile->model_categories) ? "checked" : "" }}>Art Model</label>
                                 </div>
 
-                                @if ($errors->has('voice_categories'))
+                                @if ($errors->has('model_categories'))
                                 <span class="help-block">
-                                    <strong>{{ $errors->first('voice_categories') }}</strong>
+                                    <strong>{{ $errors->first('model_categories') }}</strong>
                                 </span>
                                 @endif
                             </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="city" class="col-md-4 control-label">In your opinion, how much time do you reckon it would take you to record, edit, and "clean up" a great quality track for the following projects?</label>
-                            <div class="col-md-8">
-                                <div class="form-group {{ $errors->has('project_5000_time') ? ' has-error' : '' }}">
-                                    <div class="col-sm-4">
-                                        A project of <b>5000</b> words <br />
-                                        (short audiobooks, manuals)
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input id="project_5000_time" type="text" class="form-control" name="project_5000_time" value="{{ $artist->project_5000_time }}" required>
-                                    </div>
-                                    <label class="control-label col-sm-2" for="project_5000_time">Minutes</label>
-                                </div>
-                                <div class="form-group {{ $errors->has('project_500_time') ? ' has-error' : '' }}">
-                                    <div class="col-sm-4">
-                                        A project of <b>500</b> words <br />
-                                        (short podcast, a video for a website)
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input id="project_500_time" type="text" class="form-control" name="project_500_time" value="{{ $artist->project_500_time }}" required>
-                                    </div>
-                                    <label class="control-label col-sm-2" for="project_500_time">Minutes</label>
-                                </div>
-                                <div class="form-group {{ $errors->has('project_50_time') ? ' has-error' : '' }}">
-                                    <div class="col-sm-4">
-                                        A project of <b>50</b> words <br />
-                                        (a radio ad, a voicemail)
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input id="project_50_time" type="text" class="form-control" name="project_50_time" value="{{ $artist->project_50_time }}" required>
-                                    </div>
-                                    <label class="control-label col-sm-2" for="project_50_time">Minutes</label>
-                                </div>
-                                <div class="form-group {{ $errors->has('project_5_time') ? ' has-error' : '' }}">
-                                    <div class="col-sm-4">
-                                        A project of <b>5</b> words <br />
-                                        (a phone prompt, a radio tag)
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input id="project_5_time" type="text" class="form-control" name="project_5_time" value="{{ $artist->project_5_time }}" required>
-                                    </div>
-                                    <label class="control-label col-sm-2" for="project_5_time">Minutes</label>
-                                </div>
-
-                                @if ($errors->has('project_5000_time'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('project_5000_time') }}</strong>
-                                </span>
-                                @endif
-                                @if ($errors->has('project_500_time'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('project_500_time') }}</strong>
-                                </span>
-                                @endif
-                                @if ($errors->has('project_50_time'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('project_50_time') }}</strong>
-                                </span>
-                                @endif
-                                @if ($errors->has('project_5_time'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('project_5_time') }}</strong>
-                                </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="city" class="col-md-4 control-label">How much would you charge us to use your awesome voice on each of the following projects?</label>
-
-                            <div class="col-md-8">
-                                <p><strong>Please note this</strong></p>
-                                <ul>
-                                    <li>You don't have to worry about the billing, we will take care of it for you.</li>
-                                    <li>There's no risk to you! <b>You will be paid for everty accepted read you submit.</b></li>
-                                    <li>Most clients only need one take, but <b>some may ask for multiple takes</b></li>
-                                    <li>No music</li>
-                                    <li>No SFX</li>
-                                    <li>No revisions (we'll pay extra if your clients make changes to the original scripts)</li>
-                                    <li>No pickups</li>
-                                    <li>No other special editing</li>
-                                    <li>No commision fees to us (we will add our margin on top of your rates)</li>
-                                    <li>Your rates should be for a full buyout on all projects (we dont pay usage fees)</li>
-                                    <li>The "use" of the recorded audio file and market, if any, would be unknown or impossible to determine (considering that we are on a digital platform)</li>
-                                    <li><b>You don't have to worry about auditioning</b> (we actually pay extra to audition!)</li>
-                                </ul>
-
-                                <div class="form-group {{ $errors->has('project_5000_cost') ? ' has-error' : '' }}">
-                                    <label class="control-label col-sm-4" for="project_5000_cost">A project of <b>5000</b></label>
-                                    <div class="col-sm-8">
-                                        <input id="project_5000_cost" type="text" class="form-control" name="project_5000_cost" value="{{ $artist->project_5000_cost }}" required>
-                                    </div>                                   
-                                </div>
-                                <div class="form-group {{ $errors->has('project_500_cost') ? ' has-error' : '' }}">
-                                    <label class="control-label col-sm-4" for="project_500_cost">A project of <b>500</b></label>
-                                    <div class="col-sm-8">
-                                        <input id="project_500_cost" type="text" class="form-control" name="project_500_cost" value="{{ $artist->project_500_cost }}" required>
-                                    </div>                                    
-                                </div>
-                                <div class="form-group {{ $errors->has('project_50_cost') ? ' has-error' : '' }}">
-                                    <label class="control-label col-sm-4" for="project_50_cost">A project of <b>50</b></label>
-                                    <div class="col-sm-8">
-                                        <input id="project_50_cost" type="text" class="form-control" name="project_50_cost" value="{{ $artist->project_50_cost }}" required>
-                                    </div>                                   
-                                </div>
-                                <div class="form-group {{ $errors->has('project_5_cost') ? ' has-error' : '' }}">
-                                    <label class="control-label col-sm-4" for="project_5_cost">A project of <b>5</b></label>
-                                    <div class="col-sm-8">
-                                        <input id="project_5_cost" type="text" class="form-control" name="project_5_cost" value="{{ $artist->project_5_cost }}" required>
-                                    </div>                                    
-                                </div>
-
-                                @if ($errors->has('project_5000_cost'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('project_5000_cost') }}</strong>
-                                </span>
-                                @endif
-                                @if ($errors->has('project_500_cost'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('project_500_cost') }}</strong>
-                                </span>
-                                @endif
-                                @if ($errors->has('project_50_cost'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('project_50_cost') }}</strong>
-                                </span>
-                                @endif
-                                @if ($errors->has('project_5_cost'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('project_5_cost') }}</strong>
-                                </span>
-                                @endif
-                            </div>
-                        </div>
+                        </div>                        
                         <div class="form-group">
                             <div class="col-md-4 col-md-offset-8">  
                                 <button class="btn btn-primary btn-sm pull-right" type="submit">
