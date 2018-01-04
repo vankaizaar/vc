@@ -120,7 +120,7 @@ class ModelAlbumController extends Controller {
 
         $albumToDelete->delete();
 
-        return redirect('modelalbums')->with('success', 'Selected track has been deleted.');
+        return redirect('modelalbums')->with('success', 'Selected album has been deleted.');
     }
 
 }

@@ -9261,6 +9261,36 @@ section.spaced4 {
   background: rgba(0, 0, 0, 0.3);
 }
 
+.grid {
+  background: #f3565d;
+  width: 100%;
+  height: 100%;
+}
+
+/* clear fix */
+
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+  width: 33.333%;
+}
+
+.grid-item {
+  float: left;
+}
+
+.grid-item img {
+  display: block;
+  max-width: 100%;
+}
+
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -13838,6 +13868,221 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.focus {
   background: #fff;
   cursor: default;
 }
+
+.chocolat-zoomable.chocolat-zoomed {
+  cursor: -webkit-zoom-out;
+  cursor: zoom-out;
+}
+
+.chocolat-open {
+  overflow: hidden;
+}
+
+.chocolat-overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  background-color: #fff;
+  display: none;
+  opacity: 0.8;
+}
+
+.chocolat-wrapper {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  display: none;
+  left: 0;
+  top: 0;
+  z-index: 16;
+  color: #fff;
+}
+
+.chocolat-zoomable .chocolat-img {
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+
+.chocolat-loader {
+  height: 32px;
+  width: 32px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -16px;
+  margin-top: -16px;
+  z-index: 11;
+  background: url(/images/vendor/chocolat/dist/loader.gif?4e9173c96959c84411c28f478cba3c1c);
+  display: none;
+}
+
+.chocolat-content {
+  position: fixed;
+  width: 0px;
+  height: 0px;
+  left: 50%;
+  top: 50%;
+  z-index: 14;
+  text-align: left;
+}
+
+.chocolat-content .chocolat-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.chocolat-wrapper .chocolat-left {
+  position: absolute;
+  left: 0;
+  width: 50px;
+  height: 100px;
+  top: 50%;
+  margin-top: -50px;
+  cursor: pointer;
+  background: url(/images/vendor/chocolat/dist/left.png?b47ce3f45cf8f011fd84a26a8553efed) 50% 50% no-repeat;
+  z-index: 17;
+  display: none;
+}
+
+.chocolat-wrapper .chocolat-right {
+  position: absolute;
+  right: 0;
+  width: 50px;
+  height: 100px;
+  top: 50%;
+  margin-top: -50px;
+  cursor: pointer;
+  background: url(/images/vendor/chocolat/dist/right.png?1338218da76178f6fba023c056e1d8c4) 50% 50% no-repeat;
+  z-index: 17;
+  display: none;
+}
+
+.chocolat-wrapper .chocolat-right.active {
+  display: block;
+}
+
+.chocolat-wrapper .chocolat-left.active {
+  display: block;
+}
+
+.chocolat-wrapper .chocolat-top {
+  position: absolute;
+  top: 0px;
+  right: 0;
+  left: 0;
+  line-height: 50px;
+  height: 50px;
+  overflow: hidden;
+  z-index: 17;
+  margin-bottom: 10px;
+}
+
+.chocolat-wrapper .chocolat-close {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url(/images/vendor/chocolat/dist/close.png?0fc78c8ae79e0e61d2f937029fa71024) 50% 50% no-repeat;
+}
+
+.chocolat-wrapper .chocolat-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  line-height: 40px;
+  height: 40px;
+  font-size: 12px;
+  z-index: 17;
+  padding-left: 15px;
+  padding-right: 15px;
+  background: rgba(0, 0, 0, 0.2);
+  text-align: right;
+  margin-top: 10px;
+}
+
+.chocolat-wrapper .chocolat-set-title {
+  display: inline-block;
+  padding-right: 15px;
+  line-height: 1;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.chocolat-wrapper .chocolat-pagination {
+  float: right;
+  display: inline-block;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: 15px;
+  /*border-right: 1px solid rgba(255, 255, 255, 0.2);*/
+}
+
+.chocolat-wrapper .chocolat-fullscreen {
+  width: 16px;
+  height: 40px;
+  background: url(/images/vendor/chocolat/dist/fullscreen.png?83c94b428654410dfa3423bf3f408cc1) 50% 50% no-repeat;
+  display: block;
+  margin: auto;
+  cursor: pointer;
+  float: right;
+}
+
+.chocolat-wrapper .chocolat-description {
+  display: inline-block;
+  float: left;
+}
+
+/* no container mode*/
+
+body.chocolat-open > .chocolat-overlay {
+  z-index: 15;
+}
+
+body.chocolat-open > .chocolat-loader {
+  z-index: 15;
+}
+
+body.chocolat-open > .chocolat-content {
+  z-index: 17;
+}
+
+/* container mode*/
+
+.chocolat-in-container .chocolat-wrapper,
+.chocolat-in-container .chocolat-content,
+.chocolat-in-container .chocolat-overlay {
+  position: absolute;
+}
+
+.chocolat-in-container {
+  position: relative;
+}
+
+/* uncomment to hide controls when zoomed-in*/
+
+/*
+.chocolat-zoomable .chocolat-top,
+.chocolat-zoomable .chocolat-bottom,
+.chocolat-zoomable .chocolat-right,
+.chocolat-zoomable .chocolat-left {
+    transition: opacity .3s ease, visibility 0s .3s;
+   opacity: 1;
+}
+
+.chocolat-zoomable.chocolat-zoomed .chocolat-top,
+.chocolat-zoomable.chocolat-zoomed .chocolat-bottom,
+.chocolat-zoomable.chocolat-zoomed .chocolat-right,
+.chocolat-zoomable.chocolat-zoomed .chocolat-left {
+    visibility: hidden;
+    opacity: 0;
+}
+*/
 
 .fb-profile img.fb-image-lg {
   z-index: 0;
