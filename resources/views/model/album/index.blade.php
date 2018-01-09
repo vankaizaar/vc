@@ -19,9 +19,10 @@
                             @forelse ($modeluser->modelalbum as $album)
                             <tr>
                                 <td> 
-                                    <h4>{{ $album->title }} - <small class="text-uppercase">{{$album->type}}</small> <sup class="text-uppercase">{{$album->modelpicture()->count()}} Images</sup></h4>
-                                    <p>{{ $album->about_album }}</p>
-                                    <p>{{ $album->about_sample }}</p>
+                                    <h4 style="margin-bottom:0.2em !important;">{{ $album->title }}</h4>
+                                    <span class="label label-sm label-info">{{$album->type}}</span> <span class="label label-sm label-info text-capitalize">{{$album->modelpicture()->count()}} Images</span>                                                                                                            
+                                    <p><small>{{ $album->about_album }}</small></p>
+                                    <hr />                                    
                                     <div class="grid">                                        
                                         @foreach ( $album->modelpicture as $picture )
                                         <div class="grid-item">

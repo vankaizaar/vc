@@ -55,13 +55,21 @@
                         </div>
                         <div class="col-md-12">
                             <h4> <span class="highlighted">2</span>  Upload your photos here</h4>
+
                             <br />
                         </div>
                         <div class="form-group {{ $errors->has('link') ? ' has-error' : '' }}">
                             <label for="link" class="col-md-4 control-label">Select photos</label>
-                            <div class="col-md-8">                                
-                                <input type="file" name="link[]" id="link" class="form-control" placeholder='Choose a file...' data-buttonText="Select a File" accept="image/jpg,image/jpeg,image/png" required multiple/>			                                                                   
-                            <!--<input type="file" name="link" id="link"  class="form-control" accept="audio/*"/>-->
+                            <div class="col-md-8"> 
+                                <small><i>You can select more than 1 image</i></small>
+                                <div class="input-group">
+                                    <label class="input-group-btn">
+                                        <span class="btn btn-primary">
+                                            Browse&hellip;  <input type="file" name="link[]" style="display: none;" id="link" class="form-control" placeholder='Choose a file...' data-buttonText="Select a File" accept="image/jpg,image/jpeg,image/png" required multiple/>			                                                                                               
+                                        </span>
+                                    </label>
+                                    <input type="text" class="form-control" readonly>
+                                </div>                                                             
                                 @if ($errors->has('link'))
                                 <span class="help-block">
                                     <strong>{{ $errors->first('link') }}</strong>

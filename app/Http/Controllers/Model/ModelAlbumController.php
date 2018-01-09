@@ -9,6 +9,7 @@ use App\Models\Model\ModelUser;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
+use App\Http\Requests\Models\StoreModelAlbum;
 
 class ModelAlbumController extends Controller {
 
@@ -20,7 +21,7 @@ class ModelAlbumController extends Controller {
     public function index() {
         $modeluser = Auth::guard('web_model')->user();
         $modeluser->load('modelAlbum', 'modelPicture')->get();
-      
+
         return view('model.album.index', compact('modeluser'));
 //        return view('model.album.index')
 //        ->with('modelalbums', ModelAlbum::where('model_user_id', $id)->get())
@@ -42,7 +43,7 @@ class ModelAlbumController extends Controller {
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request) {
+    public function store(StoreModelAlbum $request) {
 
         $modelid = Auth::guard('web_model')->user()->id;
 
