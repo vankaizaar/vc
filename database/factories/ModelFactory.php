@@ -108,3 +108,63 @@ $factory->define(App\Models\Member\MemberProfile::class, function (Faker\Generat
         'gender' => $faker->boolean()
     ];
 });
+
+/* Models Factory */
+$factory->define(App\Models\Model\ModelUser::class, function (Faker\Generator $faker) {
+    static $password;
+
+    return [
+        'name' => $faker->name,
+        'email' => $faker->unique()->safeEmail,
+        'password' => $password ?: $password = bcrypt('secret'),
+        'remember_token' => str_random(10),
+    ];
+});
+
+$factory->define(App\Models\Model\ModelProfile::class, function (Faker\Generator $faker) {
+    return [
+        'dob' => $faker->dateTimeThisCentury->format('Y-m-d'),
+        'country' => $faker->country,
+        'city' => $faker->city,
+        'height' => $faker->randomFloat($nbMaxDecimals = 2, $min = 4.1, $max = 7.11),
+        'weight' => $faker->numberBetween($min = 45, $max = 100),
+        'model_categories' => $faker->words($nb = 3, $asText = true),
+        'telephone' => $faker->phoneNumber,
+        'about' => $faker->text(200),
+        'gender' => $faker->boolean(),
+    ];
+});
+
+$factory->define(App\Models\Model\ModelBillingInfo::class, function (Faker\Generator $faker) {
+    return [
+        'project_hourly_cost' => $faker->numberBetween($min = 100, $max = 500),
+        'project_half_day_cost' => $faker->numberBetween($min = 500, $max = 1000),
+        'project_full_day_cost' => $faker->numberBetween($min = 1000, $max = 2000),
+    ];
+});
+
+$factory->define(App\Models\Model\ModelAlbum::class, function (Faker\Generator $faker) {
+    return [
+        'title' => $faker->sentence($nbWords = 6, $variableNbWords = true),
+        'about_album' => $faker->paragraph($nbSentences = 3, $variableNbSentences = true),
+        'type' => $faker->randomElement($array = array('TV Commercial', 'Product Shoot', 'Fashion')),
+    ];
+});
+
+$factory->define(App\Models\Model\ModelPicture::class, function (Faker\Generator $faker) {
+    return [
+        'link' => $faker->imageUrl($width = 640, $height = 480),
+    ];
+});
+
+$factory->define(App\Models\Model\ModelCover::class, function (Faker\Generator $faker) {
+    return [
+        'link' => 'public/defaults/covers/models/cover.jpg',
+    ];
+});
+
+$factory->define(App\Models\Model\ModelAvatar::class, function (Faker\Generator $faker) {
+    return [
+        'link' => $faker->randomElement($array = array('public/defaults/avatars/models/male.svg', 'public/defaults/avatars/models/female.svg')),
+    ];
+});

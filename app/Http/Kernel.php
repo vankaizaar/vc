@@ -61,6 +61,9 @@ class Kernel extends HttpKernel {
         //member middleware.
         'member_auth' => \App\Http\Middleware\AuthenticateMember::class,
         'member_guest' => \App\Http\Middleware\RedirectIfMemberAuthenticated::class,
+        //model middleware.
+        'model_auth' => \App\Http\Middleware\AuthenticateModel::class,
+        'model_guest' => \App\Http\Middleware\RedirectIfModelAuthenticated::class,
     ];
 
 }

@@ -1,3 +1,5 @@
+/* global imagesLoaded */
+
 require('./bootstrap');
 require('bootstrap-datepicker');
 window.swal = require('sweetalert2');
@@ -6,6 +8,11 @@ require('selectize');
 require('soundmanager2');
 require('./bar-ui');
 require('./unslider-min');
+require('./bootstrap-filestyle.min');
+require('./jquery.justifiedGallery.min');
+require('jquery-colorbox');
+
+
 //require('bootstrap-responsive-tabs');
 window.CountUp = require('countup.js');
 
@@ -112,21 +119,43 @@ jQuery(document).ready(function ($) {
         autoplay: true,
         arrows: false,
         animation: 'fade',
-        animateHeight:true,
-        speed:550,
-        delay:6000,
-        nav:false
+        animateHeight: true,
+        speed: 550,
+        delay: 6000,
+        nav: false
+    });
+    $(".grid").justifiedGallery({
+        lastRow: 'justify',
+        rowHeight: 100,
+        rel: 'gallery1',
+        margins: 1,
+        captions: false
+    }).on('jg.complete', function () {
+        $(this).find('a').colorbox({
+            maxWidth: '80%',
+            maxHeight: '80%',
+            opacity: 0.8,
+            transition: 'elastic',
+            current: ''
+        });
     });
 });
 
-$(function(){
-  var hash = window.location.hash;
-  hash && $('ul.nav a[href="' + hash + '"]').tab('show');
+$(function () {
+    var hash = window.location.hash;
+    hash && $('ul.nav a[href="' + hash + '"]').tab('show');
 
-  $('.nav-tabs a').click(function (e) {
-    $(this).tab('show');
-    var scrollmem = $('body').scrollTop();
-    window.location.hash = this.hash;
-    $('html,body').scrollTop(scrollmem);
-  });
+    $('.nav-tabs a').click(function (e) {
+        $(this).tab('show');
+        var scrollmem = $('body').scrollTop();
+        window.location.hash = this.hash;
+        $('html,body').scrollTop(scrollmem);
+    });
 });
+
+
+
+
+
+
+

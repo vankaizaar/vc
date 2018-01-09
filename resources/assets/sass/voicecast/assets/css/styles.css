@@ -137,7 +137,7 @@ section.content {
 
 .tabbable-line>.nav-tabs>li.active:hover{
     background: white;
-    
+
 }
 
 .tabbable-line>.nav-tabs>li.active>a {
@@ -333,7 +333,7 @@ section.spaced4{
 }
 
 .cats:hover{
-   transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 .no-top{margin-top: 0;}
@@ -344,4 +344,17 @@ section.spaced4{
     width: 100%; height:100%;
     top:0; left:0;
     background:rgba(0,0,0,0.3);
+}
+
+.grid {
+    background: transparent;
+    width: 100%;
+    height: 100%;        
+}
+
+/* clear fix */
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
 }

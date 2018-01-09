@@ -12,18 +12,16 @@ class CreateAudioTable extends Migration {
      * @return void
      */
     public function up() {
-        Schema::create('audio', function (Blueprint $table) {        
+        Schema::create('audio', function (Blueprint $table) {
             $table->increments('id');
-            $table->char('artist_id',36);
-
+            $table->char('artist_id', 36);
             $table->string('link')->nullable();
+            $table->string('about_sample')->nullable();
             $table->string('title')->nullable();
-            
-            $table->string('about_sample')->nullable();            
             $table->string('type')->nullable();
             $table->string('language')->nullable();
-            
-            
+
+
             $table->timestamps();
         });
         Schema::table('audio', function(Blueprint $table) {
