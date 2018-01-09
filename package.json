@@ -21,9 +21,8 @@
     "dependencies": {
         "bootstrap-datepicker": "^1.7.1",
         "bootstrap-responsive-tabs": "^2.0.3",
-        "chocolat": "^0.4.19",
         "countup.js": "^1.9.3",
-        "imagesloaded": "^4.1.4",
+        "jquery-colorbox": "^1.6.4",
         "jquery-ui": "^1.12.1",
         "jquery-ui-bundle": "^1.12.1",
         "justifiedGallery": "^3.6.3",

@@ -22,12 +22,11 @@
                                     <h4>{{ $album->title }} - <small class="text-uppercase">{{$album->type}}</small> <sup class="text-uppercase">{{$album->modelpicture()->count()}} Images</sup></h4>
                                     <p>{{ $album->about_album }}</p>
                                     <p>{{ $album->about_sample }}</p>
-                                    <div class="chocolat-parent grid" data-chocolat-title="{{ $album->title }}">
-                                        <div class="grid-sizer"></div>
+                                    <div class="grid">                                        
                                         @foreach ( $album->modelpicture as $picture )
                                         <div class="grid-item">
-                                            <a class="chocolat-image" href="{{Storage::url($picture->link)}}" title="{{ $album->title }} - {{ $album->about_album }}">
-                                                <img src="{{Storage::url($picture->link)}}" alt="{{$modeluser->name}}" class="img-rounded" />
+                                            <a class="chocolat-image" rel="gallery1" href="{{Storage::url($picture->link)}}" title="{{ $album->title }} - {{ $album->about_album }}">
+                                                <img src="{{Storage::url($picture->link)}}" alt="{{$modeluser->name}}" />
                                             </a>
                                         </div>
                                         @endforeach

@@ -347,7 +347,7 @@ section.spaced4{
 }
 
 .grid {
-    background: #f3565d;
+    background: transparent;
     width: 100%;
     height: 100%;        
 }
@@ -357,20 +357,4 @@ section.spaced4{
     content: '';
     display: block;
     clear: both;
-}
-
-/* ---- .grid-item ---- */
-
-.grid-sizer,
-.grid-item {
-    width: 33.333%;
-}
-
-.grid-item {
-    float: left;    
-}
-
-.grid-item img {
-    display: block;
-    max-width: 100%;
 }

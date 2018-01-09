@@ -9,9 +9,10 @@ require('soundmanager2');
 require('./bar-ui');
 require('./unslider-min');
 require('./bootstrap-filestyle.min');
-window.Masonry = require('masonry-layout');
-window.imagesLoaded = require('imagesloaded');
-require('chocolat').Chocolat();
+require('./jquery.justifiedGallery.min');
+require('jquery-colorbox');
+
+
 //require('bootstrap-responsive-tabs');
 window.CountUp = require('countup.js');
 
@@ -123,6 +124,21 @@ jQuery(document).ready(function ($) {
         delay: 6000,
         nav: false
     });
+    $(".grid").justifiedGallery({
+        lastRow: 'justify',
+        rowHeight: 100,
+        rel: 'gallery1',
+        margins: 1,
+        captions: false
+    }).on('jg.complete', function () {
+        $(this).find('a').colorbox({
+            maxWidth: '80%',
+            maxHeight: '80%',
+            opacity: 0.8,
+            transition: 'elastic',
+            current: ''
+        });
+    });
 });
 
 $(function () {
@@ -137,21 +153,7 @@ $(function () {
     });
 });
 
-// init Masonry
-var grid = document.querySelector('.grid');
 
-var msnry = new Masonry(grid, {
-    itemSelector: '.grid-item',
-    columnWidth: '.grid-sizer',
-    percentPosition: true
-});
-
-imagesLoaded(grid).on('progress', function () {
-    msnry.layout();
-});
-jQuery(document).ready(function ($) {
-   
-});
 
 
 
