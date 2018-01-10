@@ -83,7 +83,7 @@ echo json_encode([
                 </div>
             </header>
             <section class="content">  
-                <div class="tabbable-panel">
+                <!--<div class="tabbable-panel">
                     <div class="tabbable-line">
                         <ul class="nav nav-tabs ">
                             <li>
@@ -101,7 +101,7 @@ echo json_encode([
                             </li>
                         </ul>
                     </div>
-                </div>
+                </div>-->
                 <div class="artist-content">
                     @yield('content')
                 </div>                

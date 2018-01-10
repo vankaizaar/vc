@@ -29,7 +29,7 @@ class StoreModelAlbum extends FormRequest {
             'type' => 'required',
             'about_album' => 'required|string|max:255',
             'link' => 'required|',
-            'link.*' => 'file|image|mimes:jpeg,png,jpg|max:2048',
+            'link.*' => 'file|image|mimes:jpeg,png,jpg|dimensions:min_width=400,min_height=400|max:2048',
         ];
     }
 

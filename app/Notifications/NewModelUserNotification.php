@@ -43,7 +43,7 @@ class NewModelUserNotification extends Notification {
                         ->subject("Welcome to Talent Guru")
                         ->greeting('Hello, ' . $this->ModelUser->name)
                         ->line('Welcome to Talent Guru, and thank you for signing up with us as a model.')
-                        ->action('Start uploading your pictures here.', url('/audio/create'))
+                        ->action('Start uploading your pictures here.', url('/modelalbums/create'))
                         ->line('Thank you for using our application!');
     }
 

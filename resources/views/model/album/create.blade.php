@@ -68,12 +68,14 @@
                                             Browse&hellip;  <input type="file" name="link[]" style="display: none;" id="link" class="form-control" placeholder='Choose a file...' data-buttonText="Select a File" accept="image/jpg,image/jpeg,image/png" required multiple/>			                                                                                               
                                         </span>
                                     </label>
-                                    <input type="text" class="form-control" readonly>
-                                </div>                                                             
+                                    <input type="text" class="form-control" readonly/>
+                                </div>  
                                 @if ($errors->has('link'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('link') }}</strong>
-                                </span>
+                                <div>
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('link') }}</strong>
+                                    </span>
+                                </div>
                                 @endif
                             </div>
                         </div>                                               
