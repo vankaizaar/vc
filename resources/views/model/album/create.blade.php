@@ -58,7 +58,7 @@
 
                             <br />
                         </div>
-                        <div class="form-group {{ $errors->has('link') ? ' has-error' : '' }}">
+                        <div class="form-group {{ $errors->has('link.0') ? ' has-error' : '' }}">
                             <label for="link" class="col-md-4 control-label">Select photos</label>
                             <div class="col-md-8"> 
                                 <small><i>You can select more than 1 image</i></small>
@@ -70,10 +70,10 @@
                                     </label>
                                     <input type="text" class="form-control" readonly/>
                                 </div>  
-                                @if ($errors->has('link'))
+                                @if ($errors->has('link.0'))
                                 <div>
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('link') }}</strong>
+                                        <strong>{{ $errors->first('link.0') }}</strong>
                                     </span>
                                 </div>
                                 @endif

@@ -33,4 +33,14 @@ class StoreModelAlbum extends FormRequest {
         ];
     }
 
+    public function messages() {
+        return [
+            'link.required' => 'At least 1 image is required.',
+            'link.*.image' => 'Only images can be uploaded',
+            'link.*.mimes' => 'Only JPG,JPEG,PNG image files are allowed at the moment.',
+            'link.*.dimensions' => 'Uploaded images must be at least 400px wide and 400px height.',
+            'link.*.max' => 'You have uploaded an oversized image.The maximum file size for a single image is 2MB.',
+        ];
+    }
+
 }
