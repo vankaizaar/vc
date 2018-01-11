@@ -33,6 +33,7 @@ class StoreModelAlbum extends FormRequest {
         ];
     }
 
+//custom messages for the multiple file validation.
     public function messages() {
         return [
             'link.required' => 'At least 1 image is required.',
