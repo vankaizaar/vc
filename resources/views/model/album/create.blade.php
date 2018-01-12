@@ -61,7 +61,11 @@
                         <div class="form-group {{ $errors->has('link.0') ? ' has-error' : '' }}">
                             <label for="link" class="col-md-4 control-label">Select photos</label>
                             <div class="col-md-8"> 
-                                <small><i>You can select more than 1 image</i></small>
+                                <strong>Instructions:</strong><br />
+                                <small><i>&middot; You can select more than 1 image</i></small><br />
+                                <small><i>&middot; An image must not exceed 2MB</i></small><br />
+                                <small><i>&middot; A single image must be a minimum of 400px by 400px</i></small><br />
+                                <br />
                                 <div class="input-group">
                                     <label class="input-group-btn">
                                         <span class="btn btn-primary">
