@@ -14216,11 +14216,42 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.focus {
   color: #00e4ff;
 }
 
+.navbar-default .navbar-nav > li > .dropdown-menu {
+  background-color: #2874c8;
+  border-radius: 0;
+  border: 0;
+}
+
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a {
+  color: #ffffff;
+}
+
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
+  color: #00e4ff;
+  background-color: #084488;
+  background-image: none;
+}
+
+.navbar-default .navbar-nav > li > .dropdown-menu > li.divider {
+  background-color: #084488;
+  background-image: none;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+  color: #00e4ff;
+  background-color: #084488;
+  background-image: none;
+}
+
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   color: #00e4ff;
   background-color: #084488;
+  background-image: none;
 }
 
 .navbar-default .navbar-nav > .open > a,
