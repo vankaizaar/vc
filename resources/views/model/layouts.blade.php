@@ -28,15 +28,54 @@ echo json_encode([
     </head>
     <body>
         <div id="app">
+            <nav class="navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button> 
+                        <a class="navbar-brand" href="{{ url('/') }}">
+                            <img src="{{asset('images/logo.png')}}">
+                        </a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            @guest
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MODELS <span class="caret"></span></a>
+                                <ul class="dropdown-menu">                                   
+                                    <li><a href="{{ url('/model_register') }}"><i class="glyphicon glyphicon-pencil"></i>  Sign up as a model</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="{{ url('/model_login') }}"><i class="glyphicon glyphicon-log-in"></i> Log in</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">VOICE OVER ARTISTS <span class="caret"></span></a>
+                                <ul class="dropdown-menu">                                   
+                                    <li><a href="{{ url('/artist_register') }}"><i class="glyphicon glyphicon-pencil"></i>  Sign up as a voice over artist</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="{{ url('/artist_login') }}"><i class="glyphicon glyphicon-log-in"></i>  Log in</a></li>
+                                </ul>
+                            </li>
+                            @endguest
+
+                            @auth('web_artist')
+                            <a href="{{ url('/artist_home') }}" class="account-management pull-right"><i class="glyphicon glyphicon-user"></i>Your profile</a>
+                            @endauth
+
+                            @auth('web_model')
+                            <a href="{{ url('/model_home') }}" class="account-management pull-right"><i class="glyphicon glyphicon-user"></i>Your profile</a>
+                            @endauth
+                        </ul>
+                    </div>
+                </div>
+            </nav>
             <header>
                 <div class="container">
-                    <div class="row">
-                        <div class="col-md-3 text-center">
-                            <a href="{{ url('/') }}"><img src="{{asset('images/logo.png')}}"></a>
-                        </div>
-                        <div class="col-md-6">
-
-                        </div>
+                    <div class="row">                                             
                         <div class="col-md-3 text-right">
                             <!--<a href="#" class="account-management"><i class="glyphicon glyphicon-pencil"></i>Sign up</a>
                             <a href="#" class="account-management"><i class="glyphicon glyphicon-log-in"></i>Login</a>-->

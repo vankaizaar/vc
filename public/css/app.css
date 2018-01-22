@@ -8991,12 +8991,16 @@ section.content {
 .tabbable-panel {
   border: none;
   padding: 0px;
-  margin-top: -2.8em;
+  margin-top: 0;
 }
 
 .tabbable-line > .nav-tabs {
   border: none;
   margin: 0px;
+}
+
+.tabbable-line > .nav-tabs-custom {
+  background: #084488;
 }
 
 .tabbable-line > .nav-tabs > li {
@@ -9009,6 +9013,7 @@ section.content {
   margin-right: 0;
   color: #ffffff;
   font-weight: 600;
+  border-radius: 0;
 }
 
 .tabbable-line > .nav-tabs > li > a > i {
@@ -9050,6 +9055,7 @@ section.content {
 .tabbable-line > .nav-tabs > li.active > a {
   border: 0;
   color: #2874c8;
+  background: #f1f1f1;
 }
 
 .tabbable-line > .nav-tabs > li.active > a > i {
@@ -14168,6 +14174,107 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.focus {
   background-position: bottom center;
 }
 
+.navbar {
+  margin-bottom: 0;
+}
+
+.navbar-toggle {
+  padding: 12px 10px;
+}
+
+.navbar-default {
+  background-color: #2874c8;
+  border: none;
+  border-radius: 0px;
+  border-color: #084488;
+  background-image: none !important;
+}
+
+.navbar-default .navbar-brand {
+  color: #ffffff;
+  text-shadow: none;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #00e4ff;
+}
+
+.navbar-default .navbar-text {
+  color: #ffffff;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #ffffff;
+  line-height: 30px;
+  font-weight: bold;
+  text-shadow: none;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #00e4ff;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #00e4ff;
+  background-color: #084488;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #00e4ff;
+  background-color: #084488;
+  background-image: none;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: #084488;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #084488;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #ffffff;
+}
+
+.navbar-default .navbar-link {
+  color: #ffffff;
+}
+
+.navbar-default .navbar-link:hover {
+  color: #00e4ff;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ffffff;
+  }
+
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #00e4ff;
+  }
+
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #00e4ff;
+    background-color: #084488;
+  }
+}
+
 .fb-profile img.fb-image-lg {
   z-index: 0;
   width: 100%;
@@ -14237,8 +14344,8 @@ div#app {
 }
 
 .panel-success {
-  border-color: rgba(187, 28, 148, 0.1) !important;
-  -webkit-box-shadow: 1px 1px 3px 0px rgba(187, 28, 148, 0.5);
-  box-shadow: 1px 1px 3px 0px rgba(187, 28, 148, 0.5);
+  border-color: rgba(8, 68, 136, 0.33) !important;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 

@@ -72,7 +72,7 @@ a.account-management:hover {
 }
 
 section.content {
-    padding: 0;
+    padding: 0;    
 }
 
 .artist-content {
@@ -83,12 +83,16 @@ section.content {
 .tabbable-panel {
     border: none;
     padding: 0px;
-    margin-top: -2.8em;
+    margin-top: 0;
 }
 
 .tabbable-line>.nav-tabs {
     border: none;
-    margin: 0px;
+    margin: 0px;    
+}
+
+.tabbable-line>.nav-tabs-custom{
+    background: #084488;
 }
 
 .tabbable-line>.nav-tabs>li {
@@ -101,6 +105,7 @@ section.content {
     margin-right: 0;
     color: #ffffff;
     font-weight: 600;
+    border-radius: 0;
 }
 
 .tabbable-line>.nav-tabs>li>a>i {
@@ -143,6 +148,7 @@ section.content {
 .tabbable-line>.nav-tabs>li.active>a {
     border: 0;
     color: #2874c8;
+    background:#f1f1f1;
 }
 
 .tabbable-line>.nav-tabs>li.active>a>i {
@@ -328,7 +334,7 @@ section.spaced4{
 }
 
 .cats{
-/*    max-width: 130px;*/
+    /*    max-width: 130px;*/
     transition: all .2s ease;
 }
 

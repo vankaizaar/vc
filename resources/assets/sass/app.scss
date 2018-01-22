@@ -15,6 +15,7 @@
 @import "unslider-dots";
 @import "justifiedGallery.min";
 @import "node_modules/jquery-colorbox/example3/colorbox";
+@import "modified-nav";
 
 
 
@@ -88,9 +89,9 @@ div#app {
 }
 
 .panel-success {
-    border-color: rgba(187, 28, 148, 0.1) !important;
-    -webkit-box-shadow: 1px 1px 3px 0px rgba(187,28,148,0.5);
-    -moz-box-shadow: 1px 1px 3px 0px rgba(187,28,148,0.5);
-    box-shadow: 1px 1px 3px 0px rgba(187,28,148,0.5);
+    border-color: rgba(8, 68, 136, 0.33) !important;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
 }
 
