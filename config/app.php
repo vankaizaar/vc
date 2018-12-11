@@ -147,7 +147,7 @@ return [
         EloquentFilter\ServiceProvider::class,
         Felixkiss\UniqueWithValidator\ServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
-        Unisharp\Laravelfilemanager\LaravelFilemanagerServiceProvider::class,
+        
         /*
          * Application Service Providers...
          */
